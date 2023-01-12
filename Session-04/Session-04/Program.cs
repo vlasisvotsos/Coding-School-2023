@@ -19,7 +19,7 @@ int c3 = 14 + (-3 * 6) / (7);
 Console.WriteLine(c3);
 int d3 = 2 + 13 / 6 * 6 + (int)Math.Sqrt(7);
 Console.WriteLine(d3);
-int e3 = (int)(Math.Pow(6, 4) + Math.Pow(5, 7)) /(9 % 4);
+int e3 = (int) ( (Math.Pow(6, 4) + Math.Pow(5,7) ) / (9 % 4) ) ;
 Console.WriteLine(e3);
 
 //task 4
@@ -33,7 +33,7 @@ Console.WriteLine("You are " + gender + "  and look younger than " + age + ".");
 int sec = 45678;
 Console.WriteLine(sec + " seconds is " + sec / 60 + " minutes.");
 Console.WriteLine(sec + " seconds is " + sec / (60*60) + " hours.");
-Console.WriteLine(sec + " seconds is " + sec / (60 * 60 * 24) + " days);
+Console.WriteLine(sec + " seconds is " + sec / (60 * 60 * 24) + " days");
 Console.WriteLine(sec + " seconds is " + sec / (60 * 60 * 24 * 365) + " years");
 
 // task 6
@@ -47,7 +47,8 @@ Console.WriteLine(sec + "sec is" + t.years);
 
 // task 7
 
-int c;
-int f;
-int k;
-
+int c=27;
+int f = 9/5*c +32;
+int k = c + 273;
+Console.WriteLine("27 celsius is " + f + "farenheit");
+Console.WriteLine("27 celsius is " + k + "kelvin");
