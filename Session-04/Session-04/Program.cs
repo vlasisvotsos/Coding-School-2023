@@ -39,8 +39,8 @@ Console.WriteLine(sec + " seconds is " + sec / (60 * 60 * 24 * 365) + " years");
 // task 6
 
 TimeSpan t = TimeSpan.FromSeconds(sec);
-Console.WriteLine(sec + "sec is" + t.days/365 + " years.");
-Console.WriteLine(sec + "sec is" + t.days + " days.");
+Console.WriteLine(sec + "sec is" + t.Days/365 + " years.");
+Console.WriteLine(sec + "sec is" + t.Days + " days.");
 Console.WriteLine(sec + "sec is" + t.Hours + " hours.");
 Console.WriteLine(sec + "sec is" + t.Minutes + " minutes.");
 
