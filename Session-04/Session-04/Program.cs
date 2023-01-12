@@ -29,11 +29,3 @@ string gender = "male";
 int age = 29;
 Console.WriteLine("You are " + gender + "  and look younger than " + age + ".");
 
-// task 5
-
-int sec = 45678;
-Console.WriteLine(sec + " seconds is " + sec/60 + " minutes and " + sec%60 +" seconds.");
-Console.WriteLine(sec + " seconds is " + sec/3600 + " hours and " + (sec%3600)/60 + " minutes and " + ((sec % 3600) / 60)%60 + " seconds.");
-Console.WriteLine(sec + " seconds is " + sec / 86400 + " days and " + (sec % 86400) / 3600 + " hours and " + (((sec % 86400) / 3600) % 3600) / 60 + " minutes and " + (((sec % 86400 / 3600) % 3600) / 60) % 60 + " seconds.");
-Console.WriteLine(sec + " seconds is " + sec / 86400 + " days and " + (sec % 86400) / 3600 + " hours and " + (((sec % 86400) / 3600) % 3600) / 60 + " minutes and " + (((sec % 86400 / 3600) % 3600) / 60) % 60 + " seconds.");
-
