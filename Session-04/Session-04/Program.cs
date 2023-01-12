@@ -38,12 +38,11 @@ Console.WriteLine(sec + " seconds is " + sec / 86400 + " days and " + (sec % 864
 Console.WriteLine(sec + " seconds is 0 years and " + sec / 86400 + " days and " + (sec % 86400) / 3600 + " hours and " + (((sec % 86400) / 3600) % 3600) / 60 + " minutes and " + (((sec % 86400 / 3600) % 3600) / 60) % 60 + " seconds.");
 
 // task 6
+
 TimeSpan t = TimeSpan.FromSeconds(sec);
-
 Console.WriteLine(t.Hours);
-
 Console.WriteLine(t.Minutes);
-
 Console.WriteLine(t.Seconds);
-
 Console.WriteLine(t.ToString());
+
+//
