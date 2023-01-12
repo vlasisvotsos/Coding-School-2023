@@ -34,3 +34,4 @@ Console.WriteLine("You are " + gender + "  and look younger than " + age + ".");
 int sec = 45678;
 Console.WriteLine(sec + " seconds is " + sec/60 + " minutes and " + sec%60 +" seconds.");
 Console.WriteLine(sec + " seconds is " + sec/3600 + " hours and " + (sec%3600)/60 + " minutes and " + ((sec % 3600) / 60)%60 + " seconds.");
+
