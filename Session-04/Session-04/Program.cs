@@ -48,4 +48,6 @@ Console.WriteLine(sec + "sec is" + t.years);
 // task 7
 
 int c;
-int
+int f;
+int k;
+
