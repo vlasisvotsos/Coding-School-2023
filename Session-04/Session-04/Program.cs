@@ -2,7 +2,9 @@
 Console.WriteLine("Hello Vlasis");
 
 //task 2
-int a = 1;
-int b = 2;
-int sum = a + b;
-Console.WriteLine(sum);
+int a2 = 1;
+int b2 = 2;
+int sum2 = a + b;
+Console.WriteLine(sum2);
+
+//task 3
