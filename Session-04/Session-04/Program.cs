@@ -1,7 +1,5 @@
 ﻿//task 1
 
-using System.Security.Cryptography;
-
 Console.WriteLine("Hello Vlasis");
 
 //task 2
@@ -25,6 +23,7 @@ int e3 = (int)(Math.Pow(6, 4) + Math.Pow(5, 7)) /(9 % 4);
 Console.WriteLine(e3);
 
 //task 4
+
 string gender = "male";
 int age = 29;
 Console.WriteLine("You are " + gender + "  and look younger than " + age + ".");
@@ -45,4 +44,5 @@ Console.WriteLine(t.Minutes);
 Console.WriteLine(t.Seconds);
 Console.WriteLine(t.ToString());
 
-//
+// task 7
+
