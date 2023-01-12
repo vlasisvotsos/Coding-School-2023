@@ -1,7 +1,11 @@
 ﻿//task 1
+
+using System.Security.Cryptography;
+
 Console.WriteLine("Hello Vlasis");
 
 //task 2
+
 int a2 = 1;
 int b2 = 2;
 int sum2 = a2 + b2;
@@ -24,3 +28,9 @@ Console.WriteLine(e3);
 string gender = "male";
 int age = 29;
 Console.WriteLine("You are " + gender + "  and look younger than " + age + ".");
+
+// task 5
+
+int sec = 45678;
+Console.WriteLine(sec + " seconds is " + sec/60 + " minutes and " + sec%60 +" seconds.");
+Console.WriteLine(sec + " seconds is " + sec/3600 + " hours and " + (sec%3600)/60 + " minutes and " + ((sec % 3600) / 60)%60 + " seconds.");
