@@ -15,7 +15,7 @@ int a3 = -1 + 5 * 6;
 Console.WriteLine(a3);
 int b3 = 38 + 5 % 7;
 Console.WriteLine(b3);
-int c3 = 14 + (-3 * 6) / (7);
+int c3 = 14 + (int)((-3 * 6) / 7));
 Console.WriteLine(c3);
 int d3 = 2 + 13 / 6 * 6 + (int)Math.Sqrt(7);
 Console.WriteLine(d3);
