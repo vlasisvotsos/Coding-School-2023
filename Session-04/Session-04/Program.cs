@@ -15,7 +15,7 @@ int a3 = -1 + 5 * 6;
 Console.WriteLine(a3);
 int b3 = 38 + 5 % 7;
 Console.WriteLine(b3);
-int c3 = 14 + (int)((-3 * 6) / 7));
+int c3 = 14;
 Console.WriteLine(c3);
 int d3 = 2 + 13 / 6 * 6 + (int)Math.Sqrt(7);
 Console.WriteLine(d3);
@@ -39,11 +39,10 @@ Console.WriteLine(sec + " seconds is " + sec / (60 * 60 * 24 * 365) + " years");
 // task 6
 
 TimeSpan t = TimeSpan.FromSeconds(sec);
-Console.WriteLine(sec + "sec is" + t.Hours);
-Console.WriteLine(sec + "sec is" + t.Hours);
-Console.WriteLine(sec + "sec is" + t.Minutes);
-Console.WriteLine(sec + "sec is" + t.Seconds);
-Console.WriteLine(sec + "sec is" + t.years);
+Console.WriteLine(sec + "sec is" + t.days/365 + " years.");
+Console.WriteLine(sec + "sec is" + t.days) + " days.";
+Console.WriteLine(sec + "sec is" + t.Hours) + " hours.";
+Console.WriteLine(sec + "sec is" + t.Minutes + " minutes.");
 
 // task 7
 
