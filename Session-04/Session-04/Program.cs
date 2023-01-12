@@ -1,7 +1,7 @@
 ﻿//task 1
 
 Console.WriteLine("Hello Vlasis");
-
+/*
 //task 2
 
 int a2 = 1;
@@ -51,3 +51,4 @@ int f = 9/5*c +32;
 int k = c + 273;
 Console.WriteLine("27 celsius is " + f + "farenheit");
 Console.WriteLine("27 celsius is " + k + "kelvin");
+*/
