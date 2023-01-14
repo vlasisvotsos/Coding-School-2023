@@ -61,3 +61,31 @@ for(int i = 2; i < num3;i++)
         Console.WriteLine(i);
     }
 }
+
+// task 4
+
+int counter = 0;
+int[] array1 = new int[4];
+int[] array2 = new int[4];
+int[] answer4= new int[16];
+array1[0] = 2;
+array2[0] = 1;
+array1[1] = 4;
+array2[1] = 3;
+array1[2] = 9;
+array2[2] = 7;
+array1[3] = 12;
+array2[3] = 10;
+for(int i = 0;i< array1.Length; i++)
+{
+    for(int j = 0; j < array2.Length; j++)
+    {
+        answer4[counter] = array1[i] * array2[j];
+        counter++;
+    }
+}
+for (int i = 0; i < answer4.Length; i++)
+{
+    Console.WriteLine(answer4[i]);
+}
+
