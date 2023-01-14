@@ -41,5 +41,6 @@ if(c2== 1)
     Console.WriteLine(String.Format("The product from 1 to {0} is {1}" , num2 , product2));
 }
 
+// task 3
 
 
