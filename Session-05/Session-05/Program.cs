@@ -15,3 +15,12 @@ for (int i=0;i< charArray.Length; i++)
    string reversedName = new string(charArray);
 string answer = string.Format("my name is {0} and my name reversed is {1}",name,reversedName);
 Console.WriteLine(answer);
+
+// task 2
+
+Console.WriteLine("Please insert an integer");
+int j = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Please enter s to calculate the sum from 1 to selected number or p for the product");
+//char c = Convert.ToChar(Console.ReadLine());
+
+
