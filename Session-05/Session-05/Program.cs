@@ -18,26 +18,27 @@ Console.WriteLine(answer1);
 
 // task 2
 
-int answer2 = 0;
+int sum2 = 0;
+int product2 = 1;
 Console.WriteLine("Please insert an integer");
 int num2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Please enter s to calculate the sum from 1 to selected number or p for the product");
-string c2 = Console.ReadLine();
-if(c2 == "s" )
+Console.WriteLine(string.Format("Please enter 0 to calculate the sum from 1 to {0} or 1 for the product", num2));
+int c2 = Convert.ToInt32(Console.ReadLine());
+if (c2 == 0 )
 {
     for(int i = 0; i <= num2; i++)
     {
-        answer2 += i;
+        sum2 += i;
     }
-    String.Format("The sum from 1 to {0} is {1}",num2,answer2);
+    Console.WriteLine(String.Format("The sum from 1 to {0} is {1}" , num2 , sum2));
 }
-if(c2=="p")
+if(c2== 1)
 {
-    for (int i = 0; i <= num2; i++)
+    for (int i = 1; i <= num2; i++)
     {
-        answer2 = answer2 * i;
+        product2 = product2 * i;
     }
-    String.Format("The product from 1 to {0} is {1}", num2, answer2);
+    Console.WriteLine(String.Format("The product from 1 to {0} is {1}" , num2 , product2));
 }
 
 
