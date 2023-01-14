@@ -43,4 +43,21 @@ if(c2== 1)
 
 // task 3
 
-
+Console.WriteLine("Please insert an integer");
+int num3 = Convert.ToInt32(Console.ReadLine());
+for(int i = 2; i < num3;i++)
+{
+    Boolean check = true;
+    for(int j=2; j < i; j++)
+    {
+        if (i%j==0)
+        {
+            check= false;
+            break;
+        }
+    }
+    if (check)
+    {
+        Console.WriteLine(i);
+    }
+}
