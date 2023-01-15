@@ -110,11 +110,12 @@ for(int i =0; i< unSortedArray.Length; i++)
     test = unSortedArray[i];
     for(int j = i+1; j < unSortedArray.Length; j++)
     {
-        if (test < unSortedArray[j])
+        if (test > unSortedArray[j])
         {
-            sortedArray[i] = test;
+            test = unSortedArray[j];
 
         }
+        sortedArray[i] = test;
     }
 }
 Console.WriteLine("the unsorted array is");
