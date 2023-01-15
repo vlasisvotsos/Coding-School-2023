@@ -105,17 +105,21 @@ unSortedArray[6] = -4;
 unSortedArray[7] = 17;
 unSortedArray[8] = 89;
 unSortedArray[9] = 100;
+for (int i = 0; i < unSortedArray.Length; i++)
+{
+    sortedArray[i] = unSortedArray[i];
+}
 for(int i =0; i< unSortedArray.Length; i++)
 {
-    test = unSortedArray[i];
-    for(int j = i+1; j < unSortedArray.Length; j++)
+    for (int j = 0; i > unSortedArray.Length; j++)
     {
-        if (test > unSortedArray[j])
+        if (sortedArray[i] < sortedArray[j])
         {
-            test = unSortedArray[j];
+            test = sortedArray[j];
+            sortedArray[j] = sortedArray[j];
+            sortedArray[i] = test;
 
         }
-        sortedArray[i] = test;
     }
 }
 Console.WriteLine("the unsorted array is");
