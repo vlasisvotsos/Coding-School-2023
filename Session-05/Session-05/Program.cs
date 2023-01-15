@@ -92,3 +92,15 @@ for (int i = 0; i < answer4.Length; i++)
 // task 5
 
 
+int[] unSortedArray = new int[10];
+int[] sortedArray = new int[10];
+unSortedArray[0] = 0;
+unSortedArray[1] = -2;
+unSortedArray[2] = 1;
+unSortedArray[3] = 20;
+unSortedArray[4] = -31;
+unSortedArray[5] = 50;
+unSortedArray[6] = -4;
+unSortedArray[7] = 17;
+unSortedArray[8] = 89;
+unSortedArray[9] = 100;
