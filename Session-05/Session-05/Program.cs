@@ -45,7 +45,9 @@ if(c2== 1)
 
 Console.WriteLine("Please insert an integer");
 int num3 = Convert.ToInt32(Console.ReadLine());
-for(int i = 2; i < num3;i++)
+string answer3 = string.Format("The prime numbers from 2 to {0} are ",num3);
+Console.WriteLine(answer3);
+for (int i = 2; i < num3;i++)
 {
     Boolean check = true;
     for(int j=2; j < i; j++)
@@ -84,6 +86,21 @@ for(int i = 0;i< array1.Length; i++)
         counter++;
     }
 }
+for (int i = 0; i < answer4.Length; i++)
+{
+    Console.WriteLine(answer4[i]);
+}
+Console.WriteLine("The product of matrix");
+for(int i = 0;i< array1.Length; i++)
+{
+    Console.WriteLine(array1[i]);
+}
+Console.WriteLine("and the matrix");
+for (int i = 0; i < array2.Length; i++)
+{
+    Console.WriteLine(array2[i]);
+}
+Console.WriteLine("is");
 for (int i = 0; i < answer4.Length; i++)
 {
     Console.WriteLine(answer4[i]);
@@ -132,3 +149,4 @@ for (int i = 0; i < sortedArray.Length; i++)
 {
     Console.WriteLine(sortedArray[i]);
 }
+Console.ReadLine();
