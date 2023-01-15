@@ -94,6 +94,7 @@ for (int i = 0; i < answer4.Length; i++)
 
 int[] unSortedArray = new int[10];
 int[] sortedArray = new int[10];
+int test=0;
 unSortedArray[0] = 0;
 unSortedArray[1] = -2;
 unSortedArray[2] = 1;
@@ -104,3 +105,15 @@ unSortedArray[6] = -4;
 unSortedArray[7] = 17;
 unSortedArray[8] = 89;
 unSortedArray[9] = 100;
+for(int i =0; i< unSortedArray.Length; i++)
+{
+    test = unSortedArray[i];
+    for(int j = 0; j < unSortedArray.Length; j++)
+    {
+        if (test < unSortedArray[j])
+        {
+            sortedArray[i] = test;
+        }
+    }
+}
+//string answer5 = string.Format("the unsorted array is {0} and the sorted array is {1}",unSortedArray,sortedArray);
