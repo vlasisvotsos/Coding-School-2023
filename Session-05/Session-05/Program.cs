@@ -120,3 +120,13 @@ for(int i =0; i< unSortedArray.Length; i++)
         }
     }
 }
+Console.WriteLine("the unsorted array is");
+for (int i = 0; i < unSortedArray.Length; i++)
+{
+    Console.WriteLine(unSortedArray[i]);
+}
+Console.WriteLine("and the sorted  array is");
+for (int i = 0; i < sortedArray.Length; i++)
+{
+    Console.WriteLine(sortedArray[i]);
+}
