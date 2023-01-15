@@ -108,15 +108,12 @@ unSortedArray[9] = 100;
 for(int i =0; i< unSortedArray.Length; i++)
 {
     test = unSortedArray[i];
-    for(int j = 0; j < unSortedArray.Length; j++)
+    for(int j = i+1; j < unSortedArray.Length; j++)
     {
         if (test < unSortedArray[j])
         {
             sortedArray[i] = test;
-        }
-        else
-        {
-            test = unSortedArray[j];
+
         }
     }
 }
