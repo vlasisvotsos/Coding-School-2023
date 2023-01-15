@@ -109,15 +109,15 @@ for (int i = 0; i < unSortedArray.Length; i++)
 {
     sortedArray[i] = unSortedArray[i];
 }
-for(int i =0; i< unSortedArray.Length; i++)
+for(int i =0; i< unSortedArray.Length - 1; i++)
 {
-    for (int j = 0; i > unSortedArray.Length; j++)
+    for (int j = 0; j < unSortedArray.Length - 1; j++)
     {
-        if (sortedArray[i] < sortedArray[j])
+        if (sortedArray[j] > sortedArray[j+1])
         {
             test = sortedArray[j];
-            sortedArray[j] = sortedArray[j];
-            sortedArray[i] = test;
+            sortedArray[j] = sortedArray[j+1];
+            sortedArray[j+1] = test;
 
         }
     }
