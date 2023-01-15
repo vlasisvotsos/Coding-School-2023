@@ -114,6 +114,9 @@ for(int i =0; i< unSortedArray.Length; i++)
         {
             sortedArray[i] = test;
         }
+        else
+        {
+            test = unSortedArray[j];
+        }
     }
 }
-//string answer5 = string.Format("the unsorted array is {0} and the sorted array is {1}",unSortedArray,sortedArray);
