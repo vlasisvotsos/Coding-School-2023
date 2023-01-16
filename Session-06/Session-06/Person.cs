@@ -33,7 +33,7 @@ namespace Session06
 		}
 		public void SetName(string name)
 		{
-			Name = name;
+		
 		}
 	}
 }
