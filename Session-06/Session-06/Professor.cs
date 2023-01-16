@@ -24,7 +24,7 @@ namespace Session06
         {
             Rank = rank;
         }
-        public Professor(Guid id, string name, int age, string rank, Course[] courses,) : base (id, name, age)
+        public Professor(Guid id, string name, int age, string rank, Course[] courses) : base (id, name, age)
         {
             Rank = rank;
             Courses = courses;
@@ -37,7 +37,7 @@ namespace Session06
         {
 
         }
-        public void GetName()
+        public void GetName(Guid studentId,Guid courseID,int grade)
         {
 
         }
