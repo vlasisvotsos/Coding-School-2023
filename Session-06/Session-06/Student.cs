@@ -22,10 +22,10 @@ namespace Session-06
 		{
 			RegistrationNumber = registrationNumber;
 		}
-		public Student(Guid id, string name, int age, int registrationNumber,Course course[]) : base(id, name, age)
+		public Student(Guid id, string name, int age, int registrationNumber,Course course) : base(id, name, age)
 		{
 			RegistrationNumber = registrationNumber;
-			Course[]= course[];
+			Course= course;
 
 		}
 		public void Attend(Corse corse, DateTime date)
