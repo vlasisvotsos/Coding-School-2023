@@ -5,7 +5,7 @@ namespace Session06
 	public class Student : Person
 	{
 		public int RegistrationNumber { get; set; }
-		public Course[] Course { get; set; }
+		public Course[] Courses { get; set; }
 		public Student()
 		{
 		}
@@ -22,10 +22,10 @@ namespace Session06
 		{
 			RegistrationNumber = registrationNumber;
 		}
-		public Student(Guid id, string name, int age, int registrationNumber,Course[] course) : base(id, name, age)
+		public Student(Guid id, string name, int age, int registrationNumber,Course[] courses) : base(id, name, age)
 		{
 			RegistrationNumber = registrationNumber;
-			Course = course;
+			Courses = courses;
 
 		}
 		public void Attend(Course course, DateTime date)
