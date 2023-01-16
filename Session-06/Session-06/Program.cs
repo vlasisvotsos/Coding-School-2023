@@ -1,4 +1,4 @@
-﻿namespace Session-06
+﻿namespace Session06
 {
     Console.WriteLine("Hello, World!");
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Session-06
+namespace Session06
 {
 
 	public class Person
 	{
-		public Guid Id { get; set; }
+		public Guid ID { get; set; }
 		public string Name { get; set; }
 		public int Age { get; set; }
 		public Person()
@@ -14,16 +14,16 @@ namespace Session-06
 		}
 		public Person(Guid id)
 		{
-			Id = id;
+			ID = id;
 		}
 		public Person(Guid id, string name)
 		{
-			Id = id;
+			ID = id;
 			Name = name;
 		}
 		public Person(Guid id, string name, int age)
 		{
-			Id = id;
+			ID = id;
 			Name = name;
 			Age = age;
 		}
