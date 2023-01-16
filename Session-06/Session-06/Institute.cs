@@ -5,7 +5,7 @@ namespace Session06
 
     public class Institute
     {
-        public Guid Id { get; set; }
+        public Guid ID { get; set; }
         public string Name { get; set; }
         public int YearsInService { get; set; }
         public Institute()
@@ -14,16 +14,16 @@ namespace Session06
         }
         public Institute(Guid id)
         {
-            Id = id;
+            ID = id;
         }
         public Institute(Guid id, string name)
         {
-            Id = id;
+            ID = id;
             Name = name;
         }
         public Institute(Guid id, string name, int yearsInService)
         {
-            Id = id;
+            ID = id;
             Name = name;
             YearsInService = yearsInService;
         }   

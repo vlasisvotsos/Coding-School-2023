@@ -5,10 +5,10 @@ namespace Session06
 
 	public class University : Institute
 	{
-		public Student[] Student { get; set; }
-		public Course[] Course { get; set; }
-		public Grade[] Grade { get; set; }
-		public Schedule[] Schedule { get; set; }
+		public Student[] Students { get; set; }
+		public Course[] Courses { get; set; }
+		public Grade[] Grades { get; set; }
+		public Schedule[] Schedules { get; set; }
 		public University()
 		{
 
@@ -29,27 +29,27 @@ namespace Session06
 		{
 
 		}
-		public University(Guid id, string name, int yearsInService,Student student) : base(id, name, yearsInService)
+		public University(Guid id, string name, int yearsInService,Student[] students) : base(id, name, yearsInService)
 		{
-			Student= student;
+			Students= students;
 		}
-		public University(Guid id, string name, int yearsInService, Student student, Course course) : base(id, name, yearsInService)
+		public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses) : base(id, name, yearsInService)
 		{
-			Student = student;
-			Course= course;
+			Students = students;
+			Courses= courses;
 		}
-		public University(Guid id, string name, int yearsInService, Student student, Course course,Grade grade) : base(id, name, yearsInService)
+		public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses,Grade[] grades) : base(id, name, yearsInService)
 		{
-			Student = student;
-			Course = course;
-			Grade= grade;
+			Students = students;
+			Courses = courses;
+			Grades= grades;
 		}
-		public University(Guid id, string name, int yearsInService, Student student, Course course, Grade grade,Scedule sceduledCourse) : base(id, name, yearsInService)
+		public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses, Grade[] grades,Schedule[] sceduledCourses) : base(id, name, yearsInService)
 		{
-			Student = student;
-			Course = course;
-			Grade = grade;
-			Schedule= sceduledCourse;
+			Students = students;
+			Courses = courses;
+			Grades = grades;
+			Schedules= sceduledCourses;
 		}
 		public void GetStudents()
 		{
