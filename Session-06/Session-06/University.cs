@@ -21,10 +21,6 @@ namespace Session06
 		{
 
 		}
-		public University(Guid id, string name) : base(id, name)
-		{
-
-		}
 		public University(Guid id, string name, int yearsInService) : base(id, name,yearsInService)
 		{
 
