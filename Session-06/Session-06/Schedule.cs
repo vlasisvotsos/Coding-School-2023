@@ -1,9 +1,12 @@
 ﻿using System;
 
-public class Schedule
+namespace Session-06
 {
-	public Schedule()
+	public class Schedule
 	{
+		public Schedule()
+		{
 
+		}
 	}
 }

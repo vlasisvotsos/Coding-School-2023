@@ -1,9 +1,11 @@
 ﻿using System;
-
-public class Course
+namespace Session-06
 {
+	public class Course
+	{
 	public Course()
 	{
 
+	}
 	}
 }

@@ -1,9 +1,13 @@
 ﻿using System;
 
-public class University : Institute
+namespace Session-06
 {
-	public University()
-	{
 
+	public class University : Institute
+	{
+		public University()
+		{
+
+		}
 	}
 }

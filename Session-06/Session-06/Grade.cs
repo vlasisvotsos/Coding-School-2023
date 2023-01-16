@@ -1,9 +1,13 @@
 ﻿using System;
 
-public class Grade
+namespace Session-06
 {
+
+	public class Grade
+	{
 	public Grade()
 	{
 
+	}
 	}
 }
