@@ -14,5 +14,9 @@ namespace Session_07
         public ActionRequest() { 
         
         }
+        public ActionRequest(Guid requestID)
+        {
+            RequestID= requestID;
+        }
     }
 }
