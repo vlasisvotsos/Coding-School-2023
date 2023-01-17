@@ -10,7 +10,6 @@ namespace Session_07
     {
         public Guid RequestID { get; set; }
         public string Input { get; set; }
-        public ActionEnum Action { get; set; }
         public enum ActionEnums
         {
             Convertion,
