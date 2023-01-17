@@ -1,6 +1,6 @@
 ﻿namespace Session_07
 {
-    internal class ActionEnum
+    public class ActionEnum
     {
         public enum actionEnum
         {

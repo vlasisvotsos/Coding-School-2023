@@ -3,7 +3,7 @@
     public class MessageLogger
     {
         public Message[] Messages;
-        MessageLogger() {
+         public MessageLogger() {
 
         }
         public void ReadAll()
@@ -14,9 +14,9 @@
         {
 
         }
-        public void Write(Messages)
+        public void Write(Message[] messages)
         {
-
+            Messages= messages;
         }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_07
 {
-    internal class ActionRequest
+    public class ActionRequest
     {
         public Guid RequestID { get; set; }
         public string Input { get; set; }
