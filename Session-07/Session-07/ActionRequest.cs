@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Session_07
+{
+    internal class ActionRequest
+    {
+        Guid RequestID { get; set; }
+        string Input { get; set; }
+        ActionEnum Action { get; set; }
+        public ActionRequest() { 
+        
+        }
+    }
+}
