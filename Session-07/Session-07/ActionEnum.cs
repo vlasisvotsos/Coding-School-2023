@@ -2,13 +2,18 @@
 {
     public class ActionEnum
     {
+        public string Request;
         public enum actionEnum
         {
-            Convert, 
+            Convertion, 
             Uppercase, 
             Reverse
         }
         public ActionEnum() {
+        }
+        public ActionEnum(string request)
+        {
+            Request = request;
         }
     }
 }
