@@ -11,6 +11,7 @@ namespace Session_07
     {
         public Guid RequestID { get; set; }
         public string Input { get; set; }
+        string Result;
         public enum ActionEnums
         {
             Convertion,
@@ -26,10 +27,16 @@ namespace Session_07
             switch (action)
             {
                 case ActionEnums.Convertion:
+                    if (decimal.TryParse(Input, out Result))
+                    {
+
+                    }
                     break;
                 case ActionEnums.Uppercase:
+                    
                     break;
                 case ActionEnums.Reverse:
+                    
                     break;
                 default:
                     Console.WriteLine("Error Message");
