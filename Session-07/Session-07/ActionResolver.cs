@@ -13,10 +13,6 @@ namespace Session_07
         {
 
         }
-        public ActionResolver(ActionRequest actionRequest,MessageLogger messageLogger)
-        {
-
-        }
         public ActionResponse Execute(ActionRequest request)
         {
             
