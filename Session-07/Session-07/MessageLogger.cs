@@ -2,8 +2,21 @@
 {
     public class MessageLogger
     {
-        Message[] messages
+        public Message[] Messages;
         MessageLogger() {
+
+        }
+        public void ReadAll()
+        {
+
+        }
+        public void Clear()
+        {
+
+        }
+        public void Write(Messages)
+        {
+
         }
 
     }
