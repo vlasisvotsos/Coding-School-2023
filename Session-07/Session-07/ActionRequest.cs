@@ -8,9 +8,9 @@ namespace Session_07
 {
     internal class ActionRequest
     {
-        Guid RequestID { get; set; }
-        string Input { get; set; }
-        ActionEnum Action { get; set; }
+        public Guid RequestID { get; set; }
+        public string Input { get; set; }
+        public ActionEnum Action { get; set; }
         public ActionRequest() { 
         
         }

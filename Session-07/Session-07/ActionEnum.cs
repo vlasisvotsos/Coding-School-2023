@@ -2,7 +2,8 @@
 {
     internal class ActionEnum
     {
-        enum actionEnum{
+        public enum actionEnum
+        {
             Convert, 
             Uppercase, 
             Reverse
