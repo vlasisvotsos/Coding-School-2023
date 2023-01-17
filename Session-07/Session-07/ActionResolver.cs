@@ -19,18 +19,7 @@ namespace Session_07
         }
         public ActionResponse Execute(ActionRequest request)
         {
-            switch(request)
-                {
-                case Convertion:
-
-                    break;
-                case Uppercase:
-
-                    break;
-                case Reverse:
-
-                    break;
-            }
+            
 
                 return null;
             
