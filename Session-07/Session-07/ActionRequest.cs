@@ -19,9 +19,15 @@ namespace Session_07
         public ActionRequest() { 
         
         }
-        public ActionRequest(Guid requestID)
+        public ActionRequest(Guid requestID,ActionEnums action)
         {
             RequestID= requestID;
+            action = ActionEnums.Convertion;
+        }
+
+        public ActionRequest(Guid requestID)
+        {
+            RequestID = requestID;
         }
     }
 }

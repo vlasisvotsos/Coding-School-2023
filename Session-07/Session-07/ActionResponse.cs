@@ -15,7 +15,7 @@ namespace Session_07
         public ActionResponse(Guid requestID, Guid responseID, string output) : base(requestID)
         {
             ResponseID= responseID;
-            Output= output;
+            Output = output;
         }
     }
 }
