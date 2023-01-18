@@ -11,7 +11,7 @@ namespace Session_07
         public MessageLogger Logger { get; set; }
         public ActionResolver()
         {
-
+            Logger = new MessageLogger();
         }
         public ActionResponse Execute(ActionRequest request)
         {

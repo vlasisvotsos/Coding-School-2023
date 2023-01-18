@@ -12,9 +12,8 @@ namespace Session_07
         Uppercase,
         Reverse
         }
-    public class ActionRequest
+    public class ActionRequest : ActionEntity
     {
-        public Guid RequestID { get; set; }
         public string Input { get; set; }
         public ActionEnum Action { get; set; }
         public ActionRequest() { 
