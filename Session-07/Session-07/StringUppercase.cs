@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_07
 {
-    public class StringReverse : StringManipulator
+    public class StringUppercase : StringManipulator
     {
         public override string Manipulate()
         {
