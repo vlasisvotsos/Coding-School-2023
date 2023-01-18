@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace Session_07
 {
-    public class ActionResponse : ActionRequest
+    public class ActionResponse
     {
-        public Guid ResponseID;
-        public string Output;
+        public Guid RequestID { get; set; }
+        public Guid ResponseID { get; set; }
+        public string Output { get; set; }
         public ActionResponse() { 
-        }
-        public ActionResponse(Guid requestID, Guid responseID, string output) : base(requestID)
-        {
-            ResponseID= responseID;
-            Output = output;
         }
     }
 }

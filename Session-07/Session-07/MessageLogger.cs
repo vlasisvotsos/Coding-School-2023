@@ -2,9 +2,9 @@
 {
     public class MessageLogger
     {
-        public Message[] Messages;
+        public Message[] Message { get; set; }
          public MessageLogger() {
-
+            Message= new Message[1000];
         }
         public void ReadAll()
         {
@@ -14,9 +14,8 @@
         {
 
         }
-        public void Write(Message[] messages)
+        public void Write(Message[] message)
         {
-            Messages= messages;
         }
 
     }
