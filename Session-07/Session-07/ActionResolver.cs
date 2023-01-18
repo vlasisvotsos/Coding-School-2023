@@ -19,26 +19,24 @@ namespace Session_07
             response.RequestID = request.RequestID;
             response.ResponseID=Guid.NewGuid();
 
-            MessageLogger logger = new MessageLogger();
-
-            Message message = new Message();
-            message.Text = "Execution Start";
-            message.TimeStamp = DateTime.Now;
-
-
+            Log("EXECUTION START");
 
             switch (request.Action)
             {
                 case ActionEnum.Convert:
+                    Log("CONVERT");
                     response.Output =  Convert(request.Input);
                 break;
                 case ActionEnum.Uppercase:
+                    Log("UPPERCASE");
                     response.Output = Uppercase(request.Input);
                 break;
                 case ActionEnum.Reverse:
+                    Log("REVERSE");
                     response.Output = Reverse(request.Input);
                 break;
                 default:
+                    Log("Error Message");
                 break;
             }
 
@@ -48,39 +46,63 @@ namespace Session_07
         public string Convert(string input) {
             try
             {
+                StringConvert convert = new StringConvert();
+                convert.Text = input;
 
             }
             catch(Exception ex)
             {
-                throw;
+                Log(ex.Message);
             }
-            return null;
-
+            finally
+            {
+                Log("EXECUTION END");
+            }
+            return String.Empty;
         }
         public string Uppercase(string input)
         {
             try
             {
+                StringConvert convert = new StringConvert();
+                convert.Text = input;
 
             }
             catch (Exception ex)
             {
-                throw;
+                Log(ex.Message);
             }
-            return null;
+            finally
+            {
+                Log("EXECUTION END");
+            }
+            return String.Empty;
         }
         public string Reverse(string input)
         {
             try
             {
+                StringConvert convert = new StringConvert();
+                convert.Text = input;
 
             }
             catch (Exception ex)
             {
-
-            throw;
+                Log(ex.Message);
             }
-            return null;
+            finally
+            {
+                Log("EXECUTION END");
+            }
+            return String.Empty;
+        }
+        private void Log(string text)
+        {
+
+            Logger.Write(new Message("------------"));
+
+            Message message = new Message(text);
+            Logger.Write(message);
         }
     }
 }
