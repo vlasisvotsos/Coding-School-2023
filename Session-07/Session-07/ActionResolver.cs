@@ -64,7 +64,7 @@ namespace Session_07
         {
             try
             {
-                StringConvert convert = new StringConvert();
+                StringUppercase convert = new StringUppercase();
                 convert.Text = input;
 
             }
@@ -82,7 +82,7 @@ namespace Session_07
         {
             try
             {
-                StringConvert convert = new StringConvert();
+                StringReverse convert = new StringReverse();
                 convert.Text = input;
 
             }
