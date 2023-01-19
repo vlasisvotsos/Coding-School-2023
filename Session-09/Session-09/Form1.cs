@@ -2,6 +2,16 @@ namespace Session_09
 {
     public partial class Form1 : Form
     {
+        enum Operation
+        {
+            Addition,
+            Substraction,
+            Product,
+            Division,
+            Sqrt,
+            Power
+        }
+        private Operation _operation;
         public Form1()
         {
             InitializeComponent();
