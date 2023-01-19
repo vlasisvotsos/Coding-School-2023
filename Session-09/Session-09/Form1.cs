@@ -88,20 +88,27 @@ namespace Session_09
             switch (_operation)
             {
                 case Operation.Addition:
+                    _result = _value1 + _value2;
                 break;
                 case Operation.Substraction: 
+                    _result = _value1 - _value2;
                 break;
                 case Operation.Division:
+                    _result = _value1 / _value2;
                 break;
                 case Operation.Product: 
+                    _result = _value1 * _value2;
                 break;
                 case Operation.Sqrt:
+                    _result = (decimal?)Math.Sqrt((double)_value1);
                 break;
                 case Operation.Power:
+                    _result = (decimal?)Math.Pow((double)_value1, (double)_value2);
                 break;
                 default:
                 break;
             }
+            display.Text = String.Format("{0}",_result);
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)
