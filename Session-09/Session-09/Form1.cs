@@ -234,7 +234,7 @@ namespace Session_09
                 default:
                 break;
             }
-            display.Text += String.Format("{0}",_result);
+            display.Text += _result;
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)
