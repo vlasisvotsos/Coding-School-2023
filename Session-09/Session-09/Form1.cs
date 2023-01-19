@@ -27,6 +27,12 @@ namespace Session_09
 
         private void buttonTwo_Click(object sender, EventArgs e)
         {
+            if(_result== null)
+            {
+                _result = null;
+                _value1= null;
+                _value2= null;
+            }
             if(_value1== null)
             {
                 _value1 = 2;
@@ -40,6 +46,12 @@ namespace Session_09
 
         private void buttonOne_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 1;
@@ -53,6 +65,12 @@ namespace Session_09
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 3;
@@ -66,6 +84,12 @@ namespace Session_09
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 4;
@@ -79,6 +103,12 @@ namespace Session_09
 
         private void buttonFive_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 5;
@@ -92,6 +122,12 @@ namespace Session_09
 
         private void buttonSix_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 6;
@@ -105,6 +141,12 @@ namespace Session_09
 
         private void buttonSeven_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 7;
@@ -118,6 +160,12 @@ namespace Session_09
 
         private void buttonEigth_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 8;
@@ -131,6 +179,12 @@ namespace Session_09
 
         private void buttonNine_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 9;
@@ -215,6 +269,12 @@ namespace Session_09
 
         private void buttonZero_Click(object sender, EventArgs e)
         {
+            if (_result == null)
+            {
+                _result = null;
+                _value1 = null;
+                _value2 = null;
+            }
             if (_value1 == null)
             {
                 _value1 = 0;
