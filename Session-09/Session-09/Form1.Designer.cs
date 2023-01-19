@@ -216,7 +216,6 @@
             this.display.ReadOnly = true;
             this.display.Size = new System.Drawing.Size(745, 35);
             this.display.TabIndex = 16;
-            this.display.Text = "0";
             this.display.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonZero
