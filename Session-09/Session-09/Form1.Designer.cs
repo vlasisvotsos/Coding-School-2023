@@ -44,7 +44,7 @@
             this.buttonDivision = new System.Windows.Forms.Button();
             this.buttonSqrt = new System.Windows.Forms.Button();
             this.buttonPower = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.display = new System.Windows.Forms.TextBox();
             this.buttonZero = new System.Windows.Forms.Button();
             this.buttonDot = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -209,15 +209,15 @@
             this.buttonPower.UseVisualStyleBackColor = true;
             this.buttonPower.Click += new System.EventHandler(this.buttonPower_Click);
             // 
-            // textBox1
+            // display
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(745, 35);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "0";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.display.Location = new System.Drawing.Point(33, 137);
+            this.display.Name = "display";
+            this.display.ReadOnly = true;
+            this.display.Size = new System.Drawing.Size(745, 35);
+            this.display.TabIndex = 16;
+            this.display.Text = "0";
+            this.display.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonZero
             // 
@@ -237,6 +237,7 @@
             this.buttonDot.TabIndex = 18;
             this.buttonDot.Text = ".";
             this.buttonDot.UseVisualStyleBackColor = true;
+            this.buttonDot.Click += new System.EventHandler(this.buttonDot_Click);
             // 
             // Form1
             // 
@@ -245,7 +246,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonDot);
             this.Controls.Add(this.buttonZero);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.display);
             this.Controls.Add(this.buttonPower);
             this.Controls.Add(this.buttonSqrt);
             this.Controls.Add(this.buttonDivision);
@@ -288,7 +289,7 @@
         private Button buttonDivision;
         private Button buttonSqrt;
         private Button buttonPower;
-        private TextBox textBox1;
+        private TextBox display;
         private Button buttonZero;
         private Button buttonDot;
     }
