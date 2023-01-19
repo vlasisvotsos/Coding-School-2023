@@ -27,7 +27,7 @@ namespace Session_09
 
         private void buttonTwo_Click(object sender, EventArgs e)
         {
-            if(_result== null)
+            if(_result!= null)
             {
                 _result = null;
                 _value1= null;
@@ -46,7 +46,7 @@ namespace Session_09
 
         private void buttonOne_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -65,7 +65,7 @@ namespace Session_09
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -84,7 +84,7 @@ namespace Session_09
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -103,7 +103,7 @@ namespace Session_09
 
         private void buttonFive_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -122,7 +122,7 @@ namespace Session_09
 
         private void buttonSix_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -141,7 +141,7 @@ namespace Session_09
 
         private void buttonSeven_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -160,7 +160,7 @@ namespace Session_09
 
         private void buttonEigth_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -179,7 +179,7 @@ namespace Session_09
 
         private void buttonNine_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
@@ -269,7 +269,7 @@ namespace Session_09
 
         private void buttonZero_Click(object sender, EventArgs e)
         {
-            if (_result == null)
+            if (_result != null)
             {
                 _result = null;
                 _value1 = null;
