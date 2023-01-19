@@ -45,6 +45,7 @@
             this.buttonSqrt = new System.Windows.Forms.Button();
             this.buttonPower = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonZero = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonOne
@@ -215,11 +216,22 @@
             this.textBox1.TabIndex = 16;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // buttonZero
+            // 
+            this.buttonZero.Location = new System.Drawing.Point(33, 237);
+            this.buttonZero.Name = "buttonZero";
+            this.buttonZero.Size = new System.Drawing.Size(131, 40);
+            this.buttonZero.TabIndex = 17;
+            this.buttonZero.Text = "0";
+            this.buttonZero.UseVisualStyleBackColor = true;
+            this.buttonZero.Click += new System.EventHandler(this.buttonZero_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonZero);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonPower);
             this.Controls.Add(this.buttonSqrt);
@@ -264,5 +276,6 @@
         private Button buttonSqrt;
         private Button buttonPower;
         private TextBox textBox1;
+        private Button buttonZero;
     }
 }
