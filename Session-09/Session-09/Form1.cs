@@ -73,11 +73,13 @@ namespace Session_09
         private void buttonPower_Click(object sender, EventArgs e)
         {
             display.Text += "^";
+            _operation=Operation.Power;
         }
 
         private void buttonSqrt_Click(object sender, EventArgs e)
         {
             display.Text += "sqrt:";
+            _operation = Operation.Sqrt;
         }
 
         private void buttonEqual_Click(object sender, EventArgs e)
@@ -88,21 +90,26 @@ namespace Session_09
         private void buttonPlus_Click(object sender, EventArgs e)
         {
             display.Text += "+";
+            _operation = Operation.Addition;
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
             display.Text += "-";
+            _operation = Operation.Substraction;
         }
 
         private void buttonProduct_Click(object sender, EventArgs e)
         {
             display.Text += "*";
+            _operation= Operation.Product;
+
         }
 
         private void buttonDivision_Click(object sender, EventArgs e)
         {
             display.Text += "/";
+            _operation= Operation.Division;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
