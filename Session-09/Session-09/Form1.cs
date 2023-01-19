@@ -29,6 +29,7 @@ namespace Session_09
         {
             if(_result!= null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1= null;
                 _value2= null;
@@ -48,6 +49,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -67,6 +69,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -86,6 +89,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -105,6 +109,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -124,6 +129,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -143,6 +149,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -162,6 +169,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -181,6 +189,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
@@ -271,6 +280,7 @@ namespace Session_09
         {
             if (_result != null)
             {
+                display.Text = String.Empty;
                 _result = null;
                 _value1 = null;
                 _value2 = null;
