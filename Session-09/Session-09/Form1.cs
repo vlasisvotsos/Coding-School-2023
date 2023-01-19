@@ -27,46 +27,118 @@ namespace Session_09
 
         private void buttonTwo_Click(object sender, EventArgs e)
         {
+            if(_value1== null)
+            {
+                _value1 = 2;
+            }
+            else
+            {
+                _value1 = 2;
+            }
             display.Text += "2";
         }
 
         private void buttonOne_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 1;
+            }
+            else
+            {
+                _value1 = 1;
+            }
             display.Text += "1";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 3;
+            }
+            else
+            {
+                _value1 = 3;
+            }
             display.Text += "3";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 4;
+            }
+            else
+            {
+                _value1 = 4;
+            }
             display.Text += "4";
         }
 
         private void buttonFive_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 5;
+            }
+            else
+            {
+                _value1 = 5;
+            }
             display.Text += "5";
         }
 
         private void buttonSix_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 6;
+            }
+            else
+            {
+                _value1 = 6;
+            }
             display.Text += "6";
         }
 
         private void buttonSeven_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 7;
+            }
+            else
+            {
+                _value1 = 7;
+            }
             display.Text += "7";
         }
 
         private void buttonEigth_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 8;
+            }
+            else
+            {
+                _value1 = 8;
+            }
             display.Text += "8";
         }
 
         private void buttonNine_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 9;
+            }
+            else
+            {
+                _value1 = 9;
+            }
             display.Text += "9";
         }
 
@@ -143,6 +215,14 @@ namespace Session_09
 
         private void buttonZero_Click(object sender, EventArgs e)
         {
+            if (_value1 == null)
+            {
+                _value1 = 0;
+            }
+            else
+            {
+                _value1 = 0;
+            }
             display.Text += "0";
         }
 
