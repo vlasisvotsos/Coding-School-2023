@@ -33,7 +33,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 2;
+                _value2 = 2;
             }
             display.Text += "2";
         }
@@ -46,7 +46,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 1;
+                _value2 = 1;
             }
             display.Text += "1";
         }
@@ -59,7 +59,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 3;
+                _value2 = 3;
             }
             display.Text += "3";
         }
@@ -72,7 +72,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 4;
+                _value2 = 4;
             }
             display.Text += "4";
         }
@@ -85,7 +85,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 5;
+                _value2 = 5;
             }
             display.Text += "5";
         }
@@ -98,7 +98,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 6;
+                _value2 = 6;
             }
             display.Text += "6";
         }
@@ -111,7 +111,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 7;
+                _value2 = 7;
             }
             display.Text += "7";
         }
@@ -124,7 +124,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 8;
+                _value2 = 8;
             }
             display.Text += "8";
         }
@@ -137,7 +137,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 9;
+                _value2 = 9;
             }
             display.Text += "9";
         }
@@ -180,7 +180,7 @@ namespace Session_09
                 default:
                 break;
             }
-            display.Text = String.Format("{0}",_result);
+            display.Text += String.Format("{0}",_result);
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)
@@ -221,7 +221,7 @@ namespace Session_09
             }
             else
             {
-                _value1 = 0;
+                _value2 = 0;
             }
             display.Text += "0";
         }
