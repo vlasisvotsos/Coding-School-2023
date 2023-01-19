@@ -46,6 +46,7 @@
             this.buttonPower = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonZero = new System.Windows.Forms.Button();
+            this.buttonDot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonOne
@@ -140,7 +141,7 @@
             // 
             // buttonEqual
             // 
-            this.buttonEqual.Location = new System.Drawing.Point(657, 398);
+            this.buttonEqual.Location = new System.Drawing.Point(647, 375);
             this.buttonEqual.Name = "buttonEqual";
             this.buttonEqual.Size = new System.Drawing.Size(131, 40);
             this.buttonEqual.TabIndex = 9;
@@ -150,7 +151,7 @@
             // 
             // buttonPlus
             // 
-            this.buttonPlus.Location = new System.Drawing.Point(657, 352);
+            this.buttonPlus.Location = new System.Drawing.Point(647, 329);
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(131, 40);
             this.buttonPlus.TabIndex = 10;
@@ -160,7 +161,7 @@
             // 
             // buttonMinus
             // 
-            this.buttonMinus.Location = new System.Drawing.Point(657, 306);
+            this.buttonMinus.Location = new System.Drawing.Point(647, 283);
             this.buttonMinus.Name = "buttonMinus";
             this.buttonMinus.Size = new System.Drawing.Size(131, 40);
             this.buttonMinus.TabIndex = 11;
@@ -170,7 +171,7 @@
             // 
             // buttonProduct
             // 
-            this.buttonProduct.Location = new System.Drawing.Point(657, 260);
+            this.buttonProduct.Location = new System.Drawing.Point(647, 237);
             this.buttonProduct.Name = "buttonProduct";
             this.buttonProduct.Size = new System.Drawing.Size(131, 40);
             this.buttonProduct.TabIndex = 12;
@@ -180,7 +181,7 @@
             // 
             // buttonDivision
             // 
-            this.buttonDivision.Location = new System.Drawing.Point(657, 214);
+            this.buttonDivision.Location = new System.Drawing.Point(647, 191);
             this.buttonDivision.Name = "buttonDivision";
             this.buttonDivision.Size = new System.Drawing.Size(131, 40);
             this.buttonDivision.TabIndex = 13;
@@ -210,10 +211,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 98);
+            this.textBox1.Location = new System.Drawing.Point(33, 137);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 35);
+            this.textBox1.Size = new System.Drawing.Size(745, 35);
             this.textBox1.TabIndex = 16;
+            this.textBox1.Text = "0";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonZero
@@ -226,11 +228,21 @@
             this.buttonZero.UseVisualStyleBackColor = true;
             this.buttonZero.Click += new System.EventHandler(this.buttonZero_Click);
             // 
+            // buttonDot
+            // 
+            this.buttonDot.Location = new System.Drawing.Point(491, 375);
+            this.buttonDot.Name = "buttonDot";
+            this.buttonDot.Size = new System.Drawing.Size(131, 40);
+            this.buttonDot.TabIndex = 18;
+            this.buttonDot.Text = ".";
+            this.buttonDot.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonDot);
             this.Controls.Add(this.buttonZero);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonPower);
@@ -277,5 +289,6 @@
         private Button buttonPower;
         private TextBox textBox1;
         private Button buttonZero;
+        private Button buttonDot;
     }
 }
