@@ -44,6 +44,7 @@
             this.buttonDivision = new System.Windows.Forms.Button();
             this.buttonSqrt = new System.Windows.Forms.Button();
             this.buttonPower = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonOne
@@ -206,11 +207,20 @@
             this.buttonPower.UseVisualStyleBackColor = true;
             this.buttonPower.Click += new System.EventHandler(this.buttonPower_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(33, 98);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(405, 35);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonPower);
             this.Controls.Add(this.buttonSqrt);
             this.Controls.Add(this.buttonDivision);
@@ -231,6 +241,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -252,5 +263,6 @@
         private Button buttonDivision;
         private Button buttonSqrt;
         private Button buttonPower;
+        private TextBox textBox1;
     }
 }
