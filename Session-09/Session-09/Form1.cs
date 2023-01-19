@@ -25,20 +25,25 @@ namespace Session_09
             
         }
 
-        private void buttonTwo_Click(object sender, EventArgs e)
+        private void buttonZero_Click(object sender, EventArgs e)
         {
             Clear();
-            SetNumber(2);
-            display.Text += Output("2");
+            SetNumber(0);
+            display.Text += Output("0");
         }
-
-        
 
         private void buttonOne_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(1);
             display.Text += Output("1");
+        }
+
+        private void buttonTwo_Click(object sender, EventArgs e)
+        {
+            Clear();
+            SetNumber(2);
+            display.Text += Output("2");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -92,19 +97,19 @@ namespace Session_09
 
         private void buttonPower_Click(object sender, EventArgs e)
         {
-            display.Text += "^";
-            _operation=Operation.Power;
+            display.Text += Output("^");
+            _operation =Operation.Power;
         }
 
         private void buttonSqrt_Click(object sender, EventArgs e)
         {
-            display.Text += "sqrt:";
+            display.Text += Output("sqrt:");
             _operation = Operation.Sqrt;
         }
 
         private void buttonEqual_Click(object sender, EventArgs e)
         {
-            display.Text += "=";
+            display.Text += Output("=");
             switch (_operation)
             {
                 case Operation.Addition:
@@ -133,27 +138,27 @@ namespace Session_09
 
         private void buttonPlus_Click(object sender, EventArgs e)
         {
-            display.Text += "+";
+            display.Text += Output("+");
             _operation = Operation.Addition;
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
-            display.Text += "-";
+            display.Text += Output("-");
             _operation = Operation.Substraction;
         }
 
         private void buttonProduct_Click(object sender, EventArgs e)
         {
-            display.Text += "*";
-            _operation= Operation.Product;
+            display.Text += Output("*");
+            _operation = Operation.Product;
 
         }
 
         private void buttonDivision_Click(object sender, EventArgs e)
         {
-            display.Text += "/";
-            _operation= Operation.Division;
+            display.Text += Output("/");
+            _operation = Operation.Division;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -161,17 +166,11 @@ namespace Session_09
 
         }
 
-        private void buttonZero_Click(object sender, EventArgs e)
-        {
-            Clear();
-            SetNumber(0);
-            display.Text += += Output("0");
-        }
-
         private void buttonDot_Click(object sender, EventArgs e)
         {
-            display.Text += ".";
+            display.Text += Output(".");
         }
+
         public void Clear()
         {
             if (_result != null)
@@ -182,6 +181,7 @@ namespace Session_09
                 _value2 = null;
             }
         }
+
         public void SetNumber( int num) {
             if (_value1 == null)
             {
@@ -192,6 +192,7 @@ namespace Session_09
                 _value2 = num;
             }
         }
+
         private string Output(string input)
         {
             string output = String.Format("{0}", input);
