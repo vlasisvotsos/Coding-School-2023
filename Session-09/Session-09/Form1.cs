@@ -85,6 +85,23 @@ namespace Session_09
         private void buttonEqual_Click(object sender, EventArgs e)
         {
             display.Text += "=";
+            switch (_operation)
+            {
+                case Operation.Addition:
+                break;
+                case Operation.Substraction: 
+                break;
+                case Operation.Division:
+                break;
+                case Operation.Product: 
+                break;
+                case Operation.Sqrt:
+                break;
+                case Operation.Power:
+                break;
+                default:
+                break;
+            }
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)
