@@ -29,63 +29,65 @@ namespace Session_09
         {
             Clear();
             SetNumber(2);
-            display.Text += "2";
+            display.Text += Output("2");
         }
+
+        
 
         private void buttonOne_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(1);
-            display.Text += "1";
+            display.Text += Output("1");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(3);
-            display.Text += "3";
+            display.Text += Output("3");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(4);
-            display.Text += "4";
+            display.Text += Output("4");
         }
 
         private void buttonFive_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(5);
-            display.Text += "5";
+            display.Text += Output("5");
         }
 
         private void buttonSix_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(6);
-            display.Text += "6";
+            display.Text += Output("6");
         }
 
         private void buttonSeven_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(7);
-            display.Text += "7";
+            display.Text += Output("7");
         }
 
         private void buttonEigth_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(8);
-            display.Text += "8";
+            display.Text += Output("8");
         }
 
         private void buttonNine_Click(object sender, EventArgs e)
         {
             Clear();
             SetNumber(9);
-            display.Text += "9";
+            display.Text += Output("9");
         }
 
         private void buttonPower_Click(object sender, EventArgs e)
@@ -163,7 +165,7 @@ namespace Session_09
         {
             Clear();
             SetNumber(0);
-            display.Text += "0";
+            display.Text += += Output("0");
         }
 
         private void buttonDot_Click(object sender, EventArgs e)
@@ -189,6 +191,11 @@ namespace Session_09
             {
                 _value2 = num;
             }
+        }
+        private string Output(string input)
+        {
+            string output = String.Format("{0}", input);
+            return output;
         }
     }
     
