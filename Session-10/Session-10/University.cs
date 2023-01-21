@@ -14,7 +14,7 @@ namespace Session_10
             Course course1 = new Course()
             {
                 Code = "1",
-                Subject = "C#",
+                Subject = "C#"
             };
             Course course2 = new Course()
             {
@@ -35,37 +35,30 @@ namespace Session_10
 			Courses.Add(course2);
 			Courses.Add(course3);
 			Courses.Add(course4);
-			Person professor1 = new Professor()
+			Person professor1 = new Professor(Courses)
 			{
 				Name = "Fotis",
 				Age = 43,
 				Rank = "Associate",
-                //Courses.Add(course1)
-                //Courses.Add(course2)
+				Courses = Courses
             };
-			Person professor2= new Professor()
+			Person professor2= new Professor(Courses)
 			{
                 Name = "Dimitris",
                 Age = 40,
                 Rank = "Assistant"
-                //Courses.Add(course3)
-                //Courses.Add(course4)
             };
-			Person student1 = new Student()
+			Person student1 = new Student(Courses)
 			{
 				Name = "Vlasis",
 				Age = 29,
-				RegistrationNumber= 1,
-                //Courses.Add(course1)
-                //Courses.Add(course3)
+				RegistrationNumber= 1
             };
-			Person student2= new Student()
+			Person student2= new Student(Courses)
 			{
 				Name="George",
 				Age= 26,
-				RegistrationNumber= 2,
-                //Courses.Add(course2)
-                //Courses.Add(course4)
+				RegistrationNumber= 2
             };
 			Grade grade1 = new Grade(student1.ID,course1.ID)
 			{

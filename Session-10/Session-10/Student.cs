@@ -8,9 +8,13 @@ namespace Session_10
 		public List<Course> Courses { get; set; }
 		public Student()
 		{
-            Courses = new List<Course>();
+            
         }
-		public void Attend(Course course, DateTime date)
+        public Student(List<Course> courses)
+        {
+			Courses = courses;
+        }
+        public void Attend(Course course, DateTime date)
 		{
 
 		}

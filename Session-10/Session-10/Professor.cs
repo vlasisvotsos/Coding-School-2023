@@ -10,8 +10,12 @@ namespace Session_10
         public List<Course> Courses { get; set; }
         public Professor()
         {
-            Courses = new List<Course>();
-        }          
+            
+        }
+        public Professor(List<Course> courses)
+        {
+            Courses= courses;
+        }
         public void SetGrade()
         {
 
