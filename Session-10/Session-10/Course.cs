@@ -8,22 +8,8 @@ namespace Session06
 		public string Subject { get; set; }
 		public Course()
 		{
+			ID= Guid.NewGuid();
 
-		}
-		public Course(Guid id)
-		{
-			ID= id;
-		}
-		public Course(Guid id,string code)
-		{
-			ID = id;
-			Code = code;
-		}
-		public Course(Guid id, string code, string subject)
-		{
-			ID = id;
-			Code = code;
-			Subject = subject;
-		}
+		}		
 }
 }

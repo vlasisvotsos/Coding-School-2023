@@ -10,29 +10,7 @@ namespace Session06
 		public DateTime Callender { get; set; }
 		public Schedule()
 		{
-
-		}
-		public Schedule(Guid id)
-		{
-			ID = id;
-		}
-		public Schedule(Guid id,Guid courseID)
-		{
-			ID = id;
-			CourseID = courseID;
-		}
-		public Schedule(Guid id, Guid courseID,Guid professorID)
-		{
-			ID = id;
-			CourseID = courseID;
-			ProfessorID= professorID;
-		}
-		public Schedule(Guid id, Guid courseID, Guid professorID,DateTime callender)
-		{
-			ID = id;
-			CourseID = courseID;
-			ProfessorID = professorID;
-			Callender = callender;
+			//ID = Guid.NewGuid;
 		}
 	}
 }

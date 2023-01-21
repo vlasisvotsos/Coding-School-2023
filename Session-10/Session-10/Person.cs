@@ -10,22 +10,7 @@ namespace Session06
 		public int Age { get; set; }
 		public Person()
 		{
-
-		}
-		public Person(Guid id)
-		{
-			ID = id;
-		}
-		public Person(Guid id, string name)
-		{
-			ID = id;
-			Name = name;
-		}
-		public Person(Guid id, string name, int age)
-		{
-			ID = id;
-			Name = name;
-			Age = age;
+			ID= Guid.NewGuid();
 		}
 		public void GetName()
 		{

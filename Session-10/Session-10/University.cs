@@ -12,41 +12,7 @@ namespace Session06
 		public University()
 		{
 
-		}
-		public University(Guid id) : base(id)
-		{
-
-		}
-		public University(Guid id,string name) : base(id,name)
-		{
-
-		}
-		public University(Guid id, string name, int yearsInService) : base(id, name,yearsInService)
-		{
-
-		}
-		public University(Guid id, string name, int yearsInService,Student[] students) : base(id, name, yearsInService)
-		{
-			Students= students;
-		}
-		public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses) : base(id, name, yearsInService)
-		{
-			Students = students;
-			Courses= courses;
-		}
-		public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses,Grade[] grades) : base(id, name, yearsInService)
-		{
-			Students = students;
-			Courses = courses;
-			Grades= grades;
-		}
-		public University(Guid id, string name, int yearsInService, Student[] students, Course[] courses, Grade[] grades,Schedule[] sceduledCourses) : base(id, name, yearsInService)
-		{
-			Students = students;
-			Courses = courses;
-			Grades = grades;
-			Schedules= sceduledCourses;
-		}
+		}		
 		public void GetStudents()
 		{
 
