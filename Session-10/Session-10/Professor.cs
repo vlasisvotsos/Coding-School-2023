@@ -10,7 +10,7 @@ namespace Session_10
         public List<Course> Courses { get; set; }
         public Professor()
         {
-           
+            Courses = new List<Course>();
         }          
         public void SetGrade()
         {
