@@ -11,7 +11,27 @@ namespace Session_10
 		public List<Schedule> Schedules { get; set; }
 		public University()
 		{
-			Person professor1 = new Professor()
+            Course course1 = new Course()
+            {
+                Code = "1",
+                Subject = "C#",
+            };
+            Course course2 = new Course()
+            {
+                Code = "2",
+                Subject = "Git"
+            };
+            Course course3 = new Course()
+            {
+                Code = "3",
+                Subject = "VS"
+            };
+            Course course4 = new Course()
+            {
+                Code = "4",
+                Subject = "Windows Applications"
+            };
+            Person professor1 = new Professor()
 			{
 				Name = "Fotis",
 				Age = 43,
@@ -43,13 +63,21 @@ namespace Session_10
                 //Courses=Courses.Add(course2)
                 //Courses=Courses.Add(course4)
             };
-			Grade grade1 = new Grade()
+			Grade grade1 = new Grade(student1.ID,course1.ID)
 			{
-
+				Grades=7
 			};
-			Grade grade2 = new Grade()
+			Grade grade2 = new Grade(student1.ID,course3.ID)
 			{
-
+				Grades=9
+			};
+			Grade grade3 = new Grade(student2.ID,course2.ID)
+			{
+				Grades =6
+			};
+			Grade grade4 = new Grade(student2.ID, course4.ID)
+			{
+				Grades=8
 			};
 			Schedule schedule1 = new Schedule()
 			{
@@ -59,26 +87,7 @@ namespace Session_10
 			{
 
 			};
-			Course course1 = new Course() 
-			{ 
-				Code="1",
-				Subject="C#",
-			};
-			Course course2 = new Course() 
-			{
-				Code="2",
-				Subject="Git"
-			};
-			Course course3 = new Course()
-			{
-				Code = "3",
-				Subject="VS"
-			};
-			Course course4 = new Course() 
-			{
-				Code="4",
-				Subject="Windows Applications"
-			};
+			
 		}		
 		public void GetStudents()
 		{
