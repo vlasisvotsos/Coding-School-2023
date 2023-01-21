@@ -31,37 +31,41 @@ namespace Session_10
                 Code = "4",
                 Subject = "Windows Applications"
             };
-            Person professor1 = new Professor()
+			Courses.Add(course1);
+			Courses.Add(course2);
+			Courses.Add(course3);
+			Courses.Add(course4);
+			Person professor1 = new Professor()
 			{
 				Name = "Fotis",
 				Age = 43,
 				Rank = "Associate",
-                //Courses=Courses.Add(course1)
-                //Courses=Courses.Add(course2)
+                //Courses.Add(course1)
+                //Courses.Add(course2)
             };
 			Person professor2= new Professor()
 			{
                 Name = "Dimitris",
                 Age = 40,
                 Rank = "Assistant"
-                //Courses=Courses.Add(course3)
-                //Courses=Courses.Add(course4)
+                //Courses.Add(course3)
+                //Courses.Add(course4)
             };
 			Person student1 = new Student()
 			{
 				Name = "Vlasis",
 				Age = 29,
 				RegistrationNumber= 1,
-                //Courses=Courses.Add(course1)
-                //Courses=Courses.Add(course3)
+                //Courses.Add(course1)
+                //Courses.Add(course3)
             };
 			Person student2= new Student()
 			{
 				Name="George",
 				Age= 26,
 				RegistrationNumber= 2,
-                //Courses=Courses.Add(course2)
-                //Courses=Courses.Add(course4)
+                //Courses.Add(course2)
+                //Courses.Add(course4)
             };
 			Grade grade1 = new Grade(student1.ID,course1.ID)
 			{
