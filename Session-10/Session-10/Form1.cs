@@ -1,15 +1,19 @@
 namespace Session_10
 {
     public partial class Form1 : Form
-    {
-        List<Course> Courses= new List<Course>();
-        List<Professor> Professors= new List<Professor>();
-        List<Student> Students= new List<Student>();
-        List<Grade> Grades = new List<Grade>();
-        List<Schedule> Schedules = new List<Schedule>();
+    { 
         public Form1()
         {
             InitializeComponent();
+            var Courses = this.Courses;
+            var Students = this.Students;
+            var Grades = this.Grades;
+            var Schedules = this.Schedules;
+            dataGridView1.DataSource = Courses;             
+            dataGridView2.DataSource = Grades;           
+            dataGridView3.DataSource = Schedules;
+            dataGridView4.DataSource = Students;
+
         }
        static Course course1 = new Course()
         {
@@ -32,6 +36,8 @@ namespace Session_10
             Subject = "Windows Applications"
         };
 
+        List<Course> Courses = new List<Course>() {course1, course2, course3, course4};
+
         static Person professor1 = new Professor()
         {
             Name = "Fotis",
@@ -46,7 +52,10 @@ namespace Session_10
             Rank = "Assistant",
             Courses= new List<Course>() { course3,course4}
         };
-			static Person student1 = new Student()
+
+        List<Professor> Professors = new List<Professor>() { (Professor)professor1,(Professor)professor2};
+
+        static Person student1 = new Student()
             {
                 Name = "Vlasis",
                 Age = 29,
@@ -60,7 +69,10 @@ namespace Session_10
             RegistrationNumber = 2,
             Courses=new List<Course>() { course2,course4 }
         };
-			static Grade grade1 = new Grade(student1.ID, course1.ID)
+
+        List<Student> Students = new List<Student>() { (Student)student1,(Student)student2};
+
+        static Grade grade1 = new Grade(student1.ID, course1.ID)
             {
                 Grades = 7
             };
@@ -76,7 +88,10 @@ namespace Session_10
         {
             Grades = 8
         };
-			static Schedule schedule1 = new Schedule(course1.ID, professor1.ID)
+
+        List<Grade> Grades = new List<Grade>() {grade1,grade2,grade3,grade4 };
+
+        static Schedule schedule1 = new Schedule(course1.ID, professor1.ID)
             {
                 Callender = DateTime.Now
             };
@@ -93,7 +108,9 @@ namespace Session_10
             Callender = DateTime.Now
         };
 
-			
+        List<Schedule> Schedules = new List<Schedule>() {schedule1,schedule2,schedule3,schedule4 };
+
+
         University university = new University()
         {
             Students = new List<Student>() { (Student)student1, (Student)student2},
@@ -103,5 +120,25 @@ namespace Session_10
             Professors = new List<Professor>() {(Professor) professor1,(Professor)professor2}
         };
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //courses
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //grade
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //schedule
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //student
+        }
     }
 }
