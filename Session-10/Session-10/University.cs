@@ -79,14 +79,22 @@ namespace Session_10
 			{
 				Grades=8
 			};
-			Schedule schedule1 = new Schedule()
+			Schedule schedule1 = new Schedule(course1.ID,professor1.ID)
 			{
-
+				Callender= DateTime.Now
 			};
-			Schedule schedule2 = new Schedule()
+			Schedule schedule2 = new Schedule(course2.ID,professor1.ID)
 			{
-
+				Callender= DateTime.Now
 			};
+			Schedule schedule3 = new Schedule(course3.ID, professor2.ID)
+			{
+				Callender = DateTime.Now
+            };
+			Schedule schedule4 = new Schedule(course4.ID, professor2.ID)
+			{
+				Callender = DateTime.Now
+            };
 			
 		}		
 		public void GetStudents()
