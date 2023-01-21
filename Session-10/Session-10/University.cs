@@ -9,6 +9,7 @@ namespace Session_10
 		public List<Course> Courses { get; set; }
 		public List <Grade> Grades { get; set; }
 		public List<Schedule> Schedules { get; set; }
+		public List<Professor> Professors { get; set; }
 		public University()
 		{
             Course course1 = new Course()
@@ -48,6 +49,8 @@ namespace Session_10
                 Age = 40,
                 Rank = "Assistant"
             };
+			Professors.Add((Professor)professor1);
+			Professors.Add((Professor)professor2);
 			Person student1 = new Student(Courses)
 			{
 				Name = "Vlasis",
@@ -60,6 +63,8 @@ namespace Session_10
 				Age= 26,
 				RegistrationNumber= 2
             };
+			Students.Add((Student)student1);
+			Students.Add((Student)student2);
 			Grade grade1 = new Grade(student1.ID,course1.ID)
 			{
 				Grades=7
@@ -76,6 +81,10 @@ namespace Session_10
 			{
 				Grades=8
 			};
+			Grades.Add(grade1);
+			Grades.Add(grade2);
+			Grades.Add(grade3);
+			Grades.Add(grade4);
 			Schedule schedule1 = new Schedule(course1.ID,professor1.ID)
 			{
 				Callender= DateTime.Now
@@ -92,6 +101,10 @@ namespace Session_10
 			{
 				Callender = DateTime.Now
             };
+			Schedules.Add(schedule1);
+			Schedules.Add(schedule2);
+			Schedules.Add(schedule3);
+			Schedules.Add(schedule4);
 			
 		}		
 		public void GetStudents()
