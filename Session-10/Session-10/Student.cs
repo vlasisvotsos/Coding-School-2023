@@ -10,10 +10,6 @@ namespace Session_10
 		{
             
         }
-        public Student(List<Course> courses)
-        {
-			Courses = courses;
-        }
         public void Attend(Course course, DateTime date)
 		{
 

@@ -12,10 +12,7 @@ namespace Session_10
         {
             
         }
-        public Professor(List<Course> courses)
-        {
-            Courses= courses;
-        }
+
         public void SetGrade()
         {
 
