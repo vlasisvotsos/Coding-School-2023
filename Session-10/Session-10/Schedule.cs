@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Session06
+namespace Session_10
 {
 	public class Schedule
 	{
@@ -10,7 +10,7 @@ namespace Session06
 		public DateTime Callender { get; set; }
 		public Schedule()
 		{
-			//ID = Guid.NewGuid;
+		ID = Guid.NewGuid;
 		}
 	}
 }

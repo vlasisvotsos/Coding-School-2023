@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Session06
+namespace Session_10
 {
 
 	public class University : Institute
