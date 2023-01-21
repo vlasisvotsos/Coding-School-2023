@@ -12,6 +12,10 @@ namespace Session_10
 		public Grade()
 		{
 			ID= Guid.NewGuid();
-		}		
+		}
+		public Grade(Guid studentID, Guid courseID)
+		{
+            ID = Guid.NewGuid();
+        }
 }
 }
