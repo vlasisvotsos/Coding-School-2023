@@ -5,7 +5,7 @@ namespace Session_10
 	public class Student : Person
 	{
 		public int RegistrationNumber { get; set; }
-		public Course[] Courses { get; set; }
+		public List<Course> Courses { get; set; }
 		public Student()
 		{
 
