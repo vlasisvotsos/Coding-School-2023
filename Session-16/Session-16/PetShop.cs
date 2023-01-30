@@ -17,10 +17,8 @@ namespace Session_11
         public List<PetFood>? PetFoods { get; set; }
         public List<Transaction>? Transactions { get; set; }
         public List<MonthlyLedger>? MonthlyLedgers { get; set; }    
-        public Stock Stock { get; set; }
 
-        public void Initialize() {
-            Stock stock = new Stock();
+        public void Initialize() {           
             Employee staffEmployee = CreateEmployee();
             Customer customer = CreateCustomer();
             Pet pet = CreatePet("Poodle");
@@ -87,7 +85,6 @@ namespace Session_11
             PetFoods = new List<PetFood>();
             Transactions = new List<Transaction>();
             MonthlyLedgers = new List<MonthlyLedger>();
-            Stock = new Stock();
         }
     }   
 }
