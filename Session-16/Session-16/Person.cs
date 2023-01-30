@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_11 {
+namespace Session_16 {
     public class Person {
         public string Name { get; set; }
         public string Surname { get; set; }
