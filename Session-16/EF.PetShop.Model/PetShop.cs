@@ -15,7 +15,8 @@ namespace Session_16
         public List<Employee>? Employees { get; set; }
         public List<PetFood>? PetFoods { get; set; }
         public List<Transaction>? Transactions { get; set; }
-        public List<MonthlyLedger>? MonthlyLedgers { get; set; }    
+        public List<MonthlyLedger>? MonthlyLedgers { get; set; }   
+        public List<PetReport>? PetReports { get; set; }
 
         public void Initialize() {           
             Employee staffEmployee = CreateEmployee();
