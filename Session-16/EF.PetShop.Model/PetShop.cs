@@ -62,11 +62,13 @@ namespace Session_16
             Transaction transaction = CreateTransaction(employee, customer, pet, petFood, petFoodQty, profit);
             transactions.Add(transaction);
         }
-        public Transaction CreateTransaction(Employee employee, Customer customer, Pet pet, PetFood petFood, double petFoodQty, double profit) {
+        public Transaction CreateTransaction(Employee employee, Customer customer, Pet pet, PetFood petFood, double petFoodQty, double profit)
+        {
 
             double petFoodPrice = (petFood.Cost * petFoodQty) + profit;
 
-            Transaction transaction = new Transaction() { //customerID, employeeID, petID,  petPrice, petFoodID,  petFoodQty,  petFoodPrice,  totalPrice
+            Transaction transaction = new Transaction(pet, customer)
+            { //customerID, employeeID, petID,  petPrice, petFoodID,  petFoodQty,  petFoodPrice,  totalPrice
                 CustomerID = customer.CustomerID,
                 EmployeeID = employee.EmployeeID,
                 PetID = pet.PetID,
@@ -76,7 +78,7 @@ namespace Session_16
                 PetFoodPrice = petFoodPrice
             };
             return transaction;
-        }       
+        }
         public PetShop() {
             Pets = new List<Pet>();
             Customers = new List<Customer>();
