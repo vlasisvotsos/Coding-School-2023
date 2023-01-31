@@ -1,6 +1,4 @@
-﻿//using DevExpress.CodeParser;
-//using DevExpress.XtraRichEdit.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,17 +14,8 @@ namespace Session_16
         public double Expenses { get; set; }
         public double Total { get; set; }        
 
-        public MonthlyLedger(int year, int month, double income, double expenses) {
-            Year = year;    
-            Month = month;  
-            Income = income;    
-            Expenses = expenses;    
-            Total = income - expenses;
-        }
+        public MonthlyLedger() {
 
-        public string ShowMonthlyLedger() {
-            string result = $"Year: {Year} Month: {Month} Income: {Income} Expenses: {Expenses} Total Profit: {Total}";
-            return result;
         }
     }
 }

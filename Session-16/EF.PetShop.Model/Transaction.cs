@@ -20,19 +20,7 @@ namespace Session_16 {
         public double TotalPrice { get; set; }
 
         public Transaction() {
-            TransactionID = Guid.NewGuid();
-        }
-        public Transaction(Guid customerID, Guid employeeID, Guid petID, double petPrice, Guid petFoodID, double petFoodQty, double petFoodPrice, double totalPrice) {
-            TransactionID = Guid.NewGuid();
-            TransactionDate = DateTime.Now;
-            CustomerID = customerID;
-            EmployeeID = employeeID;
-            PetID = petID;
-            PetPrice = petPrice;
-            PetFoodID = petFoodID;
-            PetFoodQty = petFoodQty;
-            PetFoodPrice = petFoodPrice;
-            TotalPrice = totalPrice;
+            TransactionID = Guid.NewGuid();            
         }
     }
 }

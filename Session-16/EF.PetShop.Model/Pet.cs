@@ -35,24 +35,17 @@ namespace Session_16 {
                   
                     case AnimalTypeEnum.Cat:
                     Price = 100;
+                    Cost= 80;
                     break;
                     case AnimalTypeEnum.Dog:
                     Price = 120;
+                    Cost = 100;
                     break;
                     case AnimalTypeEnum.Bird:
                     Price= 200;
+                    Cost= 150;
                     break;
             }
-        }
-
-        public Pet(Guid petID, string breed, AnimalTypeEnum animalType, PetStatusEnum status, double price, double cost)
-        {
-                PetID = petID;
-                Breed = breed;
-                AnimalType = animalType;
-                Status = status;
-                Price = price;
-                Cost = cost;
         }
     }
 }

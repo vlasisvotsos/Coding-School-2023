@@ -11,11 +11,8 @@ namespace Session_16 {
         public AnimalTypeEnum AnimalType { get; set; }
         public int TotalSold { get; set; }
 
-        public PetReport(int year,int month, AnimalTypeEnum animalType, int totalSold) {
-            Year = year;
-            Month = month;
-            AnimalType = animalType;    
-            TotalSold = totalSold;            
+        public PetReport() {
+            
         }
 
         public string ShowPetReport (AnimalTypeEnum animalType, int totalSold) {
@@ -41,7 +38,7 @@ namespace Session_16 {
                             totalSoldDog++;
                             break;                       
                         default:
-                            MessageBox.Show("Invalid Animal Type");
+                            //MessageBox.Show("Invalid Animal Type");
                             break;
                     }
                 }                
