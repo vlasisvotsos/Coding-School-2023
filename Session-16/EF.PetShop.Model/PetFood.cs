@@ -19,8 +19,9 @@ namespace Session_16
         public double Price { get; set; }
         public double Cost { get; set; }
 
-        public PetFood() {
+        public PetFood(Pet pet) {
             PetFoodID= Guid.NewGuid();
+            AnimalType = (AnimalTypeEnum)pet.AnimalType;
             switch (AnimalType)
             {
 

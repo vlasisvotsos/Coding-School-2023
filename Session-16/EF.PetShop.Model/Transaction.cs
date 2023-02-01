@@ -20,11 +20,14 @@ namespace Session_16 {
         public double TotalPrice { get; set; }
 
         public Transaction(Pet pet, Customer customer) {
+            PetFood petFood = new PetFood(pet);
             TransactionID = Guid.NewGuid();            
             TransactionDate = DateTime.Now;
             PetID = pet.PetID;
             CustomerID = customer.CustomerID;
             PetPrice = pet.Price;
+            PetFoodPrice = petFood.Price;
+            TotalPrice = PetPrice + PetFoodPrice;
         }
     }
 }
