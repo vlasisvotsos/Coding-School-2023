@@ -20,3 +20,12 @@ function checkPalidrome(str){
 function myltiply(a,b){
     return a*b;
 }
+/* task 5 */
+function incrementation(str){
+    if(isNaN(str[str.length-1])){
+        str[str.length-1] += 1;
+    }else{
+        str =+1;
+    }
+    return str;
+}
