@@ -1,15 +1,15 @@
 /* task 1 */
-function reversion(str){
+function reversion(str1){
     reversedStr =""
-    for (var i = str.length - 1; i >= 0; i--) {
-        reversedStr += str[i];
+    for (var i = str1.length - 1; i >= 0; i--) {
+        reversedStr += str1[i];
     }
     return reversedStr;
 }
 /* task 2 */
-function checkPalidrome(str){
-    for(let i=0;i<str.length/2;i++){
-        if(str[i]!=str[str.length-i-1]){
+function checkPalidrome(str2){
+    for(let i=0;i<str2.length/2;i++){
+        if(str2[i]!=str2[str2.length-i-1]){
             return false;
         }
     }
@@ -21,11 +21,11 @@ function myltiply(a,b){
     return a*b;
 }
 /* task 5 */
-function incrementation(str){
-    if(isNaN(str[str.length-1])){
-        str[str.length-1] += 1;
+function incrementation(str5){
+    if(isNaN(str5[str5.length-1])){
+        str5[str5.length-1] += 1;
     }else{
-        str =+1;
+        str5 =+1;
     }
-    return str;
+    return str5;
 }
