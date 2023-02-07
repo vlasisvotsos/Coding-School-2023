@@ -15,3 +15,8 @@ function checkPalidrome(str){
     }
     return true;
 }
+/* task 3 */
+/* task 4 */
+function myltiply(a,b){
+    return a*b;
+}
