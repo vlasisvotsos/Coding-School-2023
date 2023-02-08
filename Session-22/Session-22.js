@@ -1,8 +1,9 @@
 /* task 1 */
-function reversion(str1){
-    reversedStr =""
-    for (var i = str1.length - 1; i >= 0; i--) {
-        reversedStr += str1[i];
+var userSentence = document.getElementById("str1");
+function reversion(userSentence){
+    reversedStr ="";
+    for (var i = userSentence.length - 1; i >= 0; i--) {
+        reversedStr += userSentence[i];
     }
     return reversedStr;
 }

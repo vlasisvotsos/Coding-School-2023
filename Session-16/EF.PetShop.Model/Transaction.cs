@@ -24,10 +24,11 @@ namespace Session_16 {
             TransactionID = Guid.NewGuid();            
             TransactionDate = DateTime.Now;
             PetID = pet.PetID;
+            PetFoodID = petFood.PetFoodID;
             CustomerID = customer.CustomerID;
             PetPrice = pet.Price;
             PetFoodPrice = petFood.Price;
-            TotalPrice = PetPrice + PetFoodPrice;
+            TotalPrice = PetPrice + PetFoodPrice*(PetFoodQty -1);
         }
     }
 }
