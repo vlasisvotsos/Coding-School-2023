@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PetShop.Model
+namespace Session_23
 {
     public class MonthlyLedger
     {
