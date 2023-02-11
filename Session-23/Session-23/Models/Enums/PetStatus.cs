@@ -1,4 +1,4 @@
-﻿namespace PetShop.Model.Enums
+﻿namespace Session_23
 {
     public enum PetStatus
     {
