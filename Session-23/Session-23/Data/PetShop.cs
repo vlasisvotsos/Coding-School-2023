@@ -6,10 +6,10 @@ namespace Session_23
     public class PetShop : DbContext
     {
         public DbSet<Pet> Pets { get; set; } = null;
-        public DbSet<Customer> customers { get; set; } = null;
-        public DbSet<Employee> employees { get; set; } = null;
-        public DbSet<MonthlyLedger> monthlyLedger { get; set; } = null;
-        public DbSet<PetFood> petFood { get; set; } = null;
-        public DbSet<Transaction> transaction { get; set; } = null;
+        public DbSet<Customer> Customers { get; set; } = null;
+        public DbSet<Employee> Employees { get; set; } = null;
+        public DbSet<MonthlyLedger> MonthlyLedger { get; set; } = null;
+        public DbSet<PetFood> PetFood { get; set; } = null;
+        public DbSet<Transaction> Transaction { get; set; } = null;
     }
 }
