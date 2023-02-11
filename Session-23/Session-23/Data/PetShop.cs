@@ -11,5 +11,10 @@ namespace Session_23
         public DbSet<MonthlyLedger> MonthlyLedger { get; set; }
         public DbSet<PetFood> PetFood { get; set; }
         public DbSet<Transaction> Transaction { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"localhost");
+        }
     }
 }
