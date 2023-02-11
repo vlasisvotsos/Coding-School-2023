@@ -1,4 +1,6 @@
-﻿namespace Session_23
+﻿using PetShop.Model;
+
+namespace Session_23
 {
     public class Transaction
     {
