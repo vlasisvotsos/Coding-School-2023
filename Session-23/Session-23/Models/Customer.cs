@@ -1,4 +1,6 @@
-﻿namespace PetShop.Model
+﻿using System.Transactions;
+
+namespace PetShop.Model
 {
     public class Customer
     {
