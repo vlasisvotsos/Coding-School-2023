@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PetShop.EF.Migrations
+namespace Session_23
 {
     /// <inheritdoc />
     public partial class Initial : Migration

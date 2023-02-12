@@ -1,4 +1,4 @@
-﻿namespace PetShop.Model
+﻿namespace Session_23
 {
     public class Customer
     {

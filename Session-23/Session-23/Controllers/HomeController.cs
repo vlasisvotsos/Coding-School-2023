@@ -2,7 +2,7 @@
 using Session_23.Models;
 using System.Diagnostics;
 
-namespace Session_23.Controllers
+namespace Session_23
 {
     public class HomeController : Controller
     {

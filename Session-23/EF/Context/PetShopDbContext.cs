@@ -3,7 +3,7 @@
 using PetShop.EF.Configurations;
 using PetShop.Model;
 
-namespace PetShop.EF.Context
+namespace Session_23
 {
     public class PetShopDbContext : DbContext
     {

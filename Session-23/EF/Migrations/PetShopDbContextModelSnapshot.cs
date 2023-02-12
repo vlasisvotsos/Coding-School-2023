@@ -8,7 +8,7 @@ using PetShop.EF.Context;
 
 #nullable disable
 
-namespace PetShop.EF.Migrations
+namespace Session_23
 {
     [DbContext(typeof(PetShopDbContext))]
     partial class PetShopDbContextModelSnapshot : ModelSnapshot

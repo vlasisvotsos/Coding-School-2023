@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 using PetShop.Model;
 
-namespace PetShop.EF.Configurations
+namespace Session_23
 {
     public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
     {
