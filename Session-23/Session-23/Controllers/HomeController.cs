@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Session_23.Models;
 using System.Diagnostics;
 
 namespace Session_23

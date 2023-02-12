@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using PetShop.Model;
-
 namespace Session_23
 {
     public class CustomerConfiguration : IEntityTypeConfiguration<Customer>

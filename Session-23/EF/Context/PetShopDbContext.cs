@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
-using PetShop.EF.Configurations;
-using PetShop.Model;
+using System.Transactions;
 
 namespace Session_23
 {

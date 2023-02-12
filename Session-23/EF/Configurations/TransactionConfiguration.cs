@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-using PetShop.Model;
+using System.Transactions;
 
 namespace Session_23
 {
