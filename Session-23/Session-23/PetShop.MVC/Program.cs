@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PetShop.MVC.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<PetShopMVCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PetShopMVCContext") ?? throw new InvalidOperationException("Connection string 'PetShopMVCContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
