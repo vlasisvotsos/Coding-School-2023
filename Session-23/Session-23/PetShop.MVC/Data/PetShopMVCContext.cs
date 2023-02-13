@@ -15,5 +15,13 @@ namespace PetShop.MVC.Data
         }
 
         public DbSet<PetShop.Model.Customer> Customer { get; set; } = default!;
+
+        public DbSet<PetShop.Model.Employee> Employee { get; set; } = default!;
+
+        public DbSet<PetShop.Model.Pet> Pet { get; set; } = default!;
+
+        public DbSet<PetShop.Model.PetFood> PetFood { get; set; } = default!;
+
+        public DbSet<PetShop.Model.Transaction> Transaction { get; set; } = default!;
     }
 }
