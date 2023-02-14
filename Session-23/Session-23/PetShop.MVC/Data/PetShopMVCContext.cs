@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PetShop.Model;
+using PetShop.MVC.Models;
 
 namespace PetShop.MVC.Data
 {
@@ -14,14 +15,16 @@ namespace PetShop.MVC.Data
         {
         }
 
-        public DbSet<PetShop.Model.Customer> Customer { get; set; } = default!;
+        public DbSet<Customer> Customer { get; set; } = default!;
 
-        public DbSet<PetShop.Model.Employee> Employee { get; set; } = default!;
+        public DbSet<Employee> Employee { get; set; } = default!;
 
-        public DbSet<PetShop.Model.Pet> Pet { get; set; } = default!;
+        public DbSet<Pet> Pet { get; set; } = default!;
 
-        public DbSet<PetShop.Model.PetFood> PetFood { get; set; } = default!;
+        public DbSet<PetFood> PetFood { get; set; } = default!;
 
-        public DbSet<PetShop.Model.Transaction> Transaction { get; set; } = default!;
+        public DbSet<Transaction> Transaction { get; set; } = default!;
+
+        public DbSet<MonthlyLedger> MonthlyLedger { get; set; } = default!;
     }
 }
