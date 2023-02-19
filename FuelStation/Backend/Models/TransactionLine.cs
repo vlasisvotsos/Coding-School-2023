@@ -11,7 +11,7 @@
         public decimal DiscountPercent { get; set; }
         public decimal DiscountValue { get; set; }
         public decimal TotalValue { get; set; }
-        public Transaction transaction { get; set; }
+        public Transaction Transaction { get; set; }
         public Item Item { get; set; }
 
         public TransactionLine()
