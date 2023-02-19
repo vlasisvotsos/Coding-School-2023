@@ -1,4 +1,4 @@
-﻿namespace Backend.Models.Enums
+﻿namespace EF.Model.Enums
 {
     public class EmployeeTypeEnum
     {

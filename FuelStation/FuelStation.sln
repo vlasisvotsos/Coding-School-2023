@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{ABCD0C7A-A551-450C-BAC4-8C70D1D958EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "Backend\Backend.csproj", "{ABCD0C7A-A551-450C-BAC4-8C70D1D958EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm.Server", "BlazorWasm\Server\BlazorWasm.Server.csproj", "{72FFDFF9-EC21-4226-A1A8-D52C84B51766}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasm.Server", "BlazorWasm\Server\BlazorWasm.Server.csproj", "{72FFDFF9-EC21-4226-A1A8-D52C84B51766}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm.Client", "BlazorWasm\Client\BlazorWasm.Client.csproj", "{29979ECB-313C-44E3-81CB-C286033F9D3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasm.Client", "BlazorWasm\Client\BlazorWasm.Client.csproj", "{29979ECB-313C-44E3-81CB-C286033F9D3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm.Shared", "BlazorWasm\Shared\BlazorWasm.Shared.csproj", "{58256F24-C62C-4670-9161-938494C18F08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasm.Shared", "BlazorWasm\Shared\BlazorWasm.Shared.csproj", "{58256F24-C62C-4670-9161-938494C18F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms", "WinForms\WinForms.csproj", "{031374E3-61A3-4AE4-8507-123499A405A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms", "WinForms\WinForms.csproj", "{031374E3-61A3-4AE4-8507-123499A405A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.Model", "EF.Model\EF.Model.csproj", "{9D0DA31E-DB3E-4B36-A4EF-2AA2ADB4C397}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{031374E3-61A3-4AE4-8507-123499A405A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{031374E3-61A3-4AE4-8507-123499A405A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{031374E3-61A3-4AE4-8507-123499A405A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0DA31E-DB3E-4B36-A4EF-2AA2ADB4C397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0DA31E-DB3E-4B36-A4EF-2AA2ADB4C397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0DA31E-DB3E-4B36-A4EF-2AA2ADB4C397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0DA31E-DB3E-4B36-A4EF-2AA2ADB4C397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

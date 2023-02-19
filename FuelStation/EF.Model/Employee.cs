@@ -1,7 +1,9 @@
-﻿using Backend.Models.Enums;
+﻿
 
 
-namespace Backend.Models
+using EF.Model.Enums;
+
+namespace EF.Model
 {
     public class Employee
     {

@@ -1,4 +1,4 @@
-﻿namespace Backend.Models
+﻿namespace EF.Model
 {
     public class TransactionLine
     {
