@@ -11,5 +11,12 @@
         public decimal DiscountPercent { get; set; }
         public decimal DiscountValue { get; set; }
         public decimal TotalValue { get; set; }
+        public Transaction transaction { get; set; }
+        public Item Item { get; set; }
+
+        public TransactionLine()
+        {
+            ID = Guid.NewGuid();
+        }
     }
 }

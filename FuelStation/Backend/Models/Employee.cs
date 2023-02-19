@@ -12,6 +12,7 @@ namespace Backend.Models
         public DateTime HireDateEnd { get;set; }
         public int SallaryPerMonth { get; set; }
         public EmployeeTypeEnum EmployeeType { get; set; }
+        public List<Transaction> TransactionList { get; set; }
 
         public Employee()
         {

@@ -10,6 +10,9 @@ namespace Backend.Models
         public Guid CustomerID { get; set; }
         public PaymentMethodEnum PaymentMethod { get; set; }
         public decimal TotalValue { get; set; }
+        public Employee Employee { get; set; }
+        public Customer Customer { get; set; }
+        public List<TransactionLine> TransactionLineList { get; set; }
 
         public Transaction()
         {
