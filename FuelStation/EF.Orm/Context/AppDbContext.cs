@@ -1,5 +1,6 @@
 ﻿using EF.Model;
 using EF.Orm.Configurations;
+using EF.Orm.ValueGenarator;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace EF.Orm.Context
         {
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             modelBuilder.Entity<Customer>().Property(customer => customer.ID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Customer>().Property(customer => customer.CardNumber).HasValueGenerator<CustomerCardNumberGenerator>();
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
             modelBuilder.Entity<Item>().Property(item => item.ID).ValueGeneratedOnAdd();
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
