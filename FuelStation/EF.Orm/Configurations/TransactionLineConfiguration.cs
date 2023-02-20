@@ -15,6 +15,7 @@ namespace EF.Orm.Configurations
         {
             builder.ToTable("TransactionLines");
             builder.HasKey(transactionLine => transactionLine.ID);
+            builder.Property(transactionLine => transactionLine.ID).ValueGeneratedOnAdd();
         }
     }
 }

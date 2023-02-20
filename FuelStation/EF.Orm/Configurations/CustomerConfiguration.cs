@@ -1,4 +1,5 @@
 ﻿using EF.Model;
+using EF.Orm.ValueGenarator;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -15,8 +16,10 @@ namespace EF.Orm.Configurations
         {
             builder.ToTable("Customers");
             builder.HasKey(customer => customer.ID);
+            builder.Property(customer => customer.ID).ValueGeneratedOnAdd();
             builder.Property(customer => customer.Name).HasMaxLength(50).IsRequired(true);
             builder.Property(customer => customer.Surname).HasMaxLength(50).IsRequired(true);
+            builder.Property(customer => customer.CardNumber).HasValueGenerator<CustomerCardNumberGenerator>();
         }
     }
 }

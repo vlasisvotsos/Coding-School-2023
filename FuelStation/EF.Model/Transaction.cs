@@ -18,7 +18,7 @@ namespace EF.Model
 
         public Transaction()
         {
-            
+            Date= DateTime.Now;
         }
     }
 }

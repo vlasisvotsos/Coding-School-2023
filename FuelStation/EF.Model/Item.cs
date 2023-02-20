@@ -1,6 +1,7 @@
 ﻿
 
 using EF.Model.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace EF.Model
 {
@@ -10,7 +11,9 @@ namespace EF.Model
         public int Code { get; set; }
         public string Description { get; set; }
         public ItemTypeEnum ItemType { get; set; }
+        [Range(0,9999999999)]
         public decimal Price { get; set; }
+        [Range(0, 9999999999)]
         public decimal Cost { get; set; }
         public List<Transaction> TransactionList { get; set; }
 

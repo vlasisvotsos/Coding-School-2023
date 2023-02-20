@@ -1,7 +1,5 @@
-﻿
-
-
-using EF.Model.Enums;
+﻿using EF.Model.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace EF.Model
 {
@@ -12,6 +10,7 @@ namespace EF.Model
         public string Surname { get; set; }
         public DateTime HiretDateStart { get; set; }
         public DateTime HireDateEnd { get;set; }
+        [Range(700,10000)]
         public int SallaryPerMonth { get; set; }
         public EmployeeTypeEnum EmployeeType { get; set; }
         public List<Transaction> TransactionList { get; set; }

@@ -13,8 +13,11 @@ namespace EF.Orm.Configurations
     {
         public void Configure(EntityTypeBuilder<Item> builder)
         {            
-                builder.ToTable("Items");
-                builder.HasKey(item => item.ID);
+            builder.ToTable("Items");
+            builder.HasKey(item => item.ID);
+            builder.Property(item => item.ID).ValueGeneratedOnAdd();
+            builder.Property(item => item.Price).HasPrecision(12, 2);
+            builder.Property(item => item.Cost).HasPrecision(12, 2);
         }
     }
 }

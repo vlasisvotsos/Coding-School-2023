@@ -15,8 +15,11 @@ namespace EF.Orm.Configurations
         {
             builder.ToTable("Employees");
             builder.HasKey(employee => employee.ID);
+            builder.Property(employee => employee.ID).ValueGeneratedOnAdd();
+            builder.Property(employee => employee.HiretDateStart).IsRequired(true);
             builder.Property(employee => employee.Name).HasMaxLength(50).IsRequired(true);
             builder.Property(employee => employee.Surname).HasMaxLength(50).IsRequired(true);
+            builder.Property(employee => employee.SallaryPerMonth).IsRequired(true);
         }
     }
 }
