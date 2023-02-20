@@ -6,10 +6,10 @@ namespace EF.Model
 {
     public class Transaction
     {
-        public Guid ID { get; set; }
+        public int ID { get; set; }
         public DateTime Date { get; set; }
-        public Guid EmployeeID { get; set; }
-        public Guid CustomerID { get; set; }
+        public int EmployeeID { get; set; }
+        public int CustomerID { get; set; }
         public PaymentMethodEnum PaymentMethod { get; set; }
         public decimal TotalValue { get; set; }
         public Employee Employee { get; set; }
@@ -18,7 +18,7 @@ namespace EF.Model
 
         public Transaction()
         {
-            ID = Guid.NewGuid();
+            
         }
     }
 }

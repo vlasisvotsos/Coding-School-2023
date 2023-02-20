@@ -2,9 +2,9 @@
 {
     public class TransactionLine
     {
-        public Guid ID { get; set; }
-        public Guid TransactionID { get; set; }
-        public Guid ItemID { get; set; }
+        public int ID { get; set; }
+        public int TransactionID { get; set; }
+        public int ItemID { get; set; }
         public int Quantity { get; set; }
         public decimal ItemPrice { get; set; }
         public decimal NetValue { get; set; }
@@ -16,7 +16,7 @@
 
         public TransactionLine()
         {
-            ID = Guid.NewGuid();
+            
         }
     }
 }

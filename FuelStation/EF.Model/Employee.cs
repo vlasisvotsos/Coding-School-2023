@@ -7,7 +7,7 @@ namespace EF.Model
 {
     public class Employee
     {
-        public Guid ID { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime HiretDateStart { get; set; }
@@ -18,7 +18,7 @@ namespace EF.Model
 
         public Employee()
         {
-            ID = Guid.NewGuid();
+           
             HiretDateStart = DateTime.Now;
         }
     }

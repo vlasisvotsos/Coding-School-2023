@@ -8,6 +8,6 @@ namespace EF.Model
 {
     public interface IEntityBase
     {
-        Guid ID { get; set; }
+        int ID { get; set; }
     }
 }

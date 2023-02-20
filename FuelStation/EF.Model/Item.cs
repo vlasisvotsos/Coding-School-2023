@@ -6,7 +6,7 @@ namespace EF.Model
 {
     public class Item
     {
-        public Guid ID { get; set; }
+        public int ID { get; set; }
         public int Code { get; set; }
         public string Description { get; set; }
         public ItemTypeEnum ItemType { get; set; }
@@ -16,7 +16,7 @@ namespace EF.Model
 
         public Item()
         {
-            ID = Guid.NewGuid();
+            
         }
 
     }
