@@ -14,6 +14,7 @@ namespace EF.Orm.Configurations
         public void Configure(EntityTypeBuilder<Ledger> builder)
         {
             builder.ToTable("Ledgers");
+            builder.HasKey(o => new {o.Year,o.Month });
         }
     }
 }
