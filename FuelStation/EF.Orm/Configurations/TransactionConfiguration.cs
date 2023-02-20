@@ -16,6 +16,10 @@ namespace EF.Orm.Configurations
             builder.ToTable("Transactions");
             builder.HasKey(transaction => transaction.ID);
             builder.Property(transaction => transaction.ID).ValueGeneratedOnAdd();
+            builder.HasOne(employee => employee.Employee)
+            .WithMany(transactions => transactions.TransactionList);
+            builder.HasOne(customer => customer.Customer)
+            .WithMany(transactions => transactions.TransactionList);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace EF.Model
         public decimal Price { get; set; }
         [Range(0, 9999999999)]
         public decimal Cost { get; set; }
-        public List<Transaction> TransactionList { get; set; }
+        public Transaction Transaction { get; set; }
 
         public Item()
         {

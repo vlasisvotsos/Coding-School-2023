@@ -15,6 +15,7 @@ namespace EF.Model
         public Employee Employee { get; set; }
         public Customer Customer { get; set; }
         public List<TransactionLine> TransactionLineList { get; set; }
+        public List<Item> ItemList { get; set; }
 
         public Transaction()
         {
