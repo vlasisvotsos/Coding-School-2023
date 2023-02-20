@@ -25,9 +25,4 @@
     <ProjectReference Include="..\Shared\BlazorWasm.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Cashier\" />
-    <Folder Include="Pages\Staff\" />
-  </ItemGroup>
-
 </Project>
