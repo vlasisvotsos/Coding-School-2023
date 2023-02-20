@@ -21,10 +21,15 @@ namespace EF.Orm.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.Entity<Customer>().Property(customer => customer.ID).ValueGeneratedOnAdd();
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
+            modelBuilder.Entity<Item>().Property(item => item.ID).ValueGeneratedOnAdd();
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+            modelBuilder.Entity<Employee>().Property(employee => employee.ID).ValueGeneratedOnAdd();
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            modelBuilder.Entity<Transaction>().Property(transaction => transaction.ID).ValueGeneratedOnAdd();
             modelBuilder.ApplyConfiguration(new TransactionLineConfiguration());
+            modelBuilder.Entity<TransactionLine>().Property(transactionLine => transactionLine.ID).ValueGeneratedOnAdd();
             modelBuilder.ApplyConfiguration(new LedgerConfiguration());
             base.OnModelCreating(modelBuilder);
         }
