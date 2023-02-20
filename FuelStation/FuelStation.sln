@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasm.Shared", "Blazor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms", "WinForms\WinForms.csproj", "{031374E3-61A3-4AE4-8507-123499A405A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.Model", "EF.Model\EF.Model.csproj", "{9D0DA31E-DB3E-4B36-A4EF-2AA2ADB4C397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.Model", "EF.Model\EF.Model.csproj", "{9D0DA31E-DB3E-4B36-A4EF-2AA2ADB4C397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.Orm", "EF.Orm\EF.Orm.csproj", "{BFCA95E6-6083-4D25-B9C4-DECCC5DEA1D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.Orm", "EF.Orm\EF.Orm.csproj", "{BFCA95E6-6083-4D25-B9C4-DECCC5DEA1D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
