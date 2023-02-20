@@ -17,7 +17,8 @@ namespace EF.Orm.Configurations
             builder.HasKey(transactionLine => transactionLine.ID);
             builder.Property(transactionLine => transactionLine.ID).ValueGeneratedOnAdd();
             builder.HasOne(transaction => transaction.Transaction)
-            .WithMany(transactionLine => transactionLine.TransactionLineList);
+            .WithMany(transactionLine => transactionLine.TransactionLineList)
+            .HasForeignKey(transaction => transaction.TransactionID);
             
         }
     }
