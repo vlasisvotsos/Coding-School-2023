@@ -13,15 +13,42 @@
             <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
-            <NavLink class="nav-link" href="/StaffTab" >
-                <span class="oi oi-home" aria-hidden="true"></span> Staff Tab
+            <NavLink class="nav-link" href="/StaffTab" @onclick="()=>expandSubNav1 = !expandSubNav1">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Staff
             </NavLink>
-            <NavLink class="nav-link" href="/CashierTab" >
-                <span class="oi oi-home" aria-hidden="true"></span> Cashier Tab
+        @if (expandSubNav1)
+        {
+                <NavLink class="expand-menu" href="/staffTab/items">
+                <span>Items</span>
+            </NavLink>            
+        }
+            <NavLink class="nav-link" href="/cashierTab" @onclick="()=>expandSubNav2 = !expandSubNav2">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Cashier
             </NavLink>
-            <NavLink class="nav-link" href="/ManagerTab" >
-                <span class="oi oi-home" aria-hidden="true"></span> Manager Tab
+        @if (expandSubNav2)
+        {
+                <NavLink class="expand-menu" href="/cashierTab/customers">
+                <span>Customers</span>
+            </NavLink>            
+        }
+            <NavLink class="nav-link" href="/managerTab" @onclick="()=>expandSubNav3 = !expandSubNav3">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Manager
             </NavLink>
+        @if (expandSubNav3)
+        {
+                <NavLink class="expand-menu" href="/managerTab/customers">
+                <span>Customers</span>
+            </NavLink>
+                <NavLink class="expand-menu" href="/managerTab/employees">
+                <span>Employees</span>
+            </NavLink>
+                <NavLink class="expand-menu" href="/managerTab/items">
+                <span>Items</span>
+            </NavLink>
+                <NavLink class="expand-menu" href="/managerTab/ledger">
+                <span>Ledger</span>
+            </NavLink>
+            }            
         </div>
       
     </nav>
@@ -29,6 +56,9 @@
 
 @code {
     private bool collapseNavMenu = true;
+    private bool expandSubNav1;
+    private bool expandSubNav2;
+    private bool expandSubNav3;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
