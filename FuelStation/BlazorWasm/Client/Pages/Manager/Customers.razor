@@ -1,9 +1,49 @@
 ﻿@page "/managerTab/customers"
 
+
 <PageTitle>Customers</PageTitle>
 
 <h3>Customers</h3>
 
+<table>
+    <tr>
+        <th>
+            Card Number:
+        </th>
+        <th>
+            Name:
+        </th>
+        <th>
+            Surname:
+        </th>
+        <th>
+            Action:
+        </th>
+    </tr>
+    @foreach (CustomerDto customerDto in customers)
+    {
+        <tr>
+            <th>
+                <input type="text" placeholder="Card Number" @bind="customerDto.CardNumber" />
+            </th>
+            <th>
+                <input type="text" placeholder="Name" @bind="customerDto.Name" />
+            </th>
+            <th>
+                <input type="text" placeholder="Surname" @bind="customerDto.Surname" />
+            </th>
+            <th>
+                @*<button class="btn btn-primary" @onclick="()=> EditCustomer(customerDto)">Edit</button>
+            <button class="btn btn-danger" @onclick="()=> DeleteCustomer(customerDto)">Delete</button>*@
+            </th>
+        </tr>
+    }
+</table>
+
 @code {
+
+    List<CustomerDto> customers = new List<CustomerDto>();
+
+}
 
 }

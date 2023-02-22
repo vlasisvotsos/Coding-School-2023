@@ -1,8 +1,62 @@
 ﻿@page "/managerTab/employees"
 
+
 <PageTitle>Employees</PageTitle>
 <h3>Employees</h3>
 
-@code {
+<table>
+    <tr>
+        <th>
+            Name:
+        </th>
+        <th>
+            Surname:
+        </th>
+        <th>
+            Hire Date Start:
+        </th>
+        <th>
+            Hire Date End:
+        </th>
+        <th>
+            Sallary Per Month:
+        </th>
+        <th>
+            Employee Type:
+        </th>
+        <th>
+            Action:
+        </th>
+    </tr>
+    @foreach (EmployeesDto employeesDto in employees)
+    {
+            <tr>
+                <th>
+                    <input type="text" placeholder="Name" @bind="employeesDto.Name" />
+                </th>
+                <th>
+                    <input type="text" placeholder="Surname" @bind="employeesDto.Surname" />
+                </th>
+                <th>
+                    <input type="text" placeholder="Hire Date Start" @bind="employeesDto.HiretDateStart" />
+                </th>
+                <th>
+                    <input type="text" placeholder="Hire Date End" @bind="employeesDto.HireDateEnd" />
+                </th>
+                <th>
+                <input type="text" placeholder="Sallary Per Month" @bind="employeesDto.SallaryPerMonth" />
+                </th>
+                <th>
+                <input type="text" placeholder=" Employee Type" @bind="employeesDto.EmployeeType" />
+                </th>
+                <th>
+                @*<button class="btn btn-primary" @onclick="()=> EditCustomer(customerDto)">Edit</button>
+            <button class="btn btn-danger" @onclick="()=> DeleteCustomer(customerDto)">Delete</button>*@
+                </th>
+            </tr>
+    }
+</table>
 
+@code {
+    List<EmployeesDto> employees = new List<EmployeesDto>();
 }

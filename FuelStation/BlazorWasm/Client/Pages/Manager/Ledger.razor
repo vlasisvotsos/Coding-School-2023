@@ -3,6 +3,46 @@
 <PageTitle>Ledger</PageTitle>
 <h3>Ledger</h3>
 
-@code {
+<table>
+    <tr>
+        <th>
+            Year:
+        </th>
+        <th>
+            Month:
+        </th>
+        <th>
+            Income:
+        </th>
+        <th>
+            Expenses:
+        </th>
+        <th>
+            Total:
+        </th>
+    </tr>
+    @foreach (LedgerDto ledgerDto in ledgerDtos)
+    {
+            <tr>
+                <th>
+                <input type="text" placeholder="Year" @bind="ledgerDto.Year" />
+                </th>
+                <th>
+                <input type="text" placeholder="Month" @bind="ledgerDto.Month" />
+                </th>
+                <th>
+                <input type="text" placeholder="Income" @bind="ledgerDto.Income" />
+                </th>
+                <th>
+                <input type="text" placeholder="Expenses" @bind="ledgerDto.Expenses" />
+                </th>
+                <th>
+                <input type="text" placeholder="Total" @bind="ledgerDto.Total" />
+                </th>               
+            </tr>
+    }
+</table>
 
+@code {
+    List<LedgerDto> ledgerDtos = new List<LedgerDto>();
 }
