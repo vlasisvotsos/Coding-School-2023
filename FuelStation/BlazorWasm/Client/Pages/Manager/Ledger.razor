@@ -1,9 +1,38 @@
 ﻿@page "/managerTab/ledger"
 
+<style>
+    #ledger {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #ledger td, #ledger th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #ledger tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #ledger tr:hover {
+            background-color: #ddd;
+        }
+
+        #ledger th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+</style>
+
 <PageTitle>Ledger</PageTitle>
 <h3>Ledger</h3>
 
-<table>
+<table id="ledger">
     <tr>
         <th>
             Year:
