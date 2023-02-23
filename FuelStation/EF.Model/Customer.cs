@@ -8,9 +8,10 @@
         public string CardNumber { get; set; }
         public List<Transaction> TransactionList { get; set; }
 
-        public Customer()
+        public Customer(string name)
         {
-            
+            Name = name;
+            TransactionList = new List<Transaction>();
         }
     }
 }

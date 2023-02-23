@@ -1,5 +1,6 @@
 ﻿using BlazorWasm.Client.Pages.Customer;
 using BlazorWasm.Shared.Customer;
+using EF.Model;
 using EF.Orm.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,23 +29,34 @@ namespace BlazorWasm.Server.Controllers
             });
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<CustomerEditDto> GetById(int id)
-        //{
-        //    var result = _customerRepo.GetById(id);
-        //    return new CustomerEditDto
-        //    {
-        //        Id = id,
-        //        Title = result.Title,
-        //        TodoType = result.TodoType,
-        //        Finished = result.Finished,
-        //        Comments = result.Comments.Select(comment => new TodoEditCommentDto
-        //        {
-        //            Id = comment.Id,
-        //            Text = comment.Text
-        //        }).ToList()
-        //    };
-        //}
+        [HttpGet("{id}")]
+        public async Task<CustomerEditDto> GetById(int id)
+        {
+            var result = _customerRepo.GetById(id);
+            return new CustomerEditDto
+            {
+                ID = id,
+                Name = result.Name,
+                Surname = result.Surname,
+                CardNumber = result.CardNumber
+            };            
+        }
+
+        [HttpPost]
+        public async Task Post(CustomerEditDto customer)
+        {
+            var newCustomer = new Customer(customer.Name);
+            newCustomer.Surname = customer.Surname;
+            _customerRepo.Add(newCustomer);
+        }
+        [HttpPut]
+        public async Task Put(CustomerEditDto customer)
+        {
+            var customerToUpdate = _customerRepo.GetById(customer.ID);
+            customerToUpdate.Name = customer.Name;
+            customerToUpdate.Surname=customer.Surname;
+            _customerRepo.Update(customer.ID,customerToUpdate);
+        }
 
     }
 }

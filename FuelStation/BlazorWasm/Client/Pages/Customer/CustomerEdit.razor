@@ -1,6 +1,54 @@
 ﻿@page "/customers/customeredit/{Id:int?}"
+@inject HttpClient httpClient;
+@inject NavigationManager navigationManager;
+@using BlazorWasm.Shared.Customer;
+
+
 <h3>CustomerEdit</h3>
 
+<label>Name</label>
+<input type="text" placeholder="Name" @bind="Customer.Name"/>
+<label>Surname</label>
+<input type="text" placeholder="Surname" @bind="Customer.Surname"/>
+
+<button>Save</button>
+<button onclick="onCancel()">Cancel</button>
+
+
 @code {
+    [Parameter] public int? Id { get; set; }
+    CustomerEditDto Customer { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(Id == null)
+        {
+            Customer = new();
+        }
+        else
+        {
+            Customer = await httpClient.GetFromJsonAsync<CustomerEditDto>($"Customer/{Id}");
+        }
+    }
+
+    private void OnCancel()
+    {
+        navigationManager.NavigateTo("Customer");
+    }
+
+    private async Task OnSave()
+    {
+        HttpResponseMessage? responce = null;
+        if(Id == null)
+        {
+             responce = await httpClient.PostAsJsonAsync("customer",Customer);
+        }
+        else
+        {
+             responce = await httpClient.PutAsJsonAsync("Customer", Customer);
+        }
+        responce.EnsureSuccessStatusCode();
+        navigationManager.NavigateTo("Customer");
+    }
 
 }
