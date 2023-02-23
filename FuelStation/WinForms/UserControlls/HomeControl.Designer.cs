@@ -34,7 +34,7 @@
             // 
             // textBox1
             // 
-            textBox1.Dock = DockStyle.Fill;
+            textBox1.Dock = DockStyle.Top;
             textBox1.Location = new Point(0, 0);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(1716, 35);
@@ -45,7 +45,7 @@
             // 
             label1.AutoSize = true;
             label1.Dock = DockStyle.Top;
-            label1.Location = new Point(0, 0);
+            label1.Location = new Point(0, 35);
             label1.Name = "label1";
             label1.Size = new Size(107, 30);
             label1.TabIndex = 1;

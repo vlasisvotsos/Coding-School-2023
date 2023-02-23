@@ -41,8 +41,8 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.Controls.Add(tableLayoutPanel1);
+            panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(369, 1252);
@@ -113,7 +113,7 @@
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(372, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(2284, 1252);

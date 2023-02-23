@@ -66,9 +66,9 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(3, 0);
+            label1.Dock = DockStyle.Top;
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(134, 30);
             label1.TabIndex = 0;

@@ -58,10 +58,10 @@
             // 
             // dataGridView2
             // 
-            dataGridView2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Date, EmployeeID, CustomerID, PaymentMethod, TotalValue });
-            dataGridView2.Location = new Point(84, 546);
+            dataGridView2.Location = new Point(0, 533);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 72;
             dataGridView2.RowTemplate.Height = 37;
@@ -70,47 +70,47 @@
             // 
             // Date
             // 
+            Date.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Date.HeaderText = "Date:";
             Date.MinimumWidth = 9;
             Date.Name = "Date";
-            Date.Width = 175;
             // 
             // EmployeeID
             // 
+            EmployeeID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeID.HeaderText = "Employee ID:";
             EmployeeID.MinimumWidth = 9;
             EmployeeID.Name = "EmployeeID";
-            EmployeeID.Width = 175;
             // 
             // CustomerID
             // 
+            CustomerID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             CustomerID.HeaderText = "Customer ID:";
             CustomerID.MinimumWidth = 9;
             CustomerID.Name = "CustomerID";
-            CustomerID.Width = 175;
             // 
             // PaymentMethod
             // 
+            PaymentMethod.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             PaymentMethod.HeaderText = "Payment Method:";
             PaymentMethod.MinimumWidth = 9;
             PaymentMethod.Name = "PaymentMethod";
             PaymentMethod.Resizable = DataGridViewTriState.True;
             PaymentMethod.SortMode = DataGridViewColumnSortMode.Automatic;
-            PaymentMethod.Width = 175;
             // 
             // TotalValue
             // 
+            TotalValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             TotalValue.HeaderText = "Total Value:";
             TotalValue.MinimumWidth = 9;
             TotalValue.Name = "TotalValue";
-            TotalValue.Width = 175;
             // 
             // dataGridView3
             // 
             dataGridView3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { TransactionID, ItemID, Quantity, ItemPrice, NetValue, DiscountPercent, DiscountValue, dataGridViewTextBoxColumn1 });
-            dataGridView3.Location = new Point(84, 991);
+            dataGridView3.Location = new Point(0, 1093);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RightToLeft = RightToLeft.No;
             dataGridView3.RowHeadersWidth = 72;
@@ -122,64 +122,65 @@
             // 
             // TransactionID
             // 
+            TransactionID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             TransactionID.HeaderText = "Transaction ID:";
             TransactionID.MinimumWidth = 9;
             TransactionID.Name = "TransactionID";
-            TransactionID.Width = 175;
             // 
             // ItemID
             // 
+            ItemID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ItemID.HeaderText = "Item ID:";
             ItemID.MinimumWidth = 9;
             ItemID.Name = "ItemID";
-            ItemID.Width = 175;
             // 
             // Quantity
             // 
+            Quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Quantity.HeaderText = "Quantity";
             Quantity.MinimumWidth = 9;
             Quantity.Name = "Quantity";
-            Quantity.Width = 175;
             // 
             // ItemPrice
             // 
+            ItemPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ItemPrice.HeaderText = "Item Price:";
             ItemPrice.MinimumWidth = 9;
             ItemPrice.Name = "ItemPrice";
-            ItemPrice.Width = 175;
             // 
             // NetValue
             // 
+            NetValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             NetValue.HeaderText = "Net Value:";
             NetValue.MinimumWidth = 9;
             NetValue.Name = "NetValue";
-            NetValue.Width = 175;
             // 
             // DiscountPercent
             // 
+            DiscountPercent.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DiscountPercent.HeaderText = "Discount Percent:";
             DiscountPercent.MinimumWidth = 9;
             DiscountPercent.Name = "DiscountPercent";
-            DiscountPercent.Width = 175;
             // 
             // DiscountValue
             // 
+            DiscountValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DiscountValue.HeaderText = "Discount Value:";
             DiscountValue.MinimumWidth = 9;
             DiscountValue.Name = "DiscountValue";
-            DiscountValue.Width = 175;
             // 
             // dataGridViewTextBoxColumn1
             // 
+            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewTextBoxColumn1.HeaderText = "Total Value:";
             dataGridViewTextBoxColumn1.MinimumWidth = 9;
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 175;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(84, 97);
+            label1.Location = new Point(8, 50);
             label1.Name = "label1";
             label1.Size = new Size(111, 30);
             label1.TabIndex = 3;
@@ -187,8 +188,9 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(84, 513);
+            label2.Location = new Point(0, 500);
             label2.Name = "label2";
             label2.Size = new Size(127, 30);
             label2.TabIndex = 4;
@@ -196,8 +198,9 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(84, 958);
+            label3.Location = new Point(0, 1060);
             label3.Name = "label3";
             label3.Size = new Size(171, 30);
             label3.TabIndex = 5;
@@ -206,7 +209,8 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(84, 19);
+            label4.Dock = DockStyle.Top;
+            label4.Location = new Point(0, 0);
             label4.Name = "label4";
             label4.Size = new Size(119, 30);
             label4.TabIndex = 6;
@@ -214,9 +218,10 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name, surname, cardNumber });
-            dataGridView1.Location = new Point(84, 139);
+            dataGridView1.Location = new Point(0, 83);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             dataGridView1.RowTemplate.Height = 37;
@@ -225,24 +230,24 @@
             // 
             // name
             // 
+            name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             name.HeaderText = "Name:";
             name.MinimumWidth = 9;
             name.Name = "name";
-            name.Width = 175;
             // 
             // surname
             // 
+            surname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             surname.HeaderText = "Surname:";
             surname.MinimumWidth = 9;
             surname.Name = "surname";
-            surname.Width = 175;
             // 
             // cardNumber
             // 
+            cardNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cardNumber.HeaderText = "CardNumber:";
             cardNumber.MinimumWidth = 9;
             cardNumber.Name = "cardNumber";
-            cardNumber.Width = 175;
             // 
             // CashierControl
             // 
@@ -267,6 +272,11 @@
         #endregion
         private DataGridView dataGridView2;
         private DataGridView dataGridView3;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Date;
         private DataGridViewTextBoxColumn EmployeeID;
         private DataGridViewTextBoxColumn CustomerID;
@@ -280,11 +290,6 @@
         private DataGridViewTextBoxColumn DiscountPercent;
         private DataGridViewTextBoxColumn DiscountValue;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn surname;
         private DataGridViewTextBoxColumn cardNumber;
