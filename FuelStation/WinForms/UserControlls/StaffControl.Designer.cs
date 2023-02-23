@@ -42,7 +42,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(103, 25);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(93, 30);
             label1.TabIndex = 0;
@@ -50,8 +50,9 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(103, 126);
+            label2.Location = new Point(264, 209);
             label2.Name = "label2";
             label2.Size = new Size(64, 30);
             label2.TabIndex = 1;
@@ -59,53 +60,54 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Code, Description, ItemType, Price, Cost });
-            dataGridView1.Location = new Point(103, 159);
+            dataGridView1.Location = new Point(264, 242);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             dataGridView1.RowTemplate.Height = 37;
-            dataGridView1.Size = new Size(1527, 618);
+            dataGridView1.Size = new Size(2065, 823);
             dataGridView1.TabIndex = 2;
             // 
             // Code
             // 
+            Code.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Code.HeaderText = "Code:";
             Code.MinimumWidth = 9;
             Code.Name = "Code";
-            Code.Width = 175;
             // 
             // Description
             // 
+            Description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Description.HeaderText = "Description:";
             Description.MinimumWidth = 9;
             Description.Name = "Description";
-            Description.Width = 175;
             // 
             // ItemType
             // 
+            ItemType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ItemType.HeaderText = "Item Type:";
             ItemType.MinimumWidth = 9;
             ItemType.Name = "ItemType";
-            ItemType.Width = 175;
             // 
             // Price
             // 
+            Price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Price.HeaderText = "Price:";
             Price.MinimumWidth = 9;
             Price.Name = "Price";
             Price.Resizable = DataGridViewTriState.True;
             Price.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Price.Width = 175;
             // 
             // Cost
             // 
+            Cost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Cost.HeaderText = "Cost:";
             Cost.MinimumWidth = 9;
             Cost.Name = "Cost";
             Cost.Resizable = DataGridViewTriState.True;
             Cost.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Cost.Width = 175;
             // 
             // StaffControl
             // 
