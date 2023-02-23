@@ -28,18 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(270, 421);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(175, 35);
+            textBox1.TabIndex = 0;
+            textBox1.Text = "Text";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(126, 100);
+            label1.Name = "label1";
+            label1.Size = new Size(107, 30);
+            label1.TabIndex = 1;
+            label1.Text = "Home Tab";
             // 
             // HomeControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "HomeControl";
-            this.Size = new System.Drawing.Size(1716, 1072);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
+            Controls.Add(textBox1);
+            Name = "HomeControl";
+            Size = new Size(1716, 1072);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBox1;
+        private Label label1;
     }
 }
