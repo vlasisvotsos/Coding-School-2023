@@ -28,107 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Homebtn = new System.Windows.Forms.Button();
-            this.Staffbtn = new System.Windows.Forms.Button();
-            this.Cashierbtn = new System.Windows.Forms.Button();
-            this.Managerbtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            Homebtn = new Button();
+            Staffbtn = new Button();
+            Cashierbtn = new Button();
+            Managerbtn = new Button();
+            panel2 = new Panel();
+            panel1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 1252);
-            this.panel1.TabIndex = 0;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            panel1.Controls.Add(tableLayoutPanel1);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(369, 1252);
+            panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.Homebtn, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Staffbtn, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Cashierbtn, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Managerbtn, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 692);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(Homebtn, 0, 0);
+            tableLayoutPanel1.Controls.Add(Staffbtn, 0, 1);
+            tableLayoutPanel1.Controls.Add(Cashierbtn, 0, 2);
+            tableLayoutPanel1.Controls.Add(Managerbtn, 0, 3);
+            tableLayoutPanel1.Dock = DockStyle.Top;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.Size = new Size(369, 692);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // Homebtn
             // 
-            this.Homebtn.Location = new System.Drawing.Point(3, 3);
-            this.Homebtn.Name = "Homebtn";
-            this.Homebtn.Size = new System.Drawing.Size(363, 167);
-            this.Homebtn.TabIndex = 0;
-            this.Homebtn.Text = "Home";
-            this.Homebtn.UseVisualStyleBackColor = true;
-            this.Homebtn.Click += new System.EventHandler(this.Homebtn_Click);
+            Homebtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Homebtn.Location = new Point(3, 3);
+            Homebtn.Name = "Homebtn";
+            Homebtn.Size = new Size(363, 167);
+            Homebtn.TabIndex = 0;
+            Homebtn.Text = "Home";
+            Homebtn.UseVisualStyleBackColor = true;
+            Homebtn.Click += Homebtn_Click;
             // 
             // Staffbtn
             // 
-            this.Staffbtn.Location = new System.Drawing.Point(3, 176);
-            this.Staffbtn.Name = "Staffbtn";
-            this.Staffbtn.Size = new System.Drawing.Size(363, 167);
-            this.Staffbtn.TabIndex = 1;
-            this.Staffbtn.Text = "Staff";
-            this.Staffbtn.UseVisualStyleBackColor = true;
-            this.Staffbtn.Click += new System.EventHandler(this.Staffbtn_Click);
+            Staffbtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Staffbtn.Location = new Point(3, 176);
+            Staffbtn.Name = "Staffbtn";
+            Staffbtn.Size = new Size(363, 167);
+            Staffbtn.TabIndex = 1;
+            Staffbtn.Text = "Staff";
+            Staffbtn.UseVisualStyleBackColor = true;
+            Staffbtn.Click += Staffbtn_Click;
             // 
             // Cashierbtn
             // 
-            this.Cashierbtn.Location = new System.Drawing.Point(3, 349);
-            this.Cashierbtn.Name = "Cashierbtn";
-            this.Cashierbtn.Size = new System.Drawing.Size(363, 167);
-            this.Cashierbtn.TabIndex = 2;
-            this.Cashierbtn.Text = "Cashier";
-            this.Cashierbtn.UseVisualStyleBackColor = true;
-            this.Cashierbtn.Click += new System.EventHandler(this.Cashierbtn_Click);
+            Cashierbtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Cashierbtn.Location = new Point(3, 349);
+            Cashierbtn.Name = "Cashierbtn";
+            Cashierbtn.Size = new Size(363, 167);
+            Cashierbtn.TabIndex = 2;
+            Cashierbtn.Text = "Cashier";
+            Cashierbtn.UseVisualStyleBackColor = true;
+            Cashierbtn.Click += Cashierbtn_Click;
             // 
             // Managerbtn
             // 
-            this.Managerbtn.Location = new System.Drawing.Point(3, 522);
-            this.Managerbtn.Name = "Managerbtn";
-            this.Managerbtn.Size = new System.Drawing.Size(363, 167);
-            this.Managerbtn.TabIndex = 3;
-            this.Managerbtn.Text = "Manager";
-            this.Managerbtn.UseVisualStyleBackColor = true;
-            this.Managerbtn.Click += new System.EventHandler(this.Managerbtn_Click);
+            Managerbtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Managerbtn.Location = new Point(3, 522);
+            Managerbtn.Name = "Managerbtn";
+            Managerbtn.Size = new Size(363, 167);
+            Managerbtn.TabIndex = 3;
+            Managerbtn.Text = "Manager";
+            Managerbtn.UseVisualStyleBackColor = true;
+            Managerbtn.Click += Managerbtn_Click;
             // 
             // panel2
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(2306, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(350, 1252);
-            this.panel2.TabIndex = 1;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel2.Location = new Point(372, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(2284, 1252);
+            panel2.TabIndex = 1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2656, 1252);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(2656, 1252);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion

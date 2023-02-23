@@ -30,7 +30,7 @@ namespace WinForms
                 new CashierControl(),
                 new ManagerControl()
             };
-            navigationControl = new NavigationControl(userControls,panel2);
+            navigationControl = new NavigationControl(userControls, panel2);
             navigationControl.Display(0);
         }
         private void InitializeNavigationButton()
