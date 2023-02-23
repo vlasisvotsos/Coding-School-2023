@@ -1,4 +1,8 @@
 ﻿@page "/customers"
+@using BlazorWasm.Shared.Customer;
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
 
 <style>
     #customers {
@@ -33,6 +37,13 @@
 
 <h3>Customers</h3>
 
+
+@if (isLoading)
+{
+    <p>The Page Is Loading ...</p>
+}
+else
+{
 <table id="customers">
     <tr>
         <th>
@@ -61,15 +72,55 @@
                 <input type="text" placeholder="Surname" @bind="customerDto.Surname" />
             </th>
             <th>
-                @*<button class="btn btn-primary" @onclick="()=> EditCustomer(customerDto)">Edit</button>
-            <button class="btn btn-danger" @onclick="()=> DeleteCustomer(customerDto)">Delete</button>*@
+                <button class="btn btn-primary" @onclick="()=> EditCustomer(customerDto)">Edit</button>
+                <button class="btn btn-danger" @onclick="()=> DeleteCustomer(customerDto)">Delete</button>
             </th>
         </tr>
     }
 </table>
+}
 
 @code {
-
+    bool isLoading = true;
+    string errorMessage = null;
     List<CustomerDto> customers = new List<CustomerDto>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadItemsFromServer();
+        isLoading = false;
+    }
+    
+    private async Task LoadItemsFromServer()
+    {
+        customers = await httpClient.GetFromJsonAsync<List<CustomerDto>>("customer");
+    }
+
+    private void CreateItem()
+    {
+        navigationManager.NavigateTo("/customers/customeredit");
+    }
+
+    private void EditCustomer(CustomerDto customer)
+    {
+        navigationManager.NavigateTo($"customers/customeredit/{customer.ID}");
+    }
+
+    private async Task DeleteCustomer(CustomerDto customer)
+    {
+        errorMessage = null;
+        var confirm = await jsRuntime.InvokeAsync<bool>("confirm", "Delete Customer. Are you sure?");
+        if (confirm)
+        {
+            var response = await httpClient.DeleteAsync($"customer/{customer.ID}");
+            if (response.IsSuccessStatusCode)
+            {
+                await LoadItemsFromServer();
+            }
+            else
+            {
+                errorMessage = await response.Content.ReadAsStringAsync();
+            }
+        }
+    }
 }

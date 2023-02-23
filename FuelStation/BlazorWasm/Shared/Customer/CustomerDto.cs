@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorWasm.Shared
+namespace BlazorWasm.Shared.Customer
 {
     public class CustomerDto
     {

@@ -1,4 +1,5 @@
-﻿using BlazorWasm.Shared;
+﻿using BlazorWasm.Client.Pages.Customer;
+using BlazorWasm.Shared.Customer;
 using EF.Orm.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,5 +27,24 @@ namespace BlazorWasm.Server.Controllers
                 Surname= customer.Surname               
             });
         }
+
+        //[HttpGet("{id}")]
+        //public async Task<CustomerEditDto> GetById(int id)
+        //{
+        //    var result = _customerRepo.GetById(id);
+        //    return new CustomerEditDto
+        //    {
+        //        Id = id,
+        //        Title = result.Title,
+        //        TodoType = result.TodoType,
+        //        Finished = result.Finished,
+        //        Comments = result.Comments.Select(comment => new TodoEditCommentDto
+        //        {
+        //            Id = comment.Id,
+        //            Text = comment.Text
+        //        }).ToList()
+        //    };
+        //}
+
     }
 }
