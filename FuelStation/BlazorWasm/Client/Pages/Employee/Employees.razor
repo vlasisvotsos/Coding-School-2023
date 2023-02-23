@@ -1,26 +1,26 @@
-﻿@page "/managerTab/items"
+﻿@page "/employees"
 
 <style>
-    #items {
+    #employees {
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 100%;
     }
 
-        #items td, #items th {
+        #employees td, #employees th {
             border: 1px solid #ddd;
             padding: 8px;
         }
 
-        #items tr:nth-child(even) {
+        #employees tr:nth-child(even) {
             background-color: #f2f2f2;
         }
 
-        #items tr:hover {
+        #employees tr:hover {
             background-color: #ddd;
         }
 
-        #items th {
+        #employees th {
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: left;
@@ -29,47 +29,53 @@
         }
 </style>
 
-<PageTitle>Items</PageTitle>
-<h3>Items</h3>
+<PageTitle>Employees</PageTitle>
+<h3>Employees</h3>
 
-<table id="items">
+<table id="employees">
     <tr>
         <th>
-            Code:
+            Name:
         </th>
         <th>
-            Description:
+            Surname:
         </th>
         <th>
-            Item Type:
+            Hire Date Start:
         </th>
         <th>
-            Price:
+            Hire Date End:
         </th>
         <th>
-            Cost:
+            Sallary Per Month:
+        </th>
+        <th>
+            Employee Type:
         </th>
         <th>
             Action:
         </th>
     </tr>
-    @foreach (ItemsDto itemsDto in items)
+    @foreach (EmployeesDto employeesDto in employees)
     {
             <tr>
                 <th>
-                <input type="text" placeholder="Code" @bind="itemsDto.Code" />
+                    <input type="text" placeholder="Name" @bind="employeesDto.Name" />
                 </th>
                 <th>
-                <input type="text" placeholder="Description" @bind="itemsDto.Description" />
+                    <input type="text" placeholder="Surname" @bind="employeesDto.Surname" />
                 </th>
                 <th>
-                <input type="text" placeholder="Item Type" @bind="itemsDto.ItemType" />
+                    <input type="text" placeholder="Hire Date Start" @bind="employeesDto.HiretDateStart" />
                 </th>
                 <th>
-                <input type="text" placeholder="Price" @bind="itemsDto.Price" />
+                    <input type="text" placeholder="Hire Date End" @bind="employeesDto.HireDateEnd" />
                 </th>
                 <th>
-                <input type="text" placeholder="Cost" @bind="itemsDto.Cost" />
+                <input type="text" placeholder="Sallary Per Month" @bind="employeesDto.SallaryPerMonth" />
+                </th>
+                <th>
+                <input type="text" placeholder=" Employee Type" @bind="employeesDto.EmployeeType" />
                 </th>
                 <th>
                 @*<button class="btn btn-primary" @onclick="()=> EditCustomer(customerDto)">Edit</button>
@@ -80,5 +86,5 @@
 </table>
 
 @code {
-    List<ItemsDto> items = new List<ItemsDto>();
+    List<EmployeesDto> employees = new List<EmployeesDto>();
 }
