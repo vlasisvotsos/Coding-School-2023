@@ -34,16 +34,18 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(270, 421);
+            textBox1.Dock = DockStyle.Fill;
+            textBox1.Location = new Point(0, 0);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(175, 35);
+            textBox1.Size = new Size(1716, 35);
             textBox1.TabIndex = 0;
             textBox1.Text = "Text";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(126, 100);
+            label1.Dock = DockStyle.Top;
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(107, 30);
             label1.TabIndex = 1;
