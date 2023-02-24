@@ -32,16 +32,16 @@ namespace EF.Orm.Repositories
 
         }
 
-        public List<Customer> GetAll()
+        public IEnumerable<Customer> GetAll()
         {
             using var context = new AppDbContext();
-            return context.Customers.Include(customer => customer.TransactionList).ToList();            
+            return context.Customers.ToList();            
         }
 
         public Customer? GetById(int id)
         {
             using var context = new AppDbContext();
-            return context.Customers.Where(customer => customer.ID == id).Include(customer => customer.TransactionList).SingleOrDefault();
+            return context.Customers.Where(customer => customer.ID == id).SingleOrDefault();
         }
 
         public void Update(int id, Customer customer)

@@ -1,5 +1,4 @@
 ﻿@page "/customers"
-@using BlazorWasm.Shared.Customer;
 @inject HttpClient httpClient
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
@@ -37,8 +36,8 @@
 
 <h3>Customers</h3>
 
-
-@if (isLoading)
+<button class="btn btn-primary" @onclick="()=> CreateItem()">Create</button>
+@if (false)
 {
     <p>The Page Is Loading ...</p>
 }
@@ -93,7 +92,7 @@ else
     
     private async Task LoadItemsFromServer()
     {
-        customers = await httpClient.GetFromJsonAsync<List<CustomerDto>>("customer");
+        customers = await httpClient.GetFromJsonAsync<List<CustomerDto>>("Customer");
     }
 
     private void CreateItem()
@@ -101,18 +100,18 @@ else
         navigationManager.NavigateTo("/customers/customeredit");
     }
 
-    private void EditCustomer(CustomerDto customer)
+    private void EditCustomer(CustomerDto customerDto)
     {
-        navigationManager.NavigateTo($"customers/customeredit/{customer.ID}");
+        navigationManager.NavigateTo($"customers/customeredit/{customerDto.ID}");
     }
 
-    private async Task DeleteCustomer(CustomerDto customer)
+    private async Task DeleteCustomer(CustomerDto customerDto)
     {
         errorMessage = null;
         var confirm = await jsRuntime.InvokeAsync<bool>("confirm", "Delete Customer. Are you sure?");
         if (confirm)
         {
-            var response = await httpClient.DeleteAsync($"customer/{customer.ID}");
+            var response = await httpClient.DeleteAsync($"Customer/{customerDto.ID}");
             if (response.IsSuccessStatusCode)
             {
                 await LoadItemsFromServer();
