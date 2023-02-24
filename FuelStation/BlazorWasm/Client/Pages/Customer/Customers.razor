@@ -36,13 +36,18 @@
 
 <h3>Customers</h3>
 
-<button class="btn btn-primary" @onclick="()=> CreateItem()">Create</button>
+
 @if (false)
 {
     <p>The Page Is Loading ...</p>
 }
 else
 {
+    @if (errorMessage != null)
+    {
+        <p class="text-danger">@errorMessage</p>
+    }
+    <button class="btn btn-primary" @onclick="CreateItem">Create</button>
 <table id="customers">
     <tr>
         <th>
@@ -58,7 +63,7 @@ else
             Action:
         </th>
     </tr>
-    @foreach (CustomerDto customerDto in customers)
+    @foreach (var customerDto in customers)
     {
         <tr>
             <th>
@@ -82,7 +87,7 @@ else
 @code {
     bool isLoading = true;
     string errorMessage = null;
-    List<CustomerDto> customers = new List<CustomerDto>();
+    private List<CustomerDto> customers = new();
 
     protected override async Task OnInitializedAsync()
     {

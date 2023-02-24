@@ -14,7 +14,7 @@ namespace EF.Orm.Repositories
         public void Add(Customer customer)
         {
             using var context = new AppDbContext();
-            context.Add(customer);
+            context.Customers.Add(customer);
             context.SaveChanges();
         }
 
@@ -41,13 +41,13 @@ namespace EF.Orm.Repositories
         public Customer? GetById(int id)
         {
             using var context = new AppDbContext();
-            return context.Customers.Where(customer => customer.ID == id).SingleOrDefault();
+            return context.Customers.SingleOrDefault(customer => customer.ID == id);
         }
 
         public void Update(int id, Customer customer)
         {
             using var context = new AppDbContext();
-            var dbCustomer = context.Customers.Where(customer => customer.ID == id).SingleOrDefault();
+            var dbCustomer = context.Customers.SingleOrDefault(customer => customer.ID == id);
             if(dbCustomer is null)
             {
                 return;
