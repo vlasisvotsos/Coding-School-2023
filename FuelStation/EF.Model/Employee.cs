@@ -1,10 +1,15 @@
-﻿using EF.Model.Enums;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace EF.Model
 {
     public class Employee
     {
+        public enum EmployeeTypeEnum
+        {
+            Manager,
+            Staff,
+            Cashier
+        }
         public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

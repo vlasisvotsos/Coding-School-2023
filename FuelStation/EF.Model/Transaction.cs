@@ -1,11 +1,12 @@
-﻿
-
-using EF.Model.Enums;
-
-namespace EF.Model
+﻿namespace EF.Model
 {
     public class Transaction
     {
+        public enum PaymentMethodEnum
+        {
+            CreditCard,
+            Cash
+        }
         public int ID { get; set; }
         public DateTime Date { get; set; }
         public int EmployeeID { get; set; }

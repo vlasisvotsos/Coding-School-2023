@@ -21,4 +21,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorWasm\Server\BlazorWasm.Server.csproj" />
+    <ProjectReference Include="..\EF.Model\EF.Model.csproj" />
+    <ProjectReference Include="..\EF.Orm\EF.Orm.csproj" />
+  </ItemGroup>
+
 </Project>
