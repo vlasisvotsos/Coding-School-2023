@@ -17,7 +17,7 @@ namespace BlazorWasm.Server.Controllers
             _customerRepo = customerRepo;
         }
         [HttpGet]
-       public IEnumerable<CustomerDto> Get()
+       public async Task<IEnumerable<CustomerDto>> Get()
         {
              var result = _customerRepo.GetAll();
             return result.Select(customer => new CustomerDto
@@ -30,7 +30,7 @@ namespace BlazorWasm.Server.Controllers
         }
 
         [HttpGet("{id}")]
-        public CustomerEditDto GetById(int id)
+        public async Task<CustomerEditDto> GetById(int id)
         {
             var result = _customerRepo.GetById(id);
             return new CustomerEditDto
