@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlazorWasm.Server.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("[controller]")]   
     public class CustomerController : ControllerBase
     {
         private readonly CustomerRepo _customerRepo;
-        CustomerController(CustomerRepo customerRepo) 
+        public CustomerController(CustomerRepo customerRepo) 
         {
             _customerRepo = customerRepo;
         }
