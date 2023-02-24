@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\EF.Orm\EF.Orm.csproj" />
     <ProjectReference Include="..\Shared\BlazorWasm.Shared.csproj" />
   </ItemGroup>
 
