@@ -19,6 +19,16 @@ namespace EF.Orm.Context
         public DbSet<TransactionLine> TransactionsLines { get; set; }
         public DbSet<Ledger> Ledgers { get; set;}
 
+        public AppDbContext()
+        {
+
+        }
+
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
