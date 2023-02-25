@@ -11,11 +11,12 @@
 <label>Surname</label>
 <input type="text" placeholder="Surname" @bind="Customer.Surname"/>
 
-<button>Save</button>
-<button onclick="onCancel()">Cancel</button>
+<button  @onclick="OnSave">Save</button>
+<button  @onclick="OnCancel">Cancel</button>
 
 
-@code {
+@code 
+{
     [Parameter] public int? Id { get; set; }
     CustomerEditDto Customer { get; set; }
 
@@ -31,24 +32,23 @@
         }
     }
 
-    private void OnCancel()
+    public void OnCancel()
     {
-        navigationManager.NavigateTo("Customer");
+        navigationManager.NavigateTo("Customers");
     }
 
-    private async Task OnSave()
+    public async Task OnSave()
     {
         HttpResponseMessage? responce = null;
-        if(Id == null)
+        if (Id == null)
         {
-             responce = await httpClient.PostAsJsonAsync("customer",Customer);
+            responce = await httpClient.PostAsJsonAsync("customer", Customer);
         }
         else
         {
-             responce = await httpClient.PutAsJsonAsync("Customer", Customer);
+            responce = await httpClient.PutAsJsonAsync("Customer", Customer);
         }
         responce.EnsureSuccessStatusCode();
-        navigationManager.NavigateTo("Customer");
+        navigationManager.NavigateTo("/Customer");
     }
-
 }
