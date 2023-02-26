@@ -13,9 +13,6 @@ namespace BlazorWasm.Server.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly EmployeeRepo _employeeRepo;
-        public EmployeeController()
-        {
-        }
         public EmployeeController(EmployeeRepo employeeRepo)
         {
             _employeeRepo = employeeRepo;

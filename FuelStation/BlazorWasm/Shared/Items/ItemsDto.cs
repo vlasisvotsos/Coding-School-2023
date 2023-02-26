@@ -16,5 +16,6 @@ namespace BlazorWasm.Shared.Items
         public ItemTypeEnum ItemType { get; set; }
         public decimal Price { get; set; }
         public decimal Cost { get; set; }
+        public ItemsDto() { }
     }
 }
