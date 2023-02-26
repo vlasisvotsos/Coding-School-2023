@@ -63,7 +63,7 @@ else
             Action:
         </th>
     </tr>
-    @foreach (var customerDto in customers)
+    @foreach (var customerDto in CustomersList)
     {
         <tr>
             <th>
@@ -87,7 +87,7 @@ else
 @code {
     bool isLoading = true;
     string errorMessage = null;
-    private List<CustomerDto> customers = new();
+    private List<CustomerDto> CustomersList = new();
 
     protected override async Task OnInitializedAsync()
     {
@@ -97,7 +97,7 @@ else
     
     private async Task LoadItemsFromServer()
     {
-        customers = await httpClient.GetFromJsonAsync<List<CustomerDto>>("Customer");
+        CustomersList = await httpClient.GetFromJsonAsync<List<CustomerDto>>("api/Customer");
     }
 
     private void CreateItem()
@@ -116,7 +116,7 @@ else
         var confirm = await jsRuntime.InvokeAsync<bool>("confirm", "Delete Customer. Are you sure?");
         if (confirm)
         {
-            var response = await httpClient.DeleteAsync($"Customer/{customerDto.ID}");
+            var response = await httpClient.DeleteAsync($"api/Customer/{customerDto.ID}");
             if (response.IsSuccessStatusCode)
             {
                 await LoadItemsFromServer();

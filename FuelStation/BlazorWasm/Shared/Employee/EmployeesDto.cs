@@ -17,5 +17,6 @@ namespace BlazorWasm.Shared.Employee
         public DateTime HireDateEnd { get; set; }
         public int SallaryPerMonth { get; set; }
         public EmployeeTypeEnum EmployeeType { get; set; }
+        public EmployeesDto() { }
     }
 }

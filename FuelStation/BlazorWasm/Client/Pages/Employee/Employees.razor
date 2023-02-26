@@ -1,4 +1,7 @@
 ﻿@page "/employees"
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
 @using BlazorWasm.Shared.Employee;
 
 <style>
@@ -31,8 +34,20 @@
 </style>
 
 <PageTitle>Employees</PageTitle>
+
 <h3>Employees</h3>
 
+@if (false)
+{
+<p>The Page Is Loading ...</p>
+}
+else
+{
+@if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+<button class="btn btn-primary" @onclick="CreateItem">Create</button>
 <table id="employees">
     <tr>
         <th>
@@ -57,7 +72,7 @@
             Action:
         </th>
     </tr>
-    @foreach (EmployeesDto employeesDto in employees)
+    @foreach (EmployeesDto employeesDto in EmployeeList)
     {
             <tr>
                 <th>
@@ -79,13 +94,55 @@
                 <input type="text" placeholder=" Employee Type" @bind="employeesDto.EmployeeType" />
                 </th>
                 <th>
-                @*<button class="btn btn-primary" @onclick="()=> EditCustomer(customerDto)">Edit</button>
-            <button class="btn btn-danger" @onclick="()=> DeleteCustomer(customerDto)">Delete</button>*@
+                <button class="btn btn-primary" @onclick="()=> EditEmployee(employeesDto)">Edit</button>
+                <button class="btn btn-danger" @onclick="()=> DeleteEmployee(employeesDto)">Delete</button>
                 </th>
             </tr>
     }
 </table>
+}
 
 @code {
-    List<EmployeesDto> employees = new List<EmployeesDto>();
+    bool isLoading = true;
+    string errorMessage = null;
+    private List<EmployeesDto> EmployeeList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadItemsFromServer();
+        isLoading = false;
+    }
+
+    private async Task LoadItemsFromServer()
+    {
+        EmployeeList = await httpClient.GetFromJsonAsync<List<EmployeesDto>>("Employee");
+    }
+
+    private void CreateItem()
+    {
+        navigationManager.NavigateTo("/employees/employeeedit");
+    }
+
+    private void EditEmployee(EmployeesDto employeeDto)
+    {
+        navigationManager.NavigateTo($"/employees/employeeedit/{employeeDto.ID}");
+    }
+
+    private async Task DeleteEmployee(EmployeesDto employeeDto)
+    {
+        errorMessage = null;
+        var confirm = await jsRuntime.InvokeAsync<bool>("confirm", "Delete Employee. Are you sure?");
+        if (confirm)
+        {
+            var response = await httpClient.DeleteAsync($"Employee/{employeeDto.ID}");
+            if (response.IsSuccessStatusCode)
+            {
+                await LoadItemsFromServer();
+            }
+            else
+            {
+                errorMessage = await response.Content.ReadAsStringAsync();
+            }
+        }
+    }
 }

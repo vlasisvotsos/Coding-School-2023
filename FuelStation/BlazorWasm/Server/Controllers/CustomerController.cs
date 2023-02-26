@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BlazorWasm.Server.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CustomerController : ControllerBase
     {
         private readonly CustomerRepo _customerRepo;

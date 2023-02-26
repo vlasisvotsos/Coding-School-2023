@@ -28,7 +28,7 @@
         }
         else
         {
-            Customer = await httpClient.GetFromJsonAsync<CustomerEditDto>($"Customer/{Id}");
+            Customer = await httpClient.GetFromJsonAsync<CustomerEditDto>($"api/Customer/{Id}");
         }
     }
 
@@ -42,11 +42,11 @@
         HttpResponseMessage? responce = null;
         if (Id == null)
         {
-            responce = await httpClient.PostAsJsonAsync("customer", Customer);
+            responce = await httpClient.PostAsJsonAsync("api/Customer", Customer);
         }
         else
         {
-            responce = await httpClient.PutAsJsonAsync("Customer", Customer);
+            responce = await httpClient.PutAsJsonAsync("api/Customer", Customer);
         }
         responce.EnsureSuccessStatusCode();
         navigationManager.NavigateTo("/Customer");

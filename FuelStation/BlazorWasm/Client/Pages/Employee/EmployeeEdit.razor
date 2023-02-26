@@ -1,6 +1,60 @@
-﻿@page "/employees/employeeedit"
+﻿@page "/employees/employeeedit/{Id:int?}"
+@using BlazorWasm.Shared.Employee;
+@inject HttpClient httpClient;
+@inject NavigationManager navigationManager;
+
+
 <h3>EmployeeEdit</h3>
 
-@code {
+<label>Name</label>
+<input type="text" placeholder="Name" @bind="Employee.Name" />
+<label>Surname</label>
+<input type="text" placeholder="Surname" @bind="Employee.Surname" />
+<label>Hire Date Start</label>
+<input type="text" placeholder="Hire Date Start" @bind="Employee.HiretDateStart" />
+<label>Hire Date End</label>
+<input type="text" placeholder="Hire Date End" @bind="Employee.HireDateEnd" />
+<label>Sallary Per Month</label>
+<input type="text" placeholder="Sallary per Month" @bind="Employee.SallaryPerMonth" />
+<label>Employee Type</label>
+<input type="text" placeholder="Employee Type" @bind="Employee.EmployeeType" />
 
+<button @onclick="OnSave">Save</button>
+<button @onclick="OnCancel">Cancel</button>
+
+@code {
+        [Parameter] public int? Id { get; set; }
+        EmployeeEditDto Employee { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id == null)
+        {
+            Employee = new();
+        }
+        else
+        {
+            Employee = await httpClient.GetFromJsonAsync<EmployeeEditDto>($"Employee/{Id}");
+        }
+    }
+
+    public void OnCancel()
+    {
+        navigationManager.NavigateTo("Employee");
+    }
+
+    public async Task OnSave()
+    {
+        HttpResponseMessage? responce = null;
+        if (Id == null)
+        {
+            responce = await httpClient.PostAsJsonAsync("Employee", Employee);
+        }
+        else
+        {
+            responce = await httpClient.PutAsJsonAsync("Employee", Employee);
+        }
+        responce.EnsureSuccessStatusCode();
+        navigationManager.NavigateTo("/Employee");
+    }
 }

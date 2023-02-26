@@ -11,10 +11,11 @@ namespace EF.Orm.Repositories
 {
     public class EmployeeRepo
     {
+        public EmployeeRepo() { }
         public void Add(Employee employee)
         {
             using var context = new AppDbContext();
-            context.Add(employee);
+            context.Employees.Add(employee);
             context.SaveChanges();
         }
 
@@ -32,22 +33,22 @@ namespace EF.Orm.Repositories
 
         }
 
-        public List<Employee> GetAll()
+        public IEnumerable<Employee> GetAll()
         {
             using var context = new AppDbContext();
-            return context.Employees.Include(employee => employee.TransactionList).ToList();
+            return context.Employees.ToList();
         }
 
         public Employee? GetById(int id)
         {
             using var context = new AppDbContext();
-            return context.Employees.Where(employee => employee.ID == id).Include(employee => employee.TransactionList).SingleOrDefault();
+            return context.Employees.SingleOrDefault(employee => employee.ID == id);
         }
 
         public void Update(int id, Employee employee)
         {
             using var context = new AppDbContext();
-            var dbEmployee = context.Employees.Where(employee => employee.ID == id).SingleOrDefault();
+            var dbEmployee = context.Employees.SingleOrDefault(employee => employee.ID == id);
             if (dbEmployee is null)
             {
                 return;
