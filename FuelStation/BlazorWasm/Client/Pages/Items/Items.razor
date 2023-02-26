@@ -36,6 +36,17 @@
 <PageTitle>Items</PageTitle>
 <h3>Items</h3>
 
+@if (isLoading)
+{
+<p>The Page Is Loading ...</p>
+}
+else
+{
+@if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+    <button class="btn btn-primary" @onclick="CreateItem">Create</button>
 <table id="items">
     <tr>
         <th>
@@ -82,6 +93,7 @@
             </tr>
     }
 </table>
+}
 
 @code {
     bool isLoading = true;

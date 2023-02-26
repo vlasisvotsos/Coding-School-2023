@@ -1,6 +1,59 @@
-﻿@page "/items/itemedit"
+﻿@page "/items/itemedit/{Id:int?}"
+@using BlazorWasm.Shared.Items;
+@inject HttpClient httpClient;
+@inject NavigationManager navigationManager;
+
+
+
 <h3>ItemEdit</h3>
 
-@code {
+<label>Code</label>
+<input type="text" placeholder="Code" @bind="Item.Code" />
+<label>Description</label>
+<input type="text" placeholder="Description" @bind="Item.Description" />
+<label>Item Type</label>
+<input type="text" placeholder="Item Type" @bind="Item.ItemType" />
+<label>Price</label>
+<input type="text" placeholder="Price" @bind="Item.Price" />
+<label>Cost</label>
+<input type="text" placeholder="Cost" @bind="Item.Cost" />
 
+<button @onclick="OnSave">Save</button>
+<button @onclick="OnCancel">Cancel</button>
+
+@code {
+    [Parameter] public int? Id { get; set; }
+    ItemEditDto Item { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id == null)
+        {
+            Item = new();
+        }
+        else
+        {
+            Item = await httpClient.GetFromJsonAsync<ItemEditDto>($"Items/{Id}");
+        }
+    }
+
+    public void OnCancel()
+    {
+        navigationManager.NavigateTo("/items");
+    }
+
+    public async Task OnSave()
+    {
+        HttpResponseMessage? responce = null;
+        if (Id == null)
+        {
+            responce = await httpClient.PostAsJsonAsync("Items", Item);
+        }
+        else
+        {
+            responce = await httpClient.PutAsJsonAsync("Items", Item);
+        }
+        responce.EnsureSuccessStatusCode();
+        navigationManager.NavigateTo("/items");
+    }
 }

@@ -55,6 +55,6 @@
             responce = await httpClient.PutAsJsonAsync("Employee", Employee);
         }
         responce.EnsureSuccessStatusCode();
-        navigationManager.NavigateTo("/Employee");
+        navigationManager.NavigateTo("/Employees");
     }
 }
