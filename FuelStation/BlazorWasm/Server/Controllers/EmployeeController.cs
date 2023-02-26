@@ -52,7 +52,7 @@ namespace BlazorWasm.Server.Controllers
         [HttpPost]
         public async Task Post(EmployeeEditDto employee)
         {
-            var newEmployee = new Employee();
+            var newEmployee = new Employee(employee.ID);
             newEmployee.ID = employee.ID;
             newEmployee.Name = employee.Name;
             newEmployee.Surname = employee.Surname;

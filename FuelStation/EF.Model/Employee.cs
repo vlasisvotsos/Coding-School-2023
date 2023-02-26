@@ -19,10 +19,10 @@ namespace EF.Model
         public int SallaryPerMonth { get; set; }
         public EmployeeTypeEnum EmployeeType { get; set; }
         public List<Transaction> TransactionList { get; set; }
-
-        public Employee()
+        public Employee() { }
+        public Employee(int id)
         {
-           
+           ID = id;
             HiretDateStart = DateTime.Now;
         }
     }

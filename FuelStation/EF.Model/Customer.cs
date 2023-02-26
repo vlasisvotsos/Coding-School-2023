@@ -7,11 +7,11 @@
         public string Surname { get; set; }
         public string CardNumber { get; set; }
         public List<Transaction> TransactionList { get; set; }
+        public Customer() { }
 
-        public Customer(string name)
+        public Customer(int id)
         {
-            Name = name;
-            TransactionList = new List<Transaction>();
+            ID = id;
         }
     }
 }

@@ -5,6 +5,7 @@ using EF.Orm.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace BlazorWasm.Server.Controllers
 {
@@ -13,7 +14,7 @@ namespace BlazorWasm.Server.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly CustomerRepo _customerRepo;
-        public CustomerController(CustomerRepo customerRepo)
+        public CustomerController( CustomerRepo customerRepo)
         {
             _customerRepo = customerRepo;
         }
@@ -46,7 +47,7 @@ namespace BlazorWasm.Server.Controllers
         [HttpPost]
         public async Task Post(CustomerEditDto customer)
         {
-            var newCustomer = new Customer(customer.Name);
+            var newCustomer = new Customer(customer.ID);
             newCustomer.ID = customer.ID;
             newCustomer.Name = customer.Name;
             newCustomer.Surname = customer.Surname;

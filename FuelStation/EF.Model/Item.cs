@@ -19,10 +19,10 @@ namespace EF.Model
         [Range(0, 9999999999)]
         public decimal Cost { get; set; }
         public TransactionLine TransactionLine { get; set; }
-
-        public Item()
+        public Item() { }
+        public Item(int id)
         {
-            
+            ID = id;
         }
 
     }

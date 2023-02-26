@@ -16,10 +16,14 @@ namespace EF.Model
         public decimal TotalValue { get; set; }
         public Transaction Transaction { get; set; }
         public Item Item { get; set; }
-
         public TransactionLine()
         {
-            
+
+        }
+
+        public TransactionLine(int id)
+        {
+            ID = id;
         }
     }
 }

@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<CustomerRepo, CustomerRepo>();
+builder.Services.AddScoped<EmployeeRepo, EmployeeRepo>();
+builder.Services.AddScoped<ItemRepo, ItemRepo>();
+builder.Services.AddScoped<LedgerRepo, LedgerRepo>();
 
 var app = builder.Build();
 

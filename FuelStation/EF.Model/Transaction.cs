@@ -20,6 +20,11 @@
 
         public Transaction()
         {
+            Date = DateTime.Now;
+        }
+        public Transaction(int id)
+        {
+            ID = id;
             Date= DateTime.Now;
         }
     }

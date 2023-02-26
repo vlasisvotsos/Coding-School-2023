@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BlazorWasm.Shared.Customer;
+using BlazorWasm.Shared.Items;
+using EF.Model;
+using EF.Orm.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using EF.Model;
-using EF.Orm.Context;
 
 namespace BlazorWasm.Server.Controllers
 {
@@ -14,111 +12,83 @@ namespace BlazorWasm.Server.Controllers
     [ApiController]
     public class ItemsController : ControllerBase
     {
-        private readonly AppDbContext _context;
-
-        public ItemsController(AppDbContext context)
+        private readonly ItemRepo _itemRepo;
+        public ItemsController(ItemRepo itemRepo)
         {
-            _context = context;
+            _itemRepo = itemRepo;
         }
-
-        // GET: api/Items
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Item>>> GetItems()
+        public async Task<IEnumerable<ItemsDto>> Get()
         {
-          if (_context.Items == null)
-          {
-              return NotFound();
-          }
-            return await _context.Items.ToListAsync();
+            var result = _itemRepo.GetAll();
+            return result.Select(item => new ItemsDto
+            {
+                ID = item.ID,
+                Code = item.Code,
+                Description = item.Description,
+                ItemType = item.ItemType,
+                Price = item.Price,
+                Cost = item.Cost,
+            });
         }
 
-        // GET: api/Items/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Item>> GetItem(int id)
+        public async Task<ItemEditDto> GetById(int id)
         {
-          if (_context.Items == null)
-          {
-              return NotFound();
-          }
-            var item = await _context.Items.FindAsync(id);
-
-            if (item == null)
+            var result = _itemRepo.GetById(id);
+            return new ItemEditDto
             {
-                return NotFound();
-            }
-
-            return item;
+                ID = id,
+                Code = result.Code,
+                Description = result.Description,
+                ItemType = result.ItemType,
+                Price = result.Price,
+                Cost = result.Cost,
+            };
         }
 
-        // PUT: api/Items/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutItem(int id, Item item)
+        [HttpPost]
+        public async Task Post(ItemEditDto item)
         {
-            if (id != item.ID)
-            {
-                return BadRequest();
-            }
+            var newItem = new Item(item.ID);
+            newItem.ID = item.ID;
+            newItem.Code = item.Code;
+            newItem.Description = item.Description;
+            newItem.ItemType = item.ItemType;
+            newItem.Price = item.Price;
+            newItem.Cost = item.Cost;
+            _itemRepo.Add(newItem);
+        }
+        [HttpPut]
+        public async Task Put(ItemEditDto item)
+        {
+            var itemToUpdate = _itemRepo.GetById(item.ID);
+            itemToUpdate.ID = item.ID;
+            itemToUpdate.Code = item.Code;
+            itemToUpdate.Description = item.Description;
+            itemToUpdate.ItemType = item.ItemType;
+            itemToUpdate.Price = item.Price;
+            itemToUpdate.Cost = item.Cost;
+            _itemRepo.Update(item.ID, itemToUpdate);
+        }
 
-            _context.Entry(item).State = EntityState.Modified;
-
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
             try
             {
-                await _context.SaveChangesAsync();
+                _itemRepo.Delete(id);
+                return Ok();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateException ex)
             {
-                if (!ItemExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest("This item cannot be deleted!");
             }
-
-            return NoContent();
-        }
-
-        // POST: api/Items
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Item>> PostItem(Item item)
-        {
-          if (_context.Items == null)
-          {
-              return Problem("Entity set 'AppDbContext.Items'  is null.");
-          }
-            _context.Items.Add(item);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetItem", new { id = item.ID }, item);
-        }
-
-        // DELETE: api/Items/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteItem(int id)
-        {
-            if (_context.Items == null)
+            catch (KeyNotFoundException ex)
             {
-                return NotFound();
-            }
-            var item = await _context.Items.FindAsync(id);
-            if (item == null)
-            {
-                return NotFound();
+                return BadRequest($"Item with id {id} not found!");
             }
 
-            _context.Items.Remove(item);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool ItemExists(int id)
-        {
-            return (_context.Items?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }
