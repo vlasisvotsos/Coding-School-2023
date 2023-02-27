@@ -7,7 +7,10 @@
         public string Surname { get; set; }
         public string CardNumber { get; set; }
         public List<Transaction> TransactionList { get; set; }
-        public Customer() { }
+        public Customer() 
+        {
+
+        }
 
         public Customer(int id)
         {

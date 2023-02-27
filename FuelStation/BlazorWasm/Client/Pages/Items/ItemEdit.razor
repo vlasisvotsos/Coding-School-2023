@@ -33,7 +33,7 @@
         }
         else
         {
-            Item = await httpClient.GetFromJsonAsync<ItemEditDto>($"Items/{Id}");
+            Item = await httpClient.GetFromJsonAsync<ItemEditDto>($"api/Items/{Id}");
         }
     }
 
@@ -47,11 +47,11 @@
         HttpResponseMessage? responce = null;
         if (Id == null)
         {
-            responce = await httpClient.PostAsJsonAsync("Items", Item);
+            responce = await httpClient.PostAsJsonAsync("api/Items", Item);
         }
         else
         {
-            responce = await httpClient.PutAsJsonAsync("Items", Item);
+            responce = await httpClient.PutAsJsonAsync("api/Items", Item);
         }
         responce.EnsureSuccessStatusCode();
         navigationManager.NavigateTo("/items");

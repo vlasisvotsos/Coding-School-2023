@@ -276,6 +276,7 @@
             Controls.Add(dataGridView2);
             Name = "CashierControl";
             Size = new Size(2708, 1355);
+            Load += CashierControl_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

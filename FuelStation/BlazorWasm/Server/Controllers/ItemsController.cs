@@ -51,7 +51,6 @@ namespace BlazorWasm.Server.Controllers
         public async Task Post(ItemEditDto item)
         {
             var newItem = new Item(item.ID);
-            newItem.ID = item.ID;
             newItem.Code = item.Code;
             newItem.Description = item.Description;
             newItem.ItemType = item.ItemType;

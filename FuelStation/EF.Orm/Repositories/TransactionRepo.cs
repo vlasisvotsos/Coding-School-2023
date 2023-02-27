@@ -14,7 +14,7 @@ namespace EF.Orm.Repositories
         public void Add(Transaction transaction)
         {
             using var context = new AppDbContext();
-            context.Add(transaction);
+            context.Transactions.Add(transaction);
             context.SaveChanges();
         }
 
@@ -35,13 +35,13 @@ namespace EF.Orm.Repositories
         public List<Transaction> GetAll()
         {
             using var context = new AppDbContext();
-            return context.Transactions.Include(transaction => transaction.TransactionLineList).ToList();
+            return context.Transactions.ToList();
         }
 
         public Transaction? GetById(int id)
         {
             using var context = new AppDbContext();
-            return context.Transactions.Where(transaction => transaction.ID == id).Include(transaction => transaction.TransactionLineList).SingleOrDefault();
+            return context.Transactions.SingleOrDefault(transaction => transaction.ID == id);
         }
 
         public void Update(int id, Transaction transaction)

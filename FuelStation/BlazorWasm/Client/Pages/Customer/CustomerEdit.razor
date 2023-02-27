@@ -18,17 +18,17 @@
 @code 
 {
     [Parameter] public int? ID { get; set; }
-    CustomerEditDto? Customer { get; set; }
+    CustomerEditDto Customer { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         if(ID == null)
         {
-            Customer = new();
+             Customer = new();
         }
         else
         {
-            Customer = await httpClient.GetFromJsonAsync<CustomerEditDto>($"api/Customer/{ID}");
+             Customer = await httpClient.GetFromJsonAsync<CustomerEditDto>($"api/Customer/{ID}");
         }
     }
 

@@ -55,5 +55,10 @@ namespace WinForms.UserControlls
             dataGridView3.DataSource = line;
 
         }
+
+        private void CashierControl_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
