@@ -18,9 +18,6 @@ namespace EF.Orm.Configurations
             builder.Property(item => item.ID).ValueGeneratedOnAdd();
             builder.Property(item => item.Price).HasPrecision(12, 2);
             builder.Property(item => item.Cost).HasPrecision(12, 2);
-            builder.HasOne(transactionLine => transactionLine.TransactionLine)
-            .WithOne(item => item.Item)
-            .HasForeignKey<TransactionLine>(transactionLine => transactionLine.ItemID);
         }
     }
 }

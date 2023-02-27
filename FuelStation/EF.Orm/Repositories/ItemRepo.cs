@@ -14,7 +14,7 @@ namespace EF.Orm.Repositories
         public void Add(Item item)
         {
             using var context = new AppDbContext();
-            context.Add(item);
+            context.Items.Add(item);
             context.SaveChanges();
         }
 
@@ -41,13 +41,13 @@ namespace EF.Orm.Repositories
         public Item? GetById(int id)
         {
             using var context = new AppDbContext();
-            return context.Items.Where(item => item.ID == id).SingleOrDefault();
+            return context.Items.SingleOrDefault(item => item.ID == id);
         }
 
         public void Update(int id, Item item)
         {
             using var context = new AppDbContext();
-            var dbItem = context.Items.Where(item => item.ID == id).SingleOrDefault();
+            var dbItem = context.Items.SingleOrDefault(item => item.ID == id);
             if (dbItem is null)
             {
                 return;
