@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,17 +43,14 @@ namespace WinForms.UserControlls
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7086/");
 
-            var responseEmp = client.GetAsync("api/Customer").Result;
-            var emp = responseEmp.Content.ReadFromJsonAsync<IEnumerable<CustomerDto>>().Result;
-            dataGridView1.DataSource = emp;
+            var CustomersList = client.GetFromJsonAsync<List<CustomerDto>>("api/Customer");
+            dataGridView1.DataSource = CustomersList;
 
-            var responseTra = client.GetAsync("api/Transaction").Result;
-            var tra = responseTra.Content.ReadFromJsonAsync<IEnumerable<TransactionDto>>().Result;
-            dataGridView2.DataSource = tra;
+            var TransactionList = client.GetFromJsonAsync<List<TransactionDto>>("api/Transaction");
+            dataGridView2.DataSource = TransactionList;
 
-            var responseLine = client.GetAsync("api/TransactionLine").Result;
-            var line = responseLine.Content.ReadFromJsonAsync<IEnumerable<TransactionLineDto>>().Result;
-            dataGridView3.DataSource = line;
+            var TransactionLineList = client.GetFromJsonAsync<List<TransactionLineDto>>("api/TransactionLine");
+            dataGridView3.DataSource = TransactionLineList;
 
         }
 
