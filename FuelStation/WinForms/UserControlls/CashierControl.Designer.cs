@@ -51,6 +51,7 @@
             name = new DataGridViewTextBoxColumn();
             surname = new DataGridViewTextBoxColumn();
             cardNumber = new DataGridViewTextBoxColumn();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -67,6 +68,7 @@
             dataGridView2.RowTemplate.Height = 37;
             dataGridView2.Size = new Size(2514, 291);
             dataGridView2.TabIndex = 1;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // Date
             // 
@@ -227,6 +229,7 @@
             dataGridView1.RowTemplate.Height = 37;
             dataGridView1.Size = new Size(2514, 262);
             dataGridView1.TabIndex = 7;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // name
             // 
@@ -249,10 +252,21 @@
             cardNumber.MinimumWidth = 9;
             cardNumber.Name = "cardNumber";
             // 
+            // button1
+            // 
+            button1.Location = new Point(242, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(366, 65);
+            button1.TabIndex = 8;
+            button1.Text = "Get Data";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // CashierControl
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -293,5 +307,6 @@
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn surname;
         private DataGridViewTextBoxColumn cardNumber;
+        private Button button1;
     }
 }
