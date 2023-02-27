@@ -58,7 +58,6 @@
             discountPercent = new DataGridViewTextBoxColumn();
             discountValue = new DataGridViewTextBoxColumn();
             totalPrice = new DataGridViewTextBoxColumn();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -308,21 +307,10 @@
             totalPrice.MinimumWidth = 9;
             totalPrice.Name = "totalPrice";
             // 
-            // button1
-            // 
-            button1.Location = new Point(248, 13);
-            button1.Name = "button1";
-            button1.Size = new Size(131, 40);
-            button1.TabIndex = 9;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // ManagerControl
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
             Controls.Add(dataGridView4);
             Controls.Add(dataGridView3);
             Controls.Add(dataGridView2);
@@ -334,6 +322,7 @@
             Controls.Add(label1);
             Name = "ManagerControl";
             Size = new Size(2628, 1302);
+            Load += ManagerControl_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
@@ -374,6 +363,5 @@
         private DataGridViewTextBoxColumn discountPercent;
         private DataGridViewTextBoxColumn discountValue;
         private DataGridViewTextBoxColumn totalPrice;
-        private Button button1;
     }
 }

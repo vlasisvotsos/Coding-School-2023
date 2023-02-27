@@ -22,7 +22,14 @@ namespace WinForms.UserControlls
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void ManagerControl_Load(object sender, EventArgs e)
+        {
+            populateData();
+        }
+
+        private void populateData()
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7086/");

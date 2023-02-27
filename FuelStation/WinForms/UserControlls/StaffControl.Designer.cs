@@ -36,7 +36,6 @@
             ItemType = new DataGridViewComboBoxColumn();
             Price = new DataGridViewTextBoxColumn();
             Cost = new DataGridViewTextBoxColumn();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -111,26 +110,16 @@
             Cost.Resizable = DataGridViewTriState.True;
             Cost.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // button1
-            // 
-            button1.Location = new Point(550, 140);
-            button1.Name = "button1";
-            button1.Size = new Size(131, 40);
-            button1.TabIndex = 3;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // StaffControl
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "StaffControl";
             Size = new Size(2578, 1310);
+            Load += StaffControl_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -146,6 +135,5 @@
         private DataGridViewComboBoxColumn ItemType;
         private DataGridViewTextBoxColumn Price;
         private DataGridViewTextBoxColumn Cost;
-        private Button button1;
     }
 }

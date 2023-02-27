@@ -38,7 +38,14 @@ namespace WinForms.UserControlls
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void CashierControl_Load(object sender, EventArgs e)
+        {
+            populateData();
+        }
+
+        private void populateData()
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7086/");
@@ -51,12 +58,6 @@ namespace WinForms.UserControlls
 
             var TransactionLineList = client.GetFromJsonAsync<List<TransactionLineDto>>("api/TransactionLine");
             dataGridView3.DataSource = TransactionLineList;
-
-        }
-
-        private void CashierControl_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
