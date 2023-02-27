@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EF.Orm.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230224123206_initial")]
+    [Migration("20230227113939_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -91,7 +91,6 @@ namespace EF.Orm.Migrations
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
-                        .IsUnicode(true)
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
