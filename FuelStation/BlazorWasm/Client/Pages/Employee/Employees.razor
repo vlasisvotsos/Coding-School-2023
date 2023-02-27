@@ -76,22 +76,22 @@ else
     {
             <tr>
                 <th>
-                    <input type="text" placeholder="Name" @bind="employeesDto.Name" />
+                    <input type="text" placeholder="Name" @bind="employeesDto.Name" readonly />
                 </th>
                 <th>
-                    <input type="text" placeholder="Surname" @bind="employeesDto.Surname" />
+                    <input type="text" placeholder="Surname" @bind="employeesDto.Surname" readonly />
                 </th>
                 <th>
-                    <input type="text" placeholder="Hire Date Start" @bind="employeesDto.HiretDateStart" />
+                    <input type="text" placeholder="Hire Date Start" @bind="employeesDto.HiretDateStart" readonly />
                 </th>
                 <th>
-                    <input type="text" placeholder="Hire Date End" @bind="employeesDto.HireDateEnd" />
+                    <input type="text" placeholder="Hire Date End" @bind="employeesDto.HireDateEnd" readonly />
                 </th>
                 <th>
-                <input type="text" placeholder="Sallary Per Month" @bind="employeesDto.SallaryPerMonth" />
+                    <input type="text" placeholder="Sallary Per Month" @bind="employeesDto.SallaryPerMonth" readonly />
                 </th>
                 <th>
-                <input type="text" placeholder=" Employee Type" @bind="employeesDto.EmployeeType" />
+                    <input type="text" placeholder=" Employee Type" @bind="employeesDto.EmployeeType" readonly />
                 </th>
                 <th>
                 <button class="btn btn-primary" @onclick="()=> EditEmployee(employeesDto)">Edit</button>

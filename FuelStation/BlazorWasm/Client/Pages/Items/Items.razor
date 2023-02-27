@@ -72,19 +72,19 @@ else
     {
             <tr>
                 <th>
-                <input type="text" placeholder="Code" @bind="itemsDto.Code" />
+                    <input type="text" placeholder="Code" @bind="itemsDto.Code" readonly />
                 </th>
                 <th>
-                <input type="text" placeholder="Description" @bind="itemsDto.Description" />
+                    <input type="text" placeholder="Description" @bind="itemsDto.Description" readonly />
                 </th>
                 <th>
-                <input type="text" placeholder="Item Type" @bind="itemsDto.ItemType" />
+                    <input type="text" placeholder="Item Type" @bind="itemsDto.ItemType" readonly />
                 </th>
                 <th>
-                <input type="text" placeholder="Price" @bind="itemsDto.Price" />
+                    <input type="text" placeholder="Price" @bind="itemsDto.Price" readonly />
                 </th>
                 <th>
-                <input type="text" placeholder="Cost" @bind="itemsDto.Cost" />
+                    <input type="text" placeholder="Cost" @bind="itemsDto.Cost" readonly />
                 </th>
                 <th>
                 <button class="btn btn-primary" @onclick="()=> EditItem(itemsDto)">Edit</button>

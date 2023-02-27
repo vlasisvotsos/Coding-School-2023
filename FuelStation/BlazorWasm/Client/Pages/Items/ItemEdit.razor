@@ -1,5 +1,6 @@
 ﻿@page "/items/itemedit/{Id:int?}"
 @using BlazorWasm.Shared.Items;
+@using static EF.Model.Item;
 @inject HttpClient httpClient;
 @inject NavigationManager navigationManager;
 
@@ -12,7 +13,12 @@
 <label>Description</label>
 <input type="text" placeholder="Description" @bind="Item.Description" />
 <label>Item Type</label>
-<input type="text" placeholder="Item Type" @bind="Item.ItemType" />
+<InputSelect @bind-Value="Item.ItemType">
+    @foreach (var itemType in Enum.GetValues(typeof(ItemTypeEnum)))
+    {
+        <option value="@itemType">@itemType</option>
+    }
+</InputSelect>
 <label>Price</label>
 <input type="text" placeholder="Price" @bind="Item.Price" />
 <label>Cost</label>

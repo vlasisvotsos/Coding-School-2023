@@ -1,5 +1,6 @@
 ﻿@page "/employees/employeeedit/{Id:int?}"
 @using BlazorWasm.Shared.Employee;
+@using static EF.Model.Employee;
 @inject HttpClient httpClient;
 @inject NavigationManager navigationManager;
 
@@ -17,7 +18,13 @@
 <label>Sallary Per Month</label>
 <input type="text" placeholder="Sallary per Month" @bind="Employee.SallaryPerMonth" />
 <label>Employee Type</label>
-<input type="text" placeholder="Employee Type" @bind="Employee.EmployeeType" />
+<InputSelect @bind-Value="Employee.EmployeeType">
+    @foreach (var employeeType in Enum.GetValues(typeof(EmployeeTypeEnum)))
+    {
+        <option value="@employeeType">@employeeType</option>
+    }
+</InputSelect>
+
 
 <button @onclick="OnSave">Save</button>
 <button @onclick="OnCancel">Cancel</button>
