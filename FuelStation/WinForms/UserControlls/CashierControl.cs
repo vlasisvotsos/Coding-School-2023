@@ -56,7 +56,7 @@ namespace WinForms.UserControlls
 
         private void CashierControl_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
