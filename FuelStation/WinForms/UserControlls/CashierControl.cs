@@ -46,13 +46,13 @@ namespace WinForms.UserControlls
             var emp = responseEmp.Content.ReadFromJsonAsync<IEnumerable<CustomerDto>>().Result;
             dataGridView1.DataSource = emp;
 
-            var responseTra = client.GetAsync("api/Transaction").Result;
-            var tra = responseTra.Content.ReadFromJsonAsync<IEnumerable<TransactionDto>>().Result;
-            dataGridView2.DataSource = tra;
+            //var responseTra = client.GetAsync("api/Transaction").Result;
+            //var tra = responseTra.Content.ReadFromJsonAsync<IEnumerable<TransactionDto>>().Result;
+            //dataGridView2.DataSource = tra;
 
-            var responseLine = client.GetAsync("api/TransactionLine").Result;
-            var line = responseLine.Content.ReadFromJsonAsync<IEnumerable<TransactionLineDto>>().Result;
-            dataGridView3.DataSource = line;
+            //var responseLine = client.GetAsync("api/TransactionLine").Result;
+            //var line = responseLine.Content.ReadFromJsonAsync<IEnumerable<TransactionLineDto>>().Result;
+            //dataGridView3.DataSource = line;
 
         }
     }
