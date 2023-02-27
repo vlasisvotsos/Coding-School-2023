@@ -17,18 +17,18 @@
 
 @code 
 {
-    [Parameter] public int? Id { get; set; }
-    CustomerEditDto Customer { get; set; }
+    [Parameter] public int? ID { get; set; }
+    CustomerEditDto? Customer { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        if(Id == null)
+        if(ID == null)
         {
             Customer = new();
         }
         else
         {
-            Customer = await httpClient.GetFromJsonAsync<CustomerEditDto>($"api/Customer/{Id}");
+            Customer = await httpClient.GetFromJsonAsync<CustomerEditDto>($"api/Customer/{ID}");
         }
     }
 
@@ -40,7 +40,7 @@
     public async Task OnSave()
     {
         HttpResponseMessage? responce = null;
-        if (Id == null)
+        if (ID == null)
         {
             responce = await httpClient.PostAsJsonAsync("api/Customer", Customer);
         }
@@ -49,6 +49,6 @@
             responce = await httpClient.PutAsJsonAsync("api/Customer", Customer);
         }
         responce.EnsureSuccessStatusCode();
-        navigationManager.NavigateTo("/Customer");
+        navigationManager.NavigateTo("/Customers");
     }
 }

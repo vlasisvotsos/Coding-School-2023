@@ -58,10 +58,8 @@ namespace BlazorWasm.Server.Controllers
         public async Task Put(CustomerEditDto customer)
         {
             var customerToUpdate = _customerRepo.GetById(customer.ID);
-            customerToUpdate.ID = customer.ID;
             customerToUpdate.Name = customer.Name;
             customerToUpdate.Surname = customer.Surname;
-            customerToUpdate.CardNumber = customer.CardNumber;
             _customerRepo.Update(customer.ID, customerToUpdate);
         }
 

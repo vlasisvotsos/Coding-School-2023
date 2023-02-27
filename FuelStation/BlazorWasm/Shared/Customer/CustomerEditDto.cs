@@ -10,8 +10,8 @@ namespace BlazorWasm.Shared.Customer
     public class CustomerEditDto
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
         public string? CardNumber { get; set; }
 
         public CustomerEditDto() 

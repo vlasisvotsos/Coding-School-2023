@@ -12,7 +12,7 @@ namespace BlazorWasm.Shared.Items
     {
         public int ID { get; set; }
         public int Code { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public ItemTypeEnum ItemType { get; set; }
         public decimal Price { get; set; }
         public decimal Cost { get; set; }
