@@ -14,7 +14,7 @@ namespace EF.Model
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime HiretDateStart { get; set; }
-        public DateTime HireDateEnd { get;set; }
+        public DateTime? HireDateEnd { get;set; }
         [Range(700,10000)]
         public int SallaryPerMonth { get; set; }
         public EmployeeTypeEnum EmployeeType { get; set; }
