@@ -18,6 +18,7 @@ namespace EF.Orm.Configurations
             builder.Property(item => item.ID).ValueGeneratedOnAdd();
             builder.Property(item => item.Price).HasPrecision(12, 2);
             builder.Property(item => item.Cost).HasPrecision(12, 2);
+            builder.Property(item => item.Description).HasDefaultValue(null);
         }
     }
 }
