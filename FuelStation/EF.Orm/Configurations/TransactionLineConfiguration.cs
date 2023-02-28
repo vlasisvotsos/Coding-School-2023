@@ -19,7 +19,8 @@ namespace EF.Orm.Configurations
             builder.HasOne(transaction => transaction.Transaction)
             .WithMany(transactionLine => transactionLine.TransactionLineList)
             .HasForeignKey(transaction => transaction.TransactionID);
-            
+
+
         }
     }
 }

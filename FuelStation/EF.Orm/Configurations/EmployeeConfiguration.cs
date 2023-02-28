@@ -20,6 +20,7 @@ namespace EF.Orm.Configurations
             builder.Property(employee => employee.Name).HasMaxLength(50).IsRequired(true);
             builder.Property(employee => employee.Surname).HasMaxLength(50).IsRequired(true);
             builder.Property(employee => employee.SallaryPerMonth).IsRequired(true);
+            builder.Property(employee => employee.HireDateEnd).HasDefaultValue(null);
         }
     }
 }
