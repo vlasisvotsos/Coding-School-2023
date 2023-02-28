@@ -34,22 +34,22 @@
             label4 = new Label();
             label5 = new Label();
             dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            dataGridView3 = new DataGridView();
-            dataGridView4 = new DataGridView();
             name = new DataGridViewTextBoxColumn();
             surname = new DataGridViewTextBoxColumn();
             cardNumber = new DataGridViewTextBoxColumn();
+            dataGridView2 = new DataGridView();
             code = new DataGridViewTextBoxColumn();
             description = new DataGridViewTextBoxColumn();
             itemType = new DataGridViewComboBoxColumn();
             price = new DataGridViewTextBoxColumn();
             cost = new DataGridViewTextBoxColumn();
+            dataGridView3 = new DataGridView();
             date = new DataGridViewTextBoxColumn();
             employeeID = new DataGridViewTextBoxColumn();
             customerID = new DataGridViewTextBoxColumn();
             paymentMethod = new DataGridViewComboBoxColumn();
             totalValue = new DataGridViewTextBoxColumn();
+            dataGridView4 = new DataGridView();
             transactionID = new DataGridViewTextBoxColumn();
             itemID = new DataGridViewTextBoxColumn();
             quantity = new DataGridViewTextBoxColumn();
@@ -124,42 +124,6 @@
             dataGridView1.Size = new Size(1115, 365);
             dataGridView1.TabIndex = 5;
             // 
-            // dataGridView2
-            // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { code, description, itemType, price, cost });
-            dataGridView2.Location = new Point(1512, 63);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 72;
-            dataGridView2.RowTemplate.Height = 37;
-            dataGridView2.Size = new Size(1113, 365);
-            dataGridView2.TabIndex = 6;
-            // 
-            // dataGridView3
-            // 
-            dataGridView3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { date, employeeID, customerID, paymentMethod, totalValue });
-            dataGridView3.Location = new Point(0, 949);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 72;
-            dataGridView3.RowTemplate.Height = 37;
-            dataGridView3.Size = new Size(1115, 353);
-            dataGridView3.TabIndex = 7;
-            // 
-            // dataGridView4
-            // 
-            dataGridView4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { transactionID, itemID, quantity, itemPrice, netValue, discountPercent, discountValue, totalPrice });
-            dataGridView4.Location = new Point(1512, 946);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.RowHeadersWidth = 72;
-            dataGridView4.RowTemplate.Height = 37;
-            dataGridView4.Size = new Size(1116, 356);
-            dataGridView4.TabIndex = 8;
-            // 
             // name
             // 
             name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -183,6 +147,18 @@
             cardNumber.HeaderText = "CardNumber:";
             cardNumber.MinimumWidth = 9;
             cardNumber.Name = "cardNumber";
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { code, description, itemType, price, cost });
+            dataGridView2.Location = new Point(1512, 63);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 72;
+            dataGridView2.RowTemplate.Height = 37;
+            dataGridView2.Size = new Size(1113, 365);
+            dataGridView2.TabIndex = 6;
             // 
             // code
             // 
@@ -224,6 +200,18 @@
             cost.MinimumWidth = 9;
             cost.Name = "cost";
             // 
+            // dataGridView3
+            // 
+            dataGridView3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { date, employeeID, customerID, paymentMethod, totalValue });
+            dataGridView3.Location = new Point(0, 949);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 72;
+            dataGridView3.RowTemplate.Height = 37;
+            dataGridView3.Size = new Size(1115, 353);
+            dataGridView3.TabIndex = 7;
+            // 
             // date
             // 
             date.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -263,6 +251,18 @@
             totalValue.HeaderText = "Total Value:";
             totalValue.MinimumWidth = 9;
             totalValue.Name = "totalValue";
+            // 
+            // dataGridView4
+            // 
+            dataGridView4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { transactionID, itemID, quantity, itemPrice, netValue, discountPercent, discountValue, totalPrice });
+            dataGridView4.Location = new Point(1512, 946);
+            dataGridView4.Name = "dataGridView4";
+            dataGridView4.RowHeadersWidth = 72;
+            dataGridView4.RowTemplate.Height = 37;
+            dataGridView4.Size = new Size(1116, 356);
+            dataGridView4.TabIndex = 8;
             // 
             // transactionID
             // 

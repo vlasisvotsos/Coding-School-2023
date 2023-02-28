@@ -42,15 +42,15 @@ namespace WinForms.UserControlls
 
         private void CashierControl_Load(object sender, EventArgs e)
         {
-            populateData();
+
         }
 
-        private void populateData()
+        private async Task populateData()
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7086/");
 
-            var CustomersList = client.GetFromJsonAsync<List<CustomerDto>>("api/Customer");
+            var CustomersList = await client.GetFromJsonAsync<List<CustomerDto>>("api/Customer");
             dataGridView1.DataSource = CustomersList;
 
             var TransactionList = client.GetFromJsonAsync<List<TransactionDto>>("api/Transaction");
@@ -58,6 +58,21 @@ namespace WinForms.UserControlls
 
             var TransactionLineList = client.GetFromJsonAsync<List<TransactionLineDto>>("api/TransactionLine");
             dataGridView3.DataSource = TransactionLineList;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshbtm_Click(object sender, EventArgs e)
+        {
+            populateData();
+        }
+
+        private void customerSavebtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
