@@ -14,9 +14,11 @@ namespace BlazorWasm.Shared.Employee
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime HiretDateStart { get; set; }
-        public DateTime HireDateEnd { get; set; }
+        public DateTime? HireDateEnd { get; set; }
         public int SallaryPerMonth { get; set; }
         public EmployeeTypeEnum EmployeeType { get; set; }
-        public EmployeesDto() { }
+        public EmployeesDto() {
+            HiretDateStart = DateTime.Now;
+        }
     }
 }
