@@ -35,6 +35,7 @@ namespace WinForms.UserControlls
 
             var ItemsList = client.GetFromJsonAsync<List<ItemsDto>>("api/Items");
             dataGridView1.DataSource = ItemsList;
+
         }
     }
 }

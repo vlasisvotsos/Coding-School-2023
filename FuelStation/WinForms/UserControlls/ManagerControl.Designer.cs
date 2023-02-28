@@ -34,22 +34,22 @@
             label4 = new Label();
             label5 = new Label();
             dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
+            dataGridView3 = new DataGridView();
+            dataGridView4 = new DataGridView();
             name = new DataGridViewTextBoxColumn();
             surname = new DataGridViewTextBoxColumn();
             cardNumber = new DataGridViewTextBoxColumn();
-            dataGridView2 = new DataGridView();
             code = new DataGridViewTextBoxColumn();
             description = new DataGridViewTextBoxColumn();
             itemType = new DataGridViewComboBoxColumn();
             price = new DataGridViewTextBoxColumn();
             cost = new DataGridViewTextBoxColumn();
-            dataGridView3 = new DataGridView();
             date = new DataGridViewTextBoxColumn();
             employeeID = new DataGridViewTextBoxColumn();
             customerID = new DataGridViewTextBoxColumn();
             paymentMethod = new DataGridViewComboBoxColumn();
             totalValue = new DataGridViewTextBoxColumn();
-            dataGridView4 = new DataGridView();
             transactionID = new DataGridViewTextBoxColumn();
             itemID = new DataGridViewTextBoxColumn();
             quantity = new DataGridViewTextBoxColumn();
@@ -124,27 +124,6 @@
             dataGridView1.Size = new Size(1115, 365);
             dataGridView1.TabIndex = 5;
             // 
-            // name
-            // 
-            name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            name.HeaderText = "Name:";
-            name.MinimumWidth = 9;
-            name.Name = "name";
-            // 
-            // surname
-            // 
-            surname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            surname.HeaderText = "Surname:";
-            surname.MinimumWidth = 9;
-            surname.Name = "surname";
-            // 
-            // cardNumber
-            // 
-            cardNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cardNumber.HeaderText = "CardNumber:";
-            cardNumber.MinimumWidth = 9;
-            cardNumber.Name = "cardNumber";
-            // 
             // dataGridView2
             // 
             dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -156,41 +135,6 @@
             dataGridView2.RowTemplate.Height = 37;
             dataGridView2.Size = new Size(1113, 365);
             dataGridView2.TabIndex = 6;
-            // 
-            // code
-            // 
-            code.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            code.HeaderText = "Code:";
-            code.MinimumWidth = 9;
-            code.Name = "code";
-            // 
-            // description
-            // 
-            description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            description.HeaderText = "Description:";
-            description.MinimumWidth = 9;
-            description.Name = "description";
-            // 
-            // itemType
-            // 
-            itemType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            itemType.HeaderText = "Item Type:";
-            itemType.MinimumWidth = 9;
-            itemType.Name = "itemType";
-            // 
-            // price
-            // 
-            price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            price.HeaderText = "Price:";
-            price.MinimumWidth = 9;
-            price.Name = "price";
-            // 
-            // cost
-            // 
-            cost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cost.HeaderText = "Cost:";
-            cost.MinimumWidth = 9;
-            cost.Name = "cost";
             // 
             // dataGridView3
             // 
@@ -204,41 +148,6 @@
             dataGridView3.Size = new Size(1115, 353);
             dataGridView3.TabIndex = 7;
             // 
-            // date
-            // 
-            date.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            date.HeaderText = "Date:";
-            date.MinimumWidth = 9;
-            date.Name = "date";
-            // 
-            // employeeID
-            // 
-            employeeID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            employeeID.HeaderText = "employeeID";
-            employeeID.MinimumWidth = 9;
-            employeeID.Name = "employeeID";
-            // 
-            // customerID
-            // 
-            customerID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            customerID.HeaderText = "Customer ID:";
-            customerID.MinimumWidth = 9;
-            customerID.Name = "customerID";
-            // 
-            // paymentMethod
-            // 
-            paymentMethod.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            paymentMethod.HeaderText = "PaymentMethod:";
-            paymentMethod.MinimumWidth = 9;
-            paymentMethod.Name = "paymentMethod";
-            // 
-            // totalValue
-            // 
-            totalValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            totalValue.HeaderText = "Total Value:";
-            totalValue.MinimumWidth = 9;
-            totalValue.Name = "totalValue";
-            // 
             // dataGridView4
             // 
             dataGridView4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -251,9 +160,114 @@
             dataGridView4.Size = new Size(1116, 356);
             dataGridView4.TabIndex = 8;
             // 
+            // name
+            // 
+            name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            name.DataPropertyName = "Name";
+            name.HeaderText = "Name:";
+            name.MinimumWidth = 9;
+            name.Name = "name";
+            // 
+            // surname
+            // 
+            surname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            surname.DataPropertyName = "Surname";
+            surname.HeaderText = "Surname:";
+            surname.MinimumWidth = 9;
+            surname.Name = "surname";
+            // 
+            // cardNumber
+            // 
+            cardNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cardNumber.DataPropertyName = "CardNumber";
+            cardNumber.HeaderText = "CardNumber:";
+            cardNumber.MinimumWidth = 9;
+            cardNumber.Name = "cardNumber";
+            // 
+            // code
+            // 
+            code.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            code.DataPropertyName = "Code";
+            code.HeaderText = "Code:";
+            code.MinimumWidth = 9;
+            code.Name = "code";
+            // 
+            // description
+            // 
+            description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            description.DataPropertyName = "Description";
+            description.HeaderText = "Description:";
+            description.MinimumWidth = 9;
+            description.Name = "description";
+            // 
+            // itemType
+            // 
+            itemType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            itemType.DataPropertyName = "ItemType";
+            itemType.HeaderText = "Item Type:";
+            itemType.MinimumWidth = 9;
+            itemType.Name = "itemType";
+            // 
+            // price
+            // 
+            price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            price.DataPropertyName = "Price";
+            price.HeaderText = "Price:";
+            price.MinimumWidth = 9;
+            price.Name = "price";
+            // 
+            // cost
+            // 
+            cost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cost.DataPropertyName = "Cost";
+            cost.HeaderText = "Cost:";
+            cost.MinimumWidth = 9;
+            cost.Name = "cost";
+            // 
+            // date
+            // 
+            date.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            date.DataPropertyName = "Date";
+            date.HeaderText = "Date:";
+            date.MinimumWidth = 9;
+            date.Name = "date";
+            // 
+            // employeeID
+            // 
+            employeeID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            employeeID.DataPropertyName = "EmployeeID";
+            employeeID.HeaderText = "employeeID";
+            employeeID.MinimumWidth = 9;
+            employeeID.Name = "employeeID";
+            // 
+            // customerID
+            // 
+            customerID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            customerID.DataPropertyName = "CustomerID";
+            customerID.HeaderText = "Customer ID:";
+            customerID.MinimumWidth = 9;
+            customerID.Name = "customerID";
+            // 
+            // paymentMethod
+            // 
+            paymentMethod.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            paymentMethod.DataPropertyName = "PaymentMethod";
+            paymentMethod.HeaderText = "PaymentMethod:";
+            paymentMethod.MinimumWidth = 9;
+            paymentMethod.Name = "paymentMethod";
+            // 
+            // totalValue
+            // 
+            totalValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            totalValue.DataPropertyName = "TotalValue";
+            totalValue.HeaderText = "Total Value:";
+            totalValue.MinimumWidth = 9;
+            totalValue.Name = "totalValue";
+            // 
             // transactionID
             // 
             transactionID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            transactionID.DataPropertyName = "TransactionID";
             transactionID.HeaderText = "TransactionID:";
             transactionID.MinimumWidth = 9;
             transactionID.Name = "transactionID";
@@ -261,6 +275,7 @@
             // itemID
             // 
             itemID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            itemID.DataPropertyName = "ItemID";
             itemID.HeaderText = "Item ID:";
             itemID.MinimumWidth = 9;
             itemID.Name = "itemID";
@@ -268,6 +283,7 @@
             // quantity
             // 
             quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            quantity.DataPropertyName = "Quantity";
             quantity.HeaderText = "Quantity:";
             quantity.MinimumWidth = 9;
             quantity.Name = "quantity";
@@ -275,6 +291,7 @@
             // itemPrice
             // 
             itemPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            itemPrice.DataPropertyName = "ItemPrice";
             itemPrice.HeaderText = "Item Price:";
             itemPrice.MinimumWidth = 9;
             itemPrice.Name = "itemPrice";
@@ -282,6 +299,7 @@
             // netValue
             // 
             netValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            netValue.DataPropertyName = "NetValue";
             netValue.HeaderText = "Net Value:";
             netValue.MinimumWidth = 9;
             netValue.Name = "netValue";
@@ -289,6 +307,7 @@
             // discountPercent
             // 
             discountPercent.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            discountPercent.DataPropertyName = "DiscountPercent";
             discountPercent.HeaderText = "Discount Percent:";
             discountPercent.MinimumWidth = 9;
             discountPercent.Name = "discountPercent";
@@ -296,6 +315,7 @@
             // discountValue
             // 
             discountValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            discountValue.DataPropertyName = "DiscountValue";
             discountValue.HeaderText = "Discount Value:";
             discountValue.MinimumWidth = 9;
             discountValue.Name = "discountValue";
@@ -303,6 +323,7 @@
             // totalPrice
             // 
             totalPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            totalPrice.DataPropertyName = "TotalPrice";
             totalPrice.HeaderText = "Total Price:";
             totalPrice.MinimumWidth = 9;
             totalPrice.Name = "totalPrice";
@@ -339,22 +360,22 @@
         private Label label4;
         private Label label5;
         private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private DataGridView dataGridView3;
+        private DataGridView dataGridView4;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn surname;
         private DataGridViewTextBoxColumn cardNumber;
-        private DataGridView dataGridView2;
         private DataGridViewTextBoxColumn code;
         private DataGridViewTextBoxColumn description;
         private DataGridViewComboBoxColumn itemType;
         private DataGridViewTextBoxColumn price;
         private DataGridViewTextBoxColumn cost;
-        private DataGridView dataGridView3;
         private DataGridViewTextBoxColumn date;
         private DataGridViewTextBoxColumn employeeID;
         private DataGridViewTextBoxColumn customerID;
         private DataGridViewComboBoxColumn paymentMethod;
         private DataGridViewTextBoxColumn totalValue;
-        private DataGridView dataGridView4;
         private DataGridViewTextBoxColumn transactionID;
         private DataGridViewTextBoxColumn itemID;
         private DataGridViewTextBoxColumn quantity;

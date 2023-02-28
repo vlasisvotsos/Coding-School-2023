@@ -74,6 +74,7 @@
             // Code
             // 
             Code.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Code.DataPropertyName = "Code";
             Code.HeaderText = "Code:";
             Code.MinimumWidth = 9;
             Code.Name = "Code";
@@ -81,6 +82,7 @@
             // Description
             // 
             Description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Description.DataPropertyName = "Description";
             Description.HeaderText = "Description:";
             Description.MinimumWidth = 9;
             Description.Name = "Description";
@@ -88,6 +90,7 @@
             // ItemType
             // 
             ItemType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ItemType.DataPropertyName = "ItemType";
             ItemType.HeaderText = "Item Type:";
             ItemType.MinimumWidth = 9;
             ItemType.Name = "ItemType";
@@ -95,6 +98,7 @@
             // Price
             // 
             Price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Price.DataPropertyName = "Price";
             Price.HeaderText = "Price:";
             Price.MinimumWidth = 9;
             Price.Name = "Price";
@@ -104,6 +108,7 @@
             // Cost
             // 
             Cost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Cost.DataPropertyName = "Cost";
             Cost.HeaderText = "Cost:";
             Cost.MinimumWidth = 9;
             Cost.Name = "Cost";
