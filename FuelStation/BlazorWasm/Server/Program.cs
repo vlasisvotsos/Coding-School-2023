@@ -11,6 +11,8 @@ builder.Services.AddScoped<CustomerRepo, CustomerRepo>();
 builder.Services.AddScoped<EmployeeRepo, EmployeeRepo>();
 builder.Services.AddScoped<ItemRepo, ItemRepo>();
 builder.Services.AddScoped<LedgerRepo, LedgerRepo>();
+builder.Services.AddScoped<TransactionRepo, TransactionRepo>();
+builder.Services.AddScoped<TransactionLineRepo, TransactionLineRepo>();
 
 var app = builder.Build();
 
