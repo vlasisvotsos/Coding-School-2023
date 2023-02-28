@@ -19,6 +19,10 @@ namespace BlazorWasm.Shared.Transaction
         public TransactionDto() 
         {
             Date = DateTime.Now;
+            if (TotalValue>50)
+            {
+                PaymentMethod = PaymentMethodEnum.Cash;
+            }
         }
     }
 }

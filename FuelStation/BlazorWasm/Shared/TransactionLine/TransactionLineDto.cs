@@ -19,8 +19,18 @@ namespace BlazorWasm.Shared.TransactionLine
         public decimal DiscountPercent { get; set; }
         public decimal DiscountValue { get; set; }
         public decimal TotalValue { get; set; }
+        public Item Item { get; set; }
 
-        public TransactionLineDto() { }
+        public TransactionLineDto() 
+        {
+            NetValue = ItemPrice * Quantity;
+            if(Item.ItemType==Item.ItemTypeEnum.Fuel && NetValue>20)
+            {
+                DiscountPercent = (decimal)0.1;
+            }
+            DiscountValue = NetValue * DiscountPercent;
+            TotalValue = NetValue - DiscountValue;
+        }
 
     }
 }
